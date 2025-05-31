@@ -28,6 +28,7 @@ header_pages:
   - news.markdown
   - code.markdown
   - courses.markdown
+  - maia.markdown
 
 plugins:
   - jekyll-feed
