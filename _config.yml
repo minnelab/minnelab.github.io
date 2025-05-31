@@ -1,0 +1,28 @@
+#
+# MORENO'S LAB
+#
+
+title: Moreno's Lab
+email: rodmore@kth.se
+description: >- # this means to ignore newlines until "baseurl:"
+  Moreno's lab: Research in machine learning and healthcare
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://www.morenoslab.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+#twitter_username: jekyllrb
+github_username:  rodrigos-group
+future: true
+timezone: Europe/Amsterdam
+person-default-image: /assets/people/default.png
+
+include: ['_people']
+
+# Header navigation order
+header_pages:
+  - people.markdown
+  - news.markdown
+  - code.markdown
+  - courses.markdown
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag

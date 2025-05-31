@@ -1,0 +1,74 @@
+@charset "utf-8";
+
+// Import Google Fonts - Figtree
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+// Define defaults for each variable.
+
+$base-font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$title-font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !default;
+$base-font-size: 18px !default;
+$base-font-weight: 400 !default;
+$small-font-size: $base-font-size * 0.875 !default;
+$base-line-height: 1.3 !default;
+
+$spacing-unit: 30px !default;
+
+$grey-color: #828282 !default;
+$grey-color-light: lighten($grey-color, 40%) !default;
+$grey-color-dark: darken($grey-color, 40%) !default;
+
+$text-color: $grey-color-dark;
+$text-color-header: #ffffff;
+$text-color-title: #2563eb;
+/*8EC7C1*/
+$text-color-title2: #1d4ed8;
+/*8EC7C1*/
+$text-color-subtitle: #1e293b;
+$background-color: #fff;
+/*#F9FBF2 !default;*/
+$background-color2: #fff !default;
+/* Modern gradient background for header */
+$background-color3: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !default;
+/*FAD7BE, F7D750, 844279*/
+$brand-color: #132C42 !default;
+/*1C0E58*/
+$link-color: #2563eb !default;
+$link-color-dark: darken($link-color, 20%) !default;
+
+$dark-accent-color: #2C363F;
+$medium-accent-color: #22AED1;
+$light-cream-color: #F2F5EA;
+
+
+
+$table-text-align: left !default;
+
+// Width of the content area
+$content-width: 1000px !default;
+
+$on-palm: 700px !default;
+$on-laptop: 1000px !default;
+
+// Use media queries like this:
+// @include media-query($on-palm) {
+//   .wrapper {
+//     padding-right: $spacing-unit / 2;
+//     padding-left: $spacing-unit / 2;
+//   }
+// }
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+@mixin relative-font-size($ratio) {
+  font-size: $base-font-size * $ratio;
+}
+
+// Import partials.
+@import "moreno/base",
+"moreno/layout",
+"moreno/syntax-highlighting"
+;

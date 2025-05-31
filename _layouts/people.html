@@ -1,0 +1,76 @@
+---
+layout: default
+---
+
+{%- assign default_paths = site.pages | map: "path" -%}
+{%- assign page_paths = site.header_pages | default: default_paths -%}
+
+<div class="people-header">
+  <div class="wrapper">
+      <!--
+      <header class="post-header">
+        <h1 class="post-title">{{ page.title | escape }}</h1>
+      </header>
+      -->
+
+      <div class="post-content">
+        {{ content }}
+      </div>
+
+      <!--
+      <header class="post-header">
+        <h1 class="post-title">Current group members</h1>
+      </header>
+      -->
+
+      <div class="people-container">
+      {%- for path in page_paths -%}
+        {%- assign my_page = site.pages | where: "path", path | first -%}
+        {%- assign category = my_page.category | default: 'page' -%}
+        {%- assign status = my_page.status | default: 'affiliate' -%}
+        {%- if status == 'current' -%}
+          {%- assign position = my_page.position | default: '' -%}
+          {%- assign image = my_page.image | default: site.person-default-image -%}
+          {%- if category == 'people' -%}
+            {%- if my_page.title -%}
+            <div class="people-item">
+              <a  href="{{ my_page.url | relative_url }}"><img src="{{my_page.image}}"" class="people-image"/></a>
+              <p>
+              <h3 class="person-name"><a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a></h3>
+              <h4>{{position}}</h4>
+              </p>
+            </div>
+            {%- endif -%}
+          {%- endif -%}
+        {%- endif -%}
+      {%- endfor -%}
+      </div>
+    </div>
+</div>
+<div class="people-content">
+  <div class="wrapper">
+    <h1>Alumni</h1>
+    <div class="people-container">
+    {%- for path in page_paths -%}
+      {%- assign my_page = site.pages | where: "path", path | first -%}
+      {%- assign category = my_page.category | default: 'page' -%}
+      {%- assign status = my_page.status | default: 'affiliate' -%}
+      {%- if status == 'former' -%}
+        {%- assign position = my_page.position | default: '' -%}
+        {%- assign image = my_page.image | default: site.person-default-image -%}
+        {%- if category == 'people' -%}
+          {%- if my_page.title -%}
+          <div class="people-item">
+            <a  href="{{ my_page.url | relative_url }}"><img src="{{my_page.image}}"" class="people-image"/></a>
+            <p>
+            <h3 class="person-name"><a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a></h3>
+            <h4>{{position}}</h4>
+            </p>
+          </div>
+          {%- endif -%}
+        {%- endif -%}
+      {%- endif -%}
+    {%- endfor -%}
+    </div>
+  </div>
+</div>
