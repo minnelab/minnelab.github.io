@@ -24,19 +24,18 @@ layout: default
       -->
 
       <div class="people-container">
-      {%- for path in page_paths -%}
-        {%- assign my_page = site.pages | where: "path", path | first -%}
-        {%- assign category = my_page.category | default: 'page' -%}
-        {%- assign status = my_page.status | default: 'affiliate' -%}
+      {%- for person in site.people -%}
+        {%- assign category = person.category | default: 'page' -%}
+        {%- assign status = person.status | default: 'affiliate' -%}
         {%- if status == 'current' -%}
-          {%- assign position = my_page.position | default: '' -%}
-          {%- assign image = my_page.image | default: site.person-default-image -%}
+          {%- assign position = person.position | default: '' -%}
+          {%- assign image = person.image | default: site.person-default-image -%}
           {%- if category == 'people' -%}
-            {%- if my_page.title -%}
+            {%- if person.title -%}
             <div class="people-item">
-              <a  href="{{ my_page.url | relative_url }}"><img src="{{my_page.image}}"" class="people-image"/></a>
+              <a  href="{{ person.url | relative_url }}"><img src="{{person.image}}"" class="people-image"/></a>
               <p>
-              <h3 class="person-name"><a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a></h3>
+              <h3 class="person-name"><a class="page-link" href="{{ person.url | relative_url }}">{{ person.title | escape }}</a></h3>
               <h4>{{position}}</h4>
               </p>
             </div>
@@ -51,19 +50,18 @@ layout: default
   <div class="wrapper">
     <h1>Alumni</h1>
     <div class="people-container">
-    {%- for path in page_paths -%}
-      {%- assign my_page = site.pages | where: "path", path | first -%}
-      {%- assign category = my_page.category | default: 'page' -%}
-      {%- assign status = my_page.status | default: 'affiliate' -%}
+    {%- for person in site.people -%}
+      {%- assign category = person.category | default: 'page' -%}
+      {%- assign status = person.status | default: 'affiliate' -%}
       {%- if status == 'former' -%}
-        {%- assign position = my_page.position | default: '' -%}
-        {%- assign image = my_page.image | default: site.person-default-image -%}
+        {%- assign position = person.position | default: '' -%}
+        {%- assign image = person.image | default: site.person-default-image -%}
         {%- if category == 'people' -%}
-          {%- if my_page.title -%}
+          {%- if person.title -%}
           <div class="people-item">
-            <a  href="{{ my_page.url | relative_url }}"><img src="{{my_page.image}}"" class="people-image"/></a>
+            <a  href="{{ person.url | relative_url }}"><img src="{{person.image}}"" class="people-image"/></a>
             <p>
-            <h3 class="person-name"><a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a></h3>
+            <h3 class="person-name"><a class="page-link" href="{{ person.url | relative_url }}">{{ person.title | escape }}</a></h3>
             <h4>{{position}}</h4>
             </p>
           </div>
