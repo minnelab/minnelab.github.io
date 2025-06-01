@@ -25,7 +25,7 @@ img { max-width: 100%; vertical-align: middle; }
 /** Figures */
 figure > img { display: block; }
 
-figcaption { font-size: 15.75px; }
+figcaption { font-size: 15.3px; }
 
 /** Lists */
 ul, ol { margin-left: 30px; }
@@ -131,34 +131,34 @@ table td { border: 1px solid #e8e8e8; }
 /** Page content */
 .page-content { /*padding: $spacing-unit 0;*/ padding: 0 0; flex: 1; }
 
-.page-heading { font-size: 36px; }
+.page-heading { font-size: 36px; font-weight: 700; }
 
 /** Posts
 */
-.post-list-heading { font-size: 27.9px; }
+.post-list-heading { font-size: 27.9px; font-weight: 700; }
 
 .post-list { margin-left: 0; list-style: none; }
 .post-list > li { margin-bottom: 30px; }
 
-.post-meta { font-size: 15.75px; color: #828282; }
+.post-meta { font-size: 15.3px; color: #828282; }
 
 .post-link { display: block; font-size: 25.2px; }
 
 .post-header { margin-top: 30px; margin-bottom: 30px; }
 
-.post-title { font-size: 41.4px; font-weight: normal; /*bold;*/ line-height: 1; }
+.post-title { font-size: 41.4px; font-weight: 700; line-height: 1; }
 @media screen and (max-width: 1000px) { .post-title { font-size: 36px; } }
 
 .dt-published { font-size: 18px; color: #000; }
 
 .post-content { margin-bottom: 30px; }
-.post-content h1 { font-size: 41.4px; }
+.post-content h1 { font-size: 41.4px; font-weight: 700; }
 @media screen and (max-width: 1000px) { .post-content h1 { font-size: 36px; } }
-.post-content h2 { font-size: 32.4px; }
+.post-content h2 { font-size: 32.4px; font-weight: 600; }
 @media screen and (max-width: 1000px) { .post-content h2 { font-size: 28.8px; } }
-.post-content h3 { font-size: 25.2px; }
+.post-content h3 { font-size: 25.2px; font-weight: 600; }
 @media screen and (max-width: 1000px) { .post-content h3 { font-size: 21.6px; } }
-.post-content h4 { font-size: 19.8px; }
+.post-content h4 { font-size: 19.8px; font-weight: 600; }
 @media screen and (max-width: 1000px) { .post-content h4 { font-size: 18px; } }
 
 /**

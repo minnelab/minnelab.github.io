@@ -4,7 +4,10 @@ title: Teaching
 permalink: /teaching/
 ---
 
+
 Rodrigo Moreno currently teaches the following courses at the Department of Biomedical Engineering and Health Systems at KTH Royal Institute of Technology:
+
+
 
 ### **Examiner and course responsible**
 

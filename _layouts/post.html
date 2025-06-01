@@ -14,12 +14,10 @@ layout: default
           <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
         </p>
       {%- endif -%}
-      {% if page.venue or page.paper %}
-        <p><span class="p-venue h-card" itemprop="name">{{ page.venue }}
-          {% if page.paper %}
-            <a href="{{ page.paper | escape }}" target="_blank">[Paper URL]</a>
-          {% endif %}
-        </span></p>
+      {% if page.paper %}
+        <p>
+          <a href="{{ page.paper | escape }}" target="_blank">[Paper URL]</a>
+        </p>
       {% endif %}
     </header>
 

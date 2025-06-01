@@ -246,6 +246,7 @@
 
 .page-heading {
   @include relative-font-size(2);
+  font-weight: $title-font-weight;
 }
 
 /**
@@ -254,6 +255,7 @@
 
 .post-list-heading {
   @include relative-font-size(1.55);
+  font-weight: $title-font-weight;
 }
 
 .post-list {
@@ -283,7 +285,7 @@
 
 .post-title {
   @include relative-font-size(2.3);
-  font-weight: normal; /*bold;*/
+  font-weight: $title-font-weight;
 
   @include media-query($on-laptop) {
       @include relative-font-size(2);
@@ -301,6 +303,7 @@
 
   h1 {
     @include relative-font-size(2.3);
+    font-weight: $title-font-weight;
 
     @include media-query($on-laptop) {
       @include relative-font-size(2);
@@ -309,6 +312,7 @@
 
   h2 {
     @include relative-font-size(1.8);
+    font-weight: $heading-font-weight;
 
     @include media-query($on-laptop) {
       @include relative-font-size(1.6);
@@ -317,6 +321,7 @@
 
   h3 {
     @include relative-font-size(1.4);
+    font-weight: $heading-font-weight;
 
     @include media-query($on-laptop) {
       @include relative-font-size(1.2);
@@ -325,6 +330,7 @@
 
   h4 {
     @include relative-font-size(1.1);
+    font-weight: $heading-font-weight;
 
     @include media-query($on-laptop) {
       @include relative-font-size(1.0);

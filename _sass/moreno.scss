@@ -9,7 +9,9 @@ $base-font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Rob
 $title-font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !default;
 $base-font-size: 18px !default;
 $base-font-weight: 400 !default;
-$small-font-size: $base-font-size * 0.875 !default;
+$title-font-weight: 700 !default;
+$heading-font-weight: 600 !default;
+$small-font-size: $base-font-size * 0.85 !default;
 $base-line-height: 1.3 !default;
 
 $spacing-unit: 30px !default;

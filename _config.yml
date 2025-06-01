@@ -5,14 +5,13 @@
 title: Moreno's Lab
 email: rodmore@kth.se
 description: >- # this means to ignore newlines until "baseurl:"
-  Moreno's lab: Research in machine learning and healthcare
+  Moreno's lab: Research in biomedical imaging and deep learning
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://www.morenoslab.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-#twitter_username: jekyllrb
 github_username:  morenoslab
 future: true
 timezone: Europe/Amsterdam
-person-default-image: /assets/people/default.png
+person-default-image: /assets/people/default.jpg
 
 include: ['_people']
 
