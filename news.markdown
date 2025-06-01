@@ -1,5 +1,5 @@
 ---
-layout: news
-title: News
-permalink: /news/
+layout: updates
+title: Updates
+permalink: /updates/
 ---

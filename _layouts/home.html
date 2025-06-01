@@ -45,15 +45,7 @@ layout: default
                   </h3>
                   {% if post.author %}
                     <div class="post-list-author">
-                      {{ post.author | escape }}
-                    </div>
-                  {% endif %}
-                  {% if post.venue or post.paper %}
-                    <div class="post-list-venue">
-                      {{ post.venue | escape }}
-                      {% if post.paper %}
-                        <a href="{{ post.paper | escape }}" target="_blank">[Paper URL]</a>
-                      {% endif %}
+                      <strong>Paper Authors:</strong> {{ post.author | escape }}
                     </div>
                   {% endif %}
                   {% if post.image %}

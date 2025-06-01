@@ -29,6 +29,7 @@ header_pages:
   - code.markdown
   - courses.markdown
   - maia.markdown
+  - join-us.markdown
 
 plugins:
   - jekyll-feed
