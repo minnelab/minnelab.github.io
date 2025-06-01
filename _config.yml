@@ -25,7 +25,7 @@ collections:
 # Header navigation order
 header_pages:
   - people.markdown
-  - news.markdown
+  - updates.markdown
   - code.markdown
   - courses.markdown
   - maia.markdown
