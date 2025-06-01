@@ -3,8 +3,9 @@ layout: page
 title: Join Us
 permalink: /join-us/
 ---
+![Moreno's Lab](assets/about/group.jpg)
 
-## Open Positions
+## **Open Positions**
 
 We are always excited to welcome new talented individuals to our research group!
 
@@ -16,6 +17,7 @@ We welcome master students participating in exchange programs who are interested
 - Biomechanical modelling
 - Computer vision for medical applications
 
+If you are already studying at KTH and planning your master thesis, feel free to reach out for projects in biomedical imaging.
 
 ### Visiting PhD Students
 
