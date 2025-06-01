@@ -4,7 +4,7 @@ title: 'Henrik Palme'
 category: people
 permalink: /people/henrik
 image: /assets/people/default.jpg
-position: 'Postdoc'
+position: 'PhD Student'
 status: 'current'
 ---
 

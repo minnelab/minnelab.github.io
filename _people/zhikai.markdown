@@ -10,7 +10,7 @@ status: 'current'
 
 ![Zhikai](/assets/people/zhikai.jpeg){:class="people-profile-image"}
 
-##About me
+## About me
 
 I mainly work on deep learning-based medical image analysis and medical imaging reconstruction, especially breast image-related analysis.
 
@@ -38,4 +38,4 @@ Berk Kiras,  Course Project, Technical University of Munich
 
 Linkedin
 
-https://www.linkedin.com/in/zhikai-yang-1ba521125/
+<https://www.linkedin.com/in/zhikai-yang-1ba521125/>

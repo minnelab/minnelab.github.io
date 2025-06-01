@@ -4,7 +4,7 @@ title: 'Simone Bendazzoli'
 category: people
 permalink: /people/simone
 image: /assets/people/simben.jpeg
-position: 'Postdoc'
+position: 'PhD student'
 status: 'current'
 ---
 

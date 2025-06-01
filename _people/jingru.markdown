@@ -4,7 +4,7 @@ title: 'Jingru Fu'
 category: people
 permalink: /people/jingru
 image: /assets/people/jingruf.jpeg
-position: 'PhD student'
+position: 'PhD'
 status: 'current'
 ---
 

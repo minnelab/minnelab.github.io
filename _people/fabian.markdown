@@ -4,7 +4,7 @@ title: 'Fabian Sinzinger'
 category: people
 permalink: /people/fabian
 image: /assets/people/fabiansi.jpeg
-position: 'PhD student'
+position: 'PhD'
 status: 'current'
 ---
 

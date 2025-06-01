@@ -10,7 +10,6 @@ status: 'current'
 
 ![Rodrigo](/assets/people/rodmore.jpeg){:class="people-profile-image"}
 
-# About Me
 
 ## Current Research Interests
 

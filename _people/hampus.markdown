@@ -4,7 +4,7 @@ title: 'Hampus Möller'
 category: people
 permalink: /people/hampus
 image: /assets/people/default.jpg
-position: 'Postdoc'
+position: 'PhD student'
 status: 'current'
 ---
 
