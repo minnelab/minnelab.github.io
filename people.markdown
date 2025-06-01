@@ -1,5 +1,5 @@
 ---
 layout: people
-title: People
+title: PEOPLE
 permalink: /people/
 ---

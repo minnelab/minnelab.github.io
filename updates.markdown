@@ -1,5 +1,6 @@
 ---
 layout: updates
-title: Updates
+title: UPDATES
 permalink: /updates/
+hide_title: true
 ---

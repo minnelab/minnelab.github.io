@@ -4,7 +4,7 @@ title: 'Rodrigo Moreno'
 category: people
 permalink: /people/rodrigo
 image: /assets/people/rodmore.jpeg
-position: 'Group leader'
+position: 'Professor & group leader'
 status: 'current'
 ---
 

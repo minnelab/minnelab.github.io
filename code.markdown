@@ -1,8 +1,12 @@
 ---
 layout: page
-title: Code
+title: CODE
 permalink: /code/
+hide_title: true
 ---
+## **Open-source policy**
+We aim to always publish data and code from our projects when possible. 
+
 
 ## **Source Code**
 

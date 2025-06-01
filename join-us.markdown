@@ -1,7 +1,8 @@
 ---
 layout: page
-title: Join Us
+title: JOIN US
 permalink: /join-us/
+hide_title: true
 ---
 ![Moreno's Lab](assets/about/group.jpg)
 

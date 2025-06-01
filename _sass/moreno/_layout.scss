@@ -78,7 +78,7 @@
 .site-nav {
   float: right;
   line-height: $base-line-height * $base-font-size * 2.25;
-  font-family: $base-font-family;
+  font-family: $title-font-family;
 
   .nav-trigger {
       display: none;
@@ -92,7 +92,7 @@
     color: $text-color-subtitle;
     line-height: $base-line-height;
     font-weight: 500;
-    font-family: $base-font-family;
+    font-family: $title-font-family;
 
     // Gaps between nav items, but not on the last one
     &:not(:last-child) {

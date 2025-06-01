@@ -44,7 +44,7 @@ ul, ol, dl, figure,
 h1, h2 {
   color: #222;
   letter-spacing: normal;
-  /*font-family: $title-font-family !default;*/
+  font-family: $title-font-family;
 }
 
 /**
@@ -100,6 +100,7 @@ li {
  */
 h1, h2, h3, h4, h5, h6 {
   font-weight: $base-font-weight;
+  font-family: $title-font-family;
 }
 
 
