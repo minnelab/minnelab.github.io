@@ -3,7 +3,7 @@ layout: person
 title: 'Sanna Persson'
 category: people
 permalink: /people/sanna
-image: /assets/people/default.jpg
+image: /assets/people/sanna.jpg
 position: 'PhD student'
 status: 'current'
 ---
@@ -11,9 +11,16 @@ status: 'current'
 ![Sanna](/assets/people/default.jpg){:class="people-profile-image"}
 
 ## About me
+My research focuses on improving the early detection and diagnosis of neurodegenerative diseases by leveraging tractography, a non-invasive technique used to visually represent neural tracts. This technique is instrumental in understanding the complex network of connections in the brain, particularly the changes in structural brain connectivity at different disease stages. We aim to address this gap to allow for more precise connectivity analysis and possible clinical applications. During my PhD I'm interested in delving deep into the following topics: 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 
-## Research
+- Improving existing methods for tractography filtering with graph neural networks
 
-Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+- Using generative models for diffusion MRI and magnetic resonance elastography with downstream applications in tractography
+
+- Brain connectivity analysis leveraging deep learning methods
+
+- Incorporating XAI in predictive modeling for neuro-degenerative diseases 
+
+If you are interested in doing a master thesis in any of these areas, feel free to reach out: <https://www.kth.se/profile/sannape>
+
