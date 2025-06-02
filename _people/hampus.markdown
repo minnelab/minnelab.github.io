@@ -12,8 +12,10 @@ status: 'current'
 
 ## About me
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Ph.D. student, currently working on machine learning methods for Magnetic Resonance Elastography (MRE) imaging techniques, primarily for use with the brain. My work focuses on the inversion procedure; extracting the mechanical information from measured data.
 
-## Research
+MRE aims to quantify and characterize mechanical properties of tissues such as the shear modulus, providing insight into the effects of brain diseases. In MRE, vibrations are introduced into the brain using low frequency vibrations, from which the tissue displacement can be measured using magnetic resonance imaging.
 
-Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+The measurement is followed by the so-called inversion. It is an inverse problem, meaning one infers system parameters from the system output and is typically hard to solve.
+
+My interest lies in finding efficient ways to extract useful information hidden in data, primarily with machine learning. By efficient analysis of data one can accelerate understanding and potentially unlock important new insights into diseases, or into nature itself.

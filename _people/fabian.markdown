@@ -12,8 +12,4 @@ status: 'current'
 
 ## About me
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-
-## Research
-
-Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+I'm a Ph.D. student in the division of Biomedical Imaging with affiliation to the WASP-AI program. My research's primary interest is the development and investigation of novel Machine-Learning techniques in biomedical image processing. Specifically, I want to exploit geometrical properties and symmetries of the given image-signals to tackle data-sparsity problems with domain-specific model-design (e.g., Geometrical Deep learning, Graph-CNN, Topology).
