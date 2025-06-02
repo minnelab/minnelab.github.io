@@ -157,8 +157,8 @@ To preview changes locally before submitting:
 ## Need Help?
 
 - Check existing files for examples
-- Contact the repository maintainers
-- Review Jekyll documentation: https://jekyllrb.com/docs/
+- Markdown: <https://www.markdownguide.org/basic-syntax/>
+
 
 ## Important Notes
 
