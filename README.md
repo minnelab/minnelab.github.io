@@ -146,13 +146,7 @@ To preview changes locally before submitting:
 3. **View website:**
    Open `http://localhost:4000` in your browser
 
-## Style Guidelines
 
-- Use clear, professional language
-- Keep paragraphs concise
-- Use proper Markdown formatting
-- Include alt text for images
-- Follow the existing structure and style of similar content
 
 ## Need Help?
 
