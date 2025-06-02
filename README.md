@@ -54,6 +54,7 @@ status: 'current' (or former)
 ### 3. Update Status
 - Use `status: 'current'` for current team members
 - Use `status: 'alumni'` for former team members
+```
 
 ## Add an Update or News Page
 
