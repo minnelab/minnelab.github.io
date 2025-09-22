@@ -1,14 +1,14 @@
 #
-# MORENO'S LAB
+# MINNE LAB
 #
 
-title: Moreno's Lab
+title: MINNE lab
 email: rodmore@kth.se
 description: >- # this means to ignore newlines until "baseurl:"
-  Moreno's lab: Research in biomedical imaging and deep learning
+  MINNE lab: Research in biomedical imaging and deep learning
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://www.morenoslab.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-github_username:  morenoslab
+url: "http://www.minnelab.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+github_username:  minnelab
 future: true
 timezone: Europe/Amsterdam
 person-default-image: /assets/people/default.jpg

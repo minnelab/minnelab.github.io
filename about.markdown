@@ -5,7 +5,7 @@ permalink: /about/
 ---
 
 
-The Moreno lab is led by Rodrigo Moreno...
+The MINNE lab is led by Rodrigo Moreno...
 
 ![Group photo](/assets/about/group.jpg){:class="about-image"}
 

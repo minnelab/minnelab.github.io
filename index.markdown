@@ -5,8 +5,8 @@
 layout: home
 ---
 
-![Moreno's Lab](assets/about/group.jpg)
+![MINNE lab](assets/about/group.jpg)
 
-Moreno's Lab at KTH Royal Institute of Technology. The group is led by [Rodrigo Moreno](people/rodrigo.html).
+MINNE lab at KTH Royal Institute of Technology. The group is led by [Rodrigo Moreno](people/rodrigo.html).
 
 **[&#xbb; Read more about our research](/about/)** and **[our group](/people/)**

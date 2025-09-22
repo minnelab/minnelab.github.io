@@ -5,7 +5,7 @@ category: people
 permalink: /people/jingru
 image: /assets/people/jingruf.jpeg
 position: 'PhD'
-status: 'current'
+status: 'alumni'
 ---
 
 ![Jingru](/assets/people/jingruf.jpeg){:class="people-profile-image"}

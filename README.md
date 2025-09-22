@@ -1,6 +1,6 @@
-# Contributing to Minne Lab Website
+# Contributing to MINNE lab Website
 
-This repository contains the source code for the Moreno's Lab website (minnelab.github.io), built with Jekyll and hosted on GitHub Pages. Follow these instructions to add content and update the website.
+This repository contains the source code for the MINNE lab website (minnelab.github.io), built with Jekyll and hosted on GitHub Pages. Follow these instructions to add content and update the website.
 
 ## Prerequisites
 
@@ -12,8 +12,8 @@ This repository contains the source code for the Moreno's Lab website (minnelab.
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/morenoslab/morenoslab.github.io.git
-   cd morenoslab.github.io
+   git clone https://github.com/minnelab/minnelab.github.io.git
+   cd minnelab.github.io
    ```
 
 2. **Create a new branch for your changes:**

@@ -5,7 +5,7 @@ category: people
 permalink: /people/fabian
 image: /assets/people/fabiansi.jpeg
 position: 'PhD'
-status: 'current'
+status: 'alumni'
 ---
 
 ![Fabian](/assets/people/fabiansi.jpeg){:class="people-profile-image"}
