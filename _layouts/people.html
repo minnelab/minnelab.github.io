@@ -53,7 +53,7 @@ layout: default
     {%- for person in site.people -%}
       {%- assign category = person.category | default: 'page' -%}
       {%- assign status = person.status | default: 'affiliate' -%}
-      {%- if status == 'former' -%}
+      {%- if status == 'alumni' -%}
         {%- assign position = person.position | default: '' -%}
         {%- assign image = person.image | default: site.person-default-image -%}
         {%- if category == 'people' -%}
