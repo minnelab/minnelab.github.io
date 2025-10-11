@@ -28,6 +28,3 @@ This year, some members of **Minnelab** had the pleasure of attending **MICCAI 2
 Beyond the scientific exchange, the team deeply appreciated the **warm hospitality and rich culture of Korea**, from the food and traditions to the welcoming atmosphere throughout Daejeon.
 
 We return from MICCAI 2025 energized and inspired — looking forward to **reconnecting with the MICCAI community** soon for more exciting discussions, collaborations, and innovations in medical imaging AI.
-<p align="center">
-  <img src="https://github.com/minnelab/minnelab.github.io/blob/00ea36715c3d7f34f10268cd56d4138f571731e3/_posts/MICCAI-2025_content/MICCAI-1.jpg" alt="Minnelab at MICCAI 2025" style="width:60%;">
-</p>
