@@ -73,3 +73,4 @@ Our work on **MAIA** is available as an open-access preprint on arXiv:
 - GitHub: [https://github.com/minnelab/MAIA](https://github.com/minnelab/MAIA)  
 - Documentation: [https://minnelab.github.io/maia/](https://maia-toolkit.readthedocs.io)
 - Research Platform Webpage at KTH: [https://maia.app.cloud.cbh.kth.se](https://maia.app.cloud.cbh.kth.se)
+- Workshop Slides and Material for AIDA TechDays event: [https://minnelab.github.io/MAIA-AIDA-TechDays-Workshop/](https://minnelab.github.io/MAIA-AIDA-TechDays-Workshop/)
