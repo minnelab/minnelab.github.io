@@ -33,6 +33,7 @@ This study explores how **anatomical priors** can enhance deep learning segmenta
 Including the LVC map improved segmentation accuracy, especially at challenging interlobar boundaries and in expiration scans, while also improving **robustness in pathological cases** such as COVID-19. The results demonstrate that embedding anatomical knowledge into model design can enhance both **accuracy and generalization**, promoting more **clinically reliable** segmentation systems
 
 ---
+
 ### Designing Radio-dynamics Features for pCR Prediction in Breast DCE-MRI  
 **Simone Bendazzoli**, Mehdi Astaraki, Yanbo Li, Rodrigo Moreno, Örjan Smedby, Hong Lu, Chunliang Wang  
 *KTH Royal Institute of Technology, Karolinska Institutet, Tianjin Medical University Cancer Hospital*  
