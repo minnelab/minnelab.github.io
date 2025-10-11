@@ -1,3 +1,11 @@
+---
+layout: post
+title: "Minnelab at MICCAI 2025 — Reconnecting with the Community in Daejeon"
+paper_authors: "Simone Bendazzoli"
+date: 2025-10-11
+abstract: "Reconnecting with the Community in Daejeon"
+---
+
 ## Minnelab at MICCAI 2025 — Reconnecting with the Community in Daejeon 🇰🇷
 
 <p align="center">
