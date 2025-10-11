@@ -62,15 +62,24 @@ We welcome collaborations — if you are interested in contributing or exploring
 
 ---
 ### Publications
-Our work on **MAIA** is available as an open-access preprint on arXiv:
 
--  [MAIA: A Collaborative Medical AI Platform for Integrated Healthcare Innovation](https://arxiv.org/abs/2507.19489)
+Our work about **MAIA** is available as an open-access preprint on arXiv:
+<div style="text-align: center; display: inline-flex; align-items: center; gap: 10px;">
+  <a href="https://arxiv.org/abs/2507.19489">
+    <img src="https://info.arxiv.org/brand/images/brand-logo-black.jpg" alt="arXiv" width="80">
+  </a>
+  <a href="https://arxiv.org/abs/2507.19489" style="text-decoration: none; color: inherit; font-weight: bold; font-size: 1rem;">
+    MAIA: A Collaborative Medical AI Platform for Integrated Healthcare Innovation
+  </a>
+</div>
 
 
 ---
+
 ### Learn More
 
-- GitHub: [https://github.com/minnelab/MAIA](https://github.com/minnelab/MAIA)  
-- Documentation: [https://minnelab.github.io/maia/](https://maia-toolkit.readthedocs.io)
-- Research Platform Webpage at KTH: [https://maia.app.cloud.cbh.kth.se](https://maia.app.cloud.cbh.kth.se)
-- Workshop Slides and Material for AIDA TechDays event: [https://minnelab.github.io/MAIA-AIDA-TechDays-Workshop/](https://minnelab.github.io/MAIA-AIDA-TechDays-Workshop/)
+- <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" width="20" style="vertical-align:middle"> **GitHub:** [https://github.com/minnelab/MAIA](https://github.com/minnelab/MAIA)  
+- <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/readthedocs.svg" alt="Documentation" width="20" style="vertical-align:middle"> **Documentation:** [https://minnelab.github.io/maia/](https://maia-toolkit.readthedocs.io)  
+- <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/internetexplorer.svg" alt="Web" width="20" style="vertical-align:middle"> **Research Platform Webpage at KTH:** [https://maia.app.cloud.cbh.kth.se](https://maia.app.cloud.cbh.kth.se)  
+- <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/slides.svg" alt="Workshop" width="20" style="vertical-align:middle"> **Workshop Slides and Material for AIDA TechDays event:** [https://minnelab.github.io/MAIA-AIDA-TechDays-Workshop/](https://minnelab.github.io/MAIA-AIDA-TechDays-Workshop/)  
+
