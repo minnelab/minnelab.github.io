@@ -51,9 +51,43 @@ MAIA has been applied in multiple medical imaging projects at **KTH Royal Instit
 
 - **Preprint:** [https://arxiv.org/abs/2507.19489](https://arxiv.org/abs/2507.19489)  
 - **More details:** [MAIA page](/maia/)
-- **GitHub Code:** [MAIA](https://github.com/minnelab/MAIA)
+- <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" width="20" style="vertical-align:middle"> **GitHub Code:** [MAIA](https://github.com/minnelab/MAIA)
+---
+### MONet Bundle: Integrating nnU-Net within the MONAI Ecosystem
+
+**MONet** is a **nnU-Net-based MONAI Bundle** designed to bridge the gap between **state-of-the-art medical image segmentation research** and **real-world clinical deployment**. While nnU-Net is widely recognized for its robustness, versatility, and self-configuring capabilities across diverse medical imaging tasks, its native implementation faces challenges in clinical settings, such as limited portability, adaptability, and integration with existing hospital workflows.
+
+The **MONAI ecosystem** provides a standardized framework for training, deployment, and annotation of medical AI models, including tools like **MONAI Deploy** for clinical integration and **MONAI Label** for AI-assisted image annotation. Starting from MONAI v1.2.0, **nnU-Net** has been partially integrated via `nnUNetV2Runner`, enabling data preparation, preprocessing, training, and cross-validation within MONAI pipelines. However, deployment and packaging for diverse clinical applications remained limited.
+
+**MONet Bundle** extends `nnUNetV2Runner` to:  
+- Package nnU-Net models into **versatile bundles** for multiple tasks.  
+- Enable **federated learning** and **multi-center collaboration**.  
+- Integrate with **clinical workflows**, improving portability and adaptability.  
+
+This ongoing effort contributes to both **nnU-Net** and **MONAI repositories** (MONAI Core, MONAI Deploy, and MONAI Label), providing a **scalable and reproducible framework** that facilitates the transition of segmentation models from research to real-world clinical use.  
+
+**Applications and Achievements:**  
+- Competed in **BraTS 2025 Challenge Task 07: GoAT – Generalizability Across Tumors**, where MONet Bundle achieved **1st prize**, demonstrating robust performance across adult glioma, brain metastasis, meningioma, pediatric glioma, and sub-Saharan African cohorts.  
+- Used in a **federated learning approach for whole-body PET-CT lymphoma segmentation**, presented at the **DeCaF 2025 Workshop** at MICCAI. [Paper link](https://link.springer.com/chapter/10.1007/978-3-032-05663-4_10)  
 
 
+- <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" width="20" style="vertical-align:middle"> **Code:** [https://github.com/minnelab/MONet-Bundle](https://github.com/minnelab/MONet-Bundle)
+- <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/readthedocs.svg" alt="Documentation" width="20" style="vertical-align:middle"> **Documentation:** [https://minnelab.github.io/maia/](https://maia-toolkit.readthedocs.io)
+
+![MONet Bundle](/assets/MONet_Bundle.png)
+---
+### MAIA Segmentation Portal
+
+
+The **MAIA Segmentation Portal** is a user-friendly platform hosted within **MAIA**, allowing users to explore and interact with available medical AI models. Users can upload medical images and receive predictions almost instantly, or download the models to run locally if preferred.  
+
+The portal leverages models in the **MONet Bundle format**, which are compatible with **MONAI Deploy** and **MONAI Label**, making it easy to integrate AI into clinical workflows. Each model is deployed as a standalone application within MAIA, and the portal is built on a **KubeFlow-based infrastructure**, allowing smooth interaction and inference directly from the portal interface.
+
+The MAIA Segmentation Portal also provides guidance for users who want to **train their own models** using their annotated data, promoting reproducibility and collaboration in medical AI research.
+
+- <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/readthedocs.svg" alt="Documentation" width="20" style="vertical-align:middle"> **Documentation:** [MAIA Segmentation Portal Documentation](https://monet-bundle.readthedocs.io/en/latest/MAIA_Segmentation_Portal.html)
+
+![MAIA Segmentation Portal](/assets/MAIA_Segmentation_Portal.png)
 ---
 ### Lung Vessel Connectivity Map as Anatomical Prior Knowledge for Deep Learning–Based Lung Lobe Segmentation  
 **Simone Bendazzoli**, Emelie Bäcklin, Örjan Smedby, Birgitta Janerot-Sjöberg, Bryan Connolly, Chunliang Wang  
