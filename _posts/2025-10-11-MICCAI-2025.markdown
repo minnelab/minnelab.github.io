@@ -1,0 +1,20 @@
+## Minnelab at MICCAI 2025 — Reconnecting with the Community in Daejeon 🇰🇷
+
+This year, some members of **Minnelab** had the pleasure of attending **MICCAI 2025** in **Daejeon, South Korea** — an incredible experience to reconnect with the vibrant and inspiring **MICCAI community**. The conference provided a fantastic opportunity for discussions, collaborations, and the exchange of ideas across medical imaging and AI.
+
+**Simone Bendazzoli** presented at two workshops:
+
+- **BraTS Workshop** — *BraTS-FL: Enhancing Generalization in Brain Tumor Segmentation via Federated Learning*
+  This work introduced a federated learning approach to improve **generalization across brain tumor subtypes**, including adult glioma, metastasis, meningioma, pediatric glioma, and sub-Saharan African cohorts. The paper will appear soon in the workshop proceedings.  
+  The method was also **awarded first prize** in the **BraTS GoaT Subchallenge** on generalizability across tumor types — a rewarding recognition for the effort toward creating more robust and inclusive AI models in neuroimaging.
+
+- **DeCaF (Distributed and Collaborative Federated Learning) 2025 Workshop** — *MONet-FL: Extending nnU-Net with MONAI for Clinical Federated Learning*  
+  Simone presented the **MONet Bundle**, an open-source framework that integrates **nnU-Net** into the **MONAI ecosystem**, enabling its use in **federated learning, active learning**, and **PACS integration**.  
+  The MONet Bundle was showcased in two federated tasks: **whole-body PET-CT lymphoma segmentation** and **multimodal MRI brain tumor segmentation**.  
+  - [Paper (Springer Link)](https://link.springer.com/chapter/10.1007/978-3-032-05663-4_10)  
+  - [Code (GitHub)](https://github.com/minnelab/MONet-Bundle)  
+  - A dedicated post about the **MONet Bundle** will be available soon.
+
+Beyond the scientific exchange, the team deeply appreciated the **warm hospitality and rich culture of Korea**, from the food and traditions to the welcoming atmosphere throughout Daejeon.
+
+We return from MICCAI 2025 energized and inspired — looking forward to **reconnecting with the MICCAI community** soon for more exciting discussions, collaborations, and innovations in medical imaging AI.
