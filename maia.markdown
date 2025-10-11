@@ -4,7 +4,7 @@ title: MAIA
 permalink: /maia/
 hide_title: true
 ---
-![MAIA](/assets/about/MAIA.png)
+
 ## MAIA: Bridging the Gap Between Medical AI Research and Clinical Adoption
 
 **MAIA** is a medical AI platform developed within **MINNELab** by **Simone Bendazzoli**. It was designed to address a critical challenge in medical AI: bridging the gap between research innovation and clinical adoption.
@@ -14,6 +14,10 @@ In medical AI, isolating individual stages of the development process often **ob
 For example, a lung nodule detection model developed in isolation, without collaboration with radiologists or IT and infrastructure planning, might perform well in a lab setting but fail to integrate with hospital systems like PACS. Without clinical input and a continuous feedback loop, even promising AI models may remain unusable, rendering the research effort ineffective.
 
 To overcome these challenges, there is a growing need for a **shared, open, and collaborative environment**. Such a platform allows knowledge, models, and algorithms to be freely exchanged between research groups and institutions, promoting iterative evaluation and collective advancement.
+
+<p align="center">
+    <img src="https://raw.githubusercontent.com/SimoneBendazzoli93/MAIA-AIDA-TechDays-Workshop/main/img/Cover_Aurora_Snow-Night.png" alt="MAIA Cover" style="width:80%;" />
+</p>
 
 ---
 
