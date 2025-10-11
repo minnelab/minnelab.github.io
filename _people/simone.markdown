@@ -31,3 +31,14 @@ When I’m not coding or experimenting with new infrastructure designs, I’m us
 This study explores how **anatomical priors** can enhance deep learning segmentation of lung lobes from chest CT. We introduced a **Lung Vessel Connectivity (LVC) map**, encoding the vascular structure of the lungs, and integrated it into three **nnU-Net** variants: standard, multitask, and cascade models.  
 
 Including the LVC map improved segmentation accuracy, especially at challenging interlobar boundaries and in expiration scans, while also improving **robustness in pathological cases** such as COVID-19. The results demonstrate that embedding anatomical knowledge into model design can enhance both **accuracy and generalization**, promoting more **clinically reliable** segmentation systems.  
+
+### Designing Radio-dynamics Features for pCR Prediction in Breast DCE-MRI  
+**Simone Bendazzoli**, Mehdi Astaraki, Yanbo Li, Rodrigo Moreno, Örjan Smedby, Hong Lu, Chunliang Wang  
+*KTH Royal Institute of Technology, Karolinska Institutet, Tianjin Medical University Cancer Hospital*  
+
+This work introduces a novel family of imaging biomarkers, **radio-dynamics features**, designed to improve **pathological complete response (pCR)** prediction in breast cancer patients undergoing **neoadjuvant chemotherapy (NAC)**. These features are derived from **dynamic contrast-enhanced MRI (DCE-MRI)** and aim to capture the **temporal dynamics** of tumor enhancement beyond what traditional radiomics can represent.  
+
+The study implemented a full machine learning pipeline for **feature extraction, selection, and classification**, evaluated on 80 subjects using 5-fold cross-validation. Results showed that radio-dynamics features outperformed conventional radiomics, particularly in ensemble models, demonstrating their potential for more accurate and physiologically meaningful prediction of treatment response.  
+
+The **source code and pipeline** are openly available at: [https://github.com/minnelab/Hive_ML](https://github.com/minnelab/Hive_ML)  
+
