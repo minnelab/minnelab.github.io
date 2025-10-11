@@ -7,6 +7,8 @@ abstract: "MINNELab presented MAIA at the AIDA TechDays Workshop on 17 September
 ---
 
 On **17 September 2025**, [**Simone Bendazzoli**](/people/simone) presented [**MAIA**](/maia/) at the **AIDA TechDays Workshop**, hosted by the **AIDA community**, Sweden's leading arena for medical AI research. This workshop showcased **MAIA's capabilities** in facilitating collaborative, reproducible, and scalable AI development in healthcare.
+
+
 ![Minnelab at MICCAI 2025](/assets/maia-aida-techdays.png)
 ### Workshop Highlights
 
