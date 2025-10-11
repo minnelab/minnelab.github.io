@@ -3,12 +3,12 @@ layout: person
 title: 'Simone Bendazzoli'
 category: people
 permalink: /people/simone
-image: /assets/people/simben.jpeg
+image: /assets/people/simben.jpg
 position: 'PhD student'
 status: 'current'
 ---
 
-![Simone](/assets/people/simben.jpeg){:class="people-profile-image"}
+![Simone](/assets/people/simben.jpg){:class="people-profile-image"}
 
 ## About me
 
