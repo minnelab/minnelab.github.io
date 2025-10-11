@@ -24,4 +24,10 @@ When I’m not coding or experimenting with new infrastructure designs, I’m us
 
 ## Research
 
-Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+### Lung Vessel Connectivity Map as Anatomical Prior Knowledge for Deep Learning–Based Lung Lobe Segmentation  
+**Simone Bendazzoli**, Emelie Bäcklin, Örjan Smedby, Birgitta Janerot-Sjöberg, Bryan Connolly, Chunliang Wang  
+*J. Med. Imaging, 2024 — [PMID: 38988990](https://pubmed.ncbi.nlm.nih.gov/38988990/) | [DOI: 10.1117/1.JMI.11.4.044001](https://doi.org/10.1117/1.JMI.11.4.044001)*  
+
+This study explores how **anatomical priors** can enhance deep learning segmentation of lung lobes from chest CT. We introduced a **Lung Vessel Connectivity (LVC) map**, encoding the vascular structure of the lungs, and integrated it into three **nnU-Net** variants: standard, multitask, and cascade models.  
+
+Including the LVC map improved segmentation accuracy, especially at challenging interlobar boundaries and in expiration scans, while also improving **robustness in pathological cases** such as COVID-19. The results demonstrate that embedding anatomical knowledge into model design can enhance both **accuracy and generalization**, promoting more **clinically reliable** segmentation systems.  
