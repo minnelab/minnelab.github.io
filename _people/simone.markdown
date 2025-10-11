@@ -14,7 +14,7 @@ status: 'current'
 
 I began my PhD in October 2020, focusing on medical image processing using deep learning — a field that has rapidly evolved but still faces challenges in real-world clinical adoption. Over the years, working at the intersection of AI research and medical practice has made me reflect deeply on how difficult it remains to integrate the models we develop into clinical workflows in a transparent, reproducible, and scalable way.
 
-This realization led me to design and build MAIA, an open-source Medical AI platform that promotes collaboration and reproducibility in medical imaging research. MAIA integrates Kubernetes, MONAI, and the MONAI Bundle format to simplify deploying, configuring, and updating AI models in distributed research environments. It integrates essential tools such as 3D Slicer, OHIF Viewer, Orthanc, XNAT, and MLFlow, forming a cohesive ecosystem for annotation, model training, active learning, and refinement.
+This realization led me to design and build [MAIA](/maia/), an open-source Medical AI platform that promotes collaboration and reproducibility in medical imaging research. MAIA integrates Kubernetes, MONAI, and the MONAI Bundle format to simplify deploying, configuring, and updating AI models in distributed research environments. It integrates essential tools such as 3D Slicer, OHIF Viewer, Orthanc, XNAT, and MLFlow, forming a cohesive ecosystem for annotation, model training, active learning, and refinement.
 
 Through this work, I aim to bridge the gap between AI innovation and clinical implementation by providing researchers and clinicians with the infrastructure they need to collaborate effectively.
 
@@ -32,6 +32,29 @@ When I’m not coding or experimenting with new infrastructure designs, I’m us
 
 ## Research
 
+### MAIA: A Collaborative Medical AI Platform for Integrated Healthcare Innovation
+
+**Simone Bendazzoli**, Sanna Persson, Mehdi Astaraki, Sebastian Pettersson, Vitali Grozman, Rodrigo Moreno  
+*KTH Royal Institute of Technology & Karolinska Institutet, Stockholm, Sweden*  
+
+The integration of **Artificial Intelligence (AI)** into clinical workflows requires robust platforms that bridge the gap between technical innovation and practical healthcare applications. **MAIA (Medical Artificial Intelligence Assistant)** is an **open-source platform** designed to facilitate interdisciplinary collaboration among clinicians, researchers, and AI developers.  
+
+Built on **Kubernetes**, MAIA provides a **modular, scalable environment** with integrated tools for:  
+- Data management  
+- Model development  
+- Annotation and active learning  
+- Deployment and clinical feedback  
+
+Key features include **project isolation**, **CI/CD automation**, and integration with **high-computing infrastructures** and real-world clinical workflows. MAIA supports deployments in both academic and clinical environments, enabling reproducible, transparent, and user-centered AI development.  
+
+MAIA has been applied in multiple medical imaging projects at **KTH Royal Institute of Technology** and **Karolinska University Hospital**, demonstrating its ability to accelerate the translation of AI research into impactful clinical solutions.  
+
+- **Preprint:** [https://arxiv.org/abs/2507.19489](https://arxiv.org/abs/2507.19489)  
+- **More details:** [MAIA page](/maia/)
+- **GitHub Code:** [MAIA](https://github.com/minnelab/MAIA)
+
+
+---
 ### Lung Vessel Connectivity Map as Anatomical Prior Knowledge for Deep Learning–Based Lung Lobe Segmentation  
 **Simone Bendazzoli**, Emelie Bäcklin, Örjan Smedby, Birgitta Janerot-Sjöberg, Bryan Connolly, Chunliang Wang  
 *J. Med. Imaging, 2024 — [PMID: 38988990](https://pubmed.ncbi.nlm.nih.gov/38988990/) | [DOI: 10.1117/1.JMI.11.4.044001](https://doi.org/10.1117/1.JMI.11.4.044001)*  
