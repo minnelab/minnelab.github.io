@@ -52,7 +52,9 @@ MAIA has been applied in multiple medical imaging projects at **KTH Royal Instit
 - **Preprint:** [https://arxiv.org/abs/2507.19489](https://arxiv.org/abs/2507.19489)  
 - **More details:** [MAIA page](/maia/)
 - <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" width="20" style="vertical-align:middle"> **GitHub Code:** [MAIA](https://github.com/minnelab/MAIA)
+  
 ---
+
 ### MONet Bundle: Integrating nnU-Net within the MONAI Ecosystem
 
 **MONet** is a **nnU-Net-based MONAI Bundle** designed to bridge the gap between **state-of-the-art medical image segmentation research** and **real-world clinical deployment**. While nnU-Net is widely recognized for its robustness, versatility, and self-configuring capabilities across diverse medical imaging tasks, its native implementation faces challenges in clinical settings, such as limited portability, adaptability, and integration with existing hospital workflows.
@@ -75,7 +77,9 @@ This ongoing effort contributes to both **nnU-Net** and **MONAI repositories** (
 - <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/readthedocs.svg" alt="Documentation" width="20" style="vertical-align:middle"> **Documentation:** [https://minnelab.github.io/maia/](https://maia-toolkit.readthedocs.io)
 
 ![MONet Bundle](/assets/MONet_Bundle.png)
+
 ---
+
 ### MAIA Segmentation Portal
 
 
@@ -88,6 +92,7 @@ The MAIA Segmentation Portal also provides guidance for users who want to **trai
 - <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/readthedocs.svg" alt="Documentation" width="20" style="vertical-align:middle"> **Documentation:** [MAIA Segmentation Portal Documentation](https://monet-bundle.readthedocs.io/en/latest/MAIA_Segmentation_Portal.html)
 
 ![MAIA Segmentation Portal](/assets/MAIA_Segmentation_Portal.png)
+
 ---
 ### Lung Vessel Connectivity Map as Anatomical Prior Knowledge for Deep Learning–Based Lung Lobe Segmentation  
 **Simone Bendazzoli**, Emelie Bäcklin, Örjan Smedby, Birgitta Janerot-Sjöberg, Bryan Connolly, Chunliang Wang  
