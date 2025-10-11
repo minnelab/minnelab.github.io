@@ -14,7 +14,7 @@ This year, some members of **MINNELab** had the pleasure of attending **MICCAI 2
 
 - **BraTS Workshop** — *BraTS-FL: Enhancing Generalization in Brain Tumor Segmentation via Federated Learning*
   This work introduced a federated learning approach to improve **generalization across brain tumor subtypes**, including adult glioma, metastasis, meningioma, pediatric glioma, and sub-Saharan African cohorts. The paper will appear soon in the workshop proceedings.  
-  The method was also **awarded first prize** in the **BraTS GoaT Subchallenge** on generalizability across tumor types — a rewarding recognition for the effort toward creating more robust and inclusive AI models in neuroimaging.
+  The method was also **awarded first prize** in the **BraTS GoaT Task 7 subchallenge** on generalizability across tumor types — a rewarding recognition for the effort toward creating more robust and inclusive AI models in neuroimaging.
 
 - **DeCaF (Distributed and Collaborative Federated Learning) 2025 Workshop** — *MONet-FL: Extending nnU-Net with MONAI for Clinical Federated Learning*  
   Simone presented the **MONet Bundle**, an open-source framework that integrates **nnU-Net** into the **MONAI ecosystem**, enabling its use in **federated learning, active learning**, and **PACS integration**.  
