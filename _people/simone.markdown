@@ -30,8 +30,9 @@ When I’m not coding or experimenting with new infrastructure designs, I’m us
 
 This study explores how **anatomical priors** can enhance deep learning segmentation of lung lobes from chest CT. We introduced a **Lung Vessel Connectivity (LVC) map**, encoding the vascular structure of the lungs, and integrated it into three **nnU-Net** variants: standard, multitask, and cascade models.  
 
-Including the LVC map improved segmentation accuracy, especially at challenging interlobar boundaries and in expiration scans, while also improving **robustness in pathological cases** such as COVID-19. The results demonstrate that embedding anatomical knowledge into model design can enhance both **accuracy and generalization**, promoting more **clinically reliable** segmentation systems.  
+Including the LVC map improved segmentation accuracy, especially at challenging interlobar boundaries and in expiration scans, while also improving **robustness in pathological cases** such as COVID-19. The results demonstrate that embedding anatomical knowledge into model design can enhance both **accuracy and generalization**, promoting more **clinically reliable** segmentation systems
 
+---
 ### Designing Radio-dynamics Features for pCR Prediction in Breast DCE-MRI  
 **Simone Bendazzoli**, Mehdi Astaraki, Yanbo Li, Rodrigo Moreno, Örjan Smedby, Hong Lu, Chunliang Wang  
 *KTH Royal Institute of Technology, Karolinska Institutet, Tianjin Medical University Cancer Hospital*  
