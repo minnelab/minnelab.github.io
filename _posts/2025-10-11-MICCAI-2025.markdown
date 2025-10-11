@@ -3,7 +3,7 @@ layout: post
 title: "Minnelab at MICCAI 2025 — Reconnecting with the Community in Daejeon"
 paper_authors: "Simone Bendazzoli"
 date: 2025-10-11
-abstract: "Reconnecting with the Community in Daejeon"
+abstract: "Minnelab members had an inspiring experience at MICCAI 2025 in Daejeon, reconnecting with the vibrant community, presenting their work on federated learning and the MONet Bundle, and enjoying the warmth and culture of Korea."
 ---
 
 ## Minnelab at MICCAI 2025 — Reconnecting with the Community in Daejeon 🇰🇷
