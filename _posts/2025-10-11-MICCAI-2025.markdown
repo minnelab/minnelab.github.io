@@ -12,7 +12,7 @@ abstract: "Minnelab members had an inspiring experience at MICCAI 2025 in Daejeo
 
 This year, some members of **Minnelab** had the pleasure of attending **MICCAI 2025** in **Daejeon, South Korea** — an incredible experience to reconnect with the vibrant and inspiring **MICCAI community**. The conference provided a fantastic opportunity for discussions, collaborations, and the exchange of ideas across medical imaging and AI.
 
-**Simone Bendazzoli** presented at two workshops:
+[**Simone Bendazzoli**](/people/simone) presented at two workshops:
 
 - **BraTS Workshop** — *BraTS-FL: Enhancing Generalization in Brain Tumor Segmentation via Federated Learning*
   This work introduced a federated learning approach to improve **generalization across brain tumor subtypes**, including adult glioma, metastasis, meningioma, pediatric glioma, and sub-Saharan African cohorts. The paper will appear soon in the workshop proceedings.  
