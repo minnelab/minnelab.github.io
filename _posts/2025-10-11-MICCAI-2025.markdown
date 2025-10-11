@@ -8,7 +8,7 @@ abstract: "Minnelab members had an inspiring experience at MICCAI 2025 in Daejeo
 
 ## Minnelab at MICCAI 2025 — Reconnecting with the Community in Daejeon 🇰🇷
 
-![Minnelab at MICCAI 2025](/_posts/MICCAI-2025_content/MICCAI-3.jpg)
+![Minnelab at MICCAI 2025](/assets/miccai-2025/MICCAI-3.jpg)
 
 This year, some members of **Minnelab** had the pleasure of attending **MICCAI 2025** in **Daejeon, South Korea** — an incredible experience to reconnect with the vibrant and inspiring **MICCAI community**. The conference provided a fantastic opportunity for discussions, collaborations, and the exchange of ideas across medical imaging and AI.
 
