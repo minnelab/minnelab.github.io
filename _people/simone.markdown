@@ -20,7 +20,7 @@ Through this work, I aim to bridge the gap between AI innovation and clinical im
 
 As I approach the defense of my PhD thesis on November 27, 2025, my focus remains on advancing open, modular, and transparent medical AI systems that can empower the community and accelerate the safe translation of research into practice.
 
-When I’m not coding or experimenting with new infrastructure designs, I’m usually out running — my favorite way to clear my mind, stay focused, and find inspiration for the next challenge.
+When I’m not coding or experimenting with new infrastructure designs, I’m usually out running — my favorite way to clear my mind, stay focused, and find inspiration for the next challenge. Follow my running activities on [Strava](https://www.strava.com/athletes/107384738)
 
 ## Research
 
