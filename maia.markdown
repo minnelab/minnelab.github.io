@@ -40,7 +40,18 @@ MAIA supports the **complete AI lifecycle**, incorporating:
 By connecting researchers, clinicians, and infrastructure in a single platform, MAIA bridges the critical gap between **medical AI research and clinical adoption**, accelerating the translation of innovative models into solutions that truly impact patient care.
 
 ---
+### Current Usage
 
+MAIA has been the **main research platform** at KTH in the **Division of Biomedical Imaging** for the past two years, serving over **80 PhD students, Master students, postdocs, and participants in master-level courses**.  
+
+On the clinical side, a deployment at the **Radiology Department of Karolinska University Hospital** is enabling **closer collaboration between AI researchers and radiologists**. MAIA is currently used for projects including:  
+
+- **MRI bone metastasis segmentation**  
+- **Brain MRI metastasis segmentation**  
+
+In these projects, AI researchers develop models directly from raw **DICOM images** imported into the MAIA platform, while radiologists play a key role in several steps, including **active learning** and **smart annotation** to refine predicted lesions. This integrated workflow ensures that AI models are both technically robust and clinically relevant.
+
+---
 ### Current and Future Directions
 
 We are exploring the integration of **large language models (LLMs)** into radiology workflows to enable **automatic report generation** directly from medical images and corresponding segmentation masks as **ROIs**.  
@@ -50,8 +61,15 @@ This will allow a seamless pipeline from image acquisition, AI-based analysis, s
 We welcome collaborations — if you are interested in contributing or exploring these capabilities, **feel free to reach out**!
 
 ---
+### Publications
+Our work on **MAIA** is available as an open-access preprint on arXiv:
 
+-  [MAIA: A Collaborative Medical AI Platform for Integrated Healthcare Innovation](https://arxiv.org/abs/2507.19489)
+
+
+---
 ### Learn More
 
 - GitHub: [https://github.com/minnelab/MAIA](https://github.com/minnelab/MAIA)  
-- Documentation: [https://minnelab.github.io/maia/](https://minnelab.github.io/maia/](https://maia-toolkit.readthedocs.io) 
+- Documentation: [https://minnelab.github.io/maia/](https://minnelab.github.io/maia/](https://maia-toolkit.readthedocs.io)
+- Research Platform Webpage at KTH: [https://maia.app.cloud.cbh.kth.se](https://maia.app.cloud.cbh.kth.se)
