@@ -71,5 +71,5 @@ Our work on **MAIA** is available as an open-access preprint on arXiv:
 ### Learn More
 
 - GitHub: [https://github.com/minnelab/MAIA](https://github.com/minnelab/MAIA)  
-- Documentation: [https://minnelab.github.io/maia/](https://minnelab.github.io/maia/](https://maia-toolkit.readthedocs.io)
+- Documentation: [https://minnelab.github.io/maia/](https://maia-toolkit.readthedocs.io)
 - Research Platform Webpage at KTH: [https://maia.app.cloud.cbh.kth.se](https://maia.app.cloud.cbh.kth.se)
