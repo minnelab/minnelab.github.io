@@ -3,12 +3,12 @@ layout: person
 title: 'Henrik Palme'
 category: people
 permalink: /people/henrik
-image: /assets/people/default.jpg
+image: /assets/people/hepalme.jpg
 position: 'PhD Student'
 status: 'current'
 ---
 
-![Henrik](/assets/people/default.jpg){:class="people-profile-image"}
+![Henrik](/assets/people/hepalme.jpg){:class="people-profile-image"}
 
 ## About me
 
