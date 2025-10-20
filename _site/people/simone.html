@@ -3,27 +3,27 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Simone Bendazzoli | Moreno’s Lab</title>
+<title>Simone Bendazzoli | MINNE lab</title>
 <meta name="generator" content="Jekyll v3.10.0" />
 <meta property="og:title" content="Simone Bendazzoli" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Moreno’s lab: Research in biomedical imaging and deep learning" />
-<meta property="og:description" content="Moreno’s lab: Research in biomedical imaging and deep learning" />
+<meta name="description" content="MINNE lab: Research in biomedical imaging and deep learning" />
+<meta property="og:description" content="MINNE lab: Research in biomedical imaging and deep learning" />
 <link rel="canonical" href="http://localhost:4000/people/simone" />
 <meta property="og:url" content="http://localhost:4000/people/simone" />
-<meta property="og:site_name" content="Moreno’s Lab" />
-<meta property="og:image" content="http://localhost:4000/assets/people/simben.jpeg" />
+<meta property="og:site_name" content="MINNE lab" />
+<meta property="og:image" content="http://localhost:4000/assets/people/simben.jpg" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="http://localhost:4000/assets/people/simben.jpeg" />
+<meta property="twitter:image" content="http://localhost:4000/assets/people/simben.jpg" />
 <meta property="twitter:title" content="Simone Bendazzoli" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"Moreno’s lab: Research in biomedical imaging and deep learning","headline":"Simone Bendazzoli","image":"http://localhost:4000/assets/people/simben.jpeg","url":"http://localhost:4000/people/simone"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"MINNE lab: Research in biomedical imaging and deep learning","headline":"Simone Bendazzoli","image":"http://localhost:4000/assets/people/simben.jpg","url":"http://localhost:4000/people/simone"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Moreno&apos;s Lab" /></head>
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="MINNE lab" /></head>
 <body><header class="site-header" role="banner">
   <div class="wrapper"><div class="site-title">
-      <a rel="author" href="/">Moreno's <span id="title-ai">Lab</span><br/></a>
+      <a rel="author" href="/">MINNE <span id="title-ai">lab</span><br/></a>
       <div class="site-subtitle">at KTH Royal Institute of Technology</div>
     </div>
 
@@ -51,15 +51,120 @@
     </header>
 
     <div class="post-content">
-      <p><img src="/assets/people/simben.jpeg" alt="Simone" class="people-profile-image" /></p>
+      <p><img src="/assets/people/simben.jpg" alt="Simone" class="people-profile-image" /></p>
 
 <h2 id="about-me">About me</h2>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+<p>I began my PhD in October 2020, focusing on medical image processing using deep learning — a field that has rapidly evolved but still faces challenges in real-world clinical adoption. Over the years, working at the intersection of AI research and medical practice has made me reflect deeply on how difficult it remains to integrate the models we develop into clinical workflows in a transparent, reproducible, and scalable way.</p>
+
+<p>This realization led me to design and build <a href="/maia/">MAIA</a>, an open-source Medical AI platform that promotes collaboration and reproducibility in medical imaging research. MAIA integrates Kubernetes, MONAI, and the MONAI Bundle format to simplify deploying, configuring, and updating AI models in distributed research environments. It integrates essential tools such as 3D Slicer, OHIF Viewer, Orthanc, XNAT, and MLFlow, forming a cohesive ecosystem for annotation, model training, active learning, and refinement.</p>
+
+<p>Through this work, I aim to bridge the gap between AI innovation and clinical implementation by providing researchers and clinicians with the infrastructure they need to collaborate effectively.</p>
+
+<p>As I approach the defense of my PhD thesis on November 27, 2025, my focus remains on advancing open, modular, and transparent medical AI systems that can empower the community and accelerate the safe translation of research into practice.</p>
+
+<p>When I’m not coding or experimenting with new infrastructure designs, I’m usually out running — my favorite way to clear my mind, stay focused, and find inspiration for the next challenge. Follow my running activities on Strava:</p>
+<p align="center">
+  <a href="https://www.strava.com/athletes/107384738">
+    <img src="/assets/socials/strava_black.png" alt="Strava" width="40" />
+    Simone Bendazzoli - Strava
+  </a>
+</p>
 
 <h2 id="research">Research</h2>
 
-<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+<h3 id="maia-a-collaborative-medical-ai-platform-for-integrated-healthcare-innovation">MAIA: A Collaborative Medical AI Platform for Integrated Healthcare Innovation</h3>
+
+<p><strong>Simone Bendazzoli</strong>, Sanna Persson, Mehdi Astaraki, Sebastian Pettersson, Vitali Grozman, Rodrigo Moreno<br />
+<em>KTH Royal Institute of Technology,  Karolinska University Hospital &amp; Karolinska Institutet, Stockholm, Sweden</em></p>
+
+<p>The integration of <strong>Artificial Intelligence (AI)</strong> into clinical workflows requires robust platforms that bridge the gap between technical innovation and practical healthcare applications. <strong>MAIA (Medical Artificial Intelligence Assistant)</strong> is an <strong>open-source platform</strong> designed to facilitate interdisciplinary collaboration among clinicians, researchers, and AI developers.</p>
+
+<p>Built on <strong>Kubernetes</strong>, MAIA provides a <strong>modular, scalable environment</strong> with integrated tools for:</p>
+<ul>
+  <li>Data management</li>
+  <li>Model development</li>
+  <li>Annotation and active learning</li>
+  <li>Deployment and clinical feedback</li>
+</ul>
+
+<p>Key features include <strong>project isolation</strong>, <strong>CI/CD automation</strong>, and integration with <strong>high-computing infrastructures</strong> and real-world clinical workflows. MAIA supports deployments in both academic and clinical environments, enabling reproducible, transparent, and user-centered AI development.</p>
+
+<p>MAIA has been applied in multiple medical imaging projects at <strong>KTH Royal Institute of Technology</strong> and <strong>Karolinska University Hospital</strong>, demonstrating its ability to accelerate the translation of AI research into impactful clinical solutions.</p>
+
+<ul>
+  <li><strong>Preprint:</strong> <a href="https://arxiv.org/abs/2507.19489">https://arxiv.org/abs/2507.19489</a></li>
+  <li><strong>More details:</strong> <a href="/maia/">MAIA page</a></li>
+  <li><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" width="20" style="vertical-align:middle" /> <strong>GitHub Code:</strong> <a href="https://github.com/minnelab/MAIA">MAIA</a></li>
+</ul>
+
+<hr />
+
+<h3 id="monet-bundle-integrating-nnu-net-within-the-monai-ecosystem">MONet Bundle: Integrating nnU-Net within the MONAI Ecosystem</h3>
+
+<p><strong>MONet</strong> is a <strong>nnU-Net-based MONAI Bundle</strong> designed to bridge the gap between <strong>state-of-the-art medical image segmentation research</strong> and <strong>real-world clinical deployment</strong>. While nnU-Net is widely recognized for its robustness, versatility, and self-configuring capabilities across diverse medical imaging tasks, its native implementation faces challenges in clinical settings, such as limited portability, adaptability, and integration with existing hospital workflows.</p>
+
+<p>The <strong>MONAI ecosystem</strong> provides a standardized framework for training, deployment, and annotation of medical AI models, including tools like <strong>MONAI Deploy</strong> for clinical integration and <strong>MONAI Label</strong> for AI-assisted image annotation. Starting from MONAI v1.2.0, <strong>nnU-Net</strong> has been partially integrated via <code class="language-plaintext highlighter-rouge">nnUNetV2Runner</code>, enabling data preparation, preprocessing, training, and cross-validation within MONAI pipelines. However, deployment and packaging for diverse clinical applications remained limited.</p>
+
+<p><strong>MONet Bundle</strong> extends <code class="language-plaintext highlighter-rouge">nnUNetV2Runner</code> to:</p>
+<ul>
+  <li>Package nnU-Net models into <strong>versatile bundles</strong> for multiple tasks.</li>
+  <li>Enable <strong>federated learning</strong> and <strong>multi-center collaboration</strong>.</li>
+  <li>Integrate with <strong>clinical workflows</strong>, improving portability and adaptability.</li>
+</ul>
+
+<p>This ongoing effort contributes to both <strong>nnU-Net</strong> and <strong>MONAI repositories</strong> (MONAI Core, MONAI Deploy, and MONAI Label), providing a <strong>scalable and reproducible framework</strong> that facilitates the transition of segmentation models from research to real-world clinical use.</p>
+
+<p><strong>Applications and Achievements:</strong></p>
+<ul>
+  <li>Competed in <strong>BraTS 2025 Challenge Task 07: GoAT – Generalizability Across Tumors</strong>, where MONet Bundle achieved <strong>1st prize</strong>, demonstrating robust performance across adult glioma, brain metastasis, meningioma, pediatric glioma, and sub-Saharan African cohorts.</li>
+  <li>
+    <p>Used in a <strong>federated learning approach for whole-body PET-CT lymphoma segmentation</strong>, presented at the <strong>DeCaF 2025 Workshop</strong> at MICCAI. <a href="https://link.springer.com/chapter/10.1007/978-3-032-05663-4_10">Paper link</a></p>
+  </li>
+  <li><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" width="20" style="vertical-align:middle" /> <strong>Code:</strong> <a href="https://github.com/minnelab/MONet-Bundle">https://github.com/minnelab/MONet-Bundle</a></li>
+  <li><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/readthedocs.svg" alt="Documentation" width="20" style="vertical-align:middle" /> <strong>Documentation:</strong> <a href="https://maia-toolkit.readthedocs.io">https://minnelab.github.io/maia/</a></li>
+</ul>
+
+<p><img src="/assets/MONet_Bundle.png" alt="MONet Bundle" /></p>
+
+<hr />
+
+<h3 id="maia-segmentation-portal">MAIA Segmentation Portal</h3>
+
+<p>The <strong>MAIA Segmentation Portal</strong> is a user-friendly platform hosted within <strong>MAIA</strong>, allowing users to explore and interact with available medical AI models. Users can upload medical images and receive predictions almost instantly, or download the models to run locally if preferred.</p>
+
+<p>The portal leverages models in the <strong>MONet Bundle format</strong>, which are compatible with <strong>MONAI Deploy</strong> and <strong>MONAI Label</strong>, making it easy to integrate AI into clinical workflows. Each model is deployed as a standalone application within MAIA, and the portal is built on a <strong>KubeFlow-based infrastructure</strong>, allowing smooth interaction and inference directly from the portal interface.</p>
+
+<p>The MAIA Segmentation Portal also provides guidance for users who want to <strong>train their own models</strong> using their annotated data, promoting reproducibility and collaboration in medical AI research.</p>
+
+<ul>
+  <li><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/readthedocs.svg" alt="Documentation" width="20" style="vertical-align:middle" /> <strong>Documentation:</strong> <a href="https://monet-bundle.readthedocs.io/en/latest/MAIA_Segmentation_Portal.html">MAIA Segmentation Portal Documentation</a></li>
+</ul>
+
+<p><img src="/assets/MAIA_Segmentation_Portal.png" alt="MAIA Segmentation Portal" /></p>
+
+<hr />
+<h3 id="lung-vessel-connectivity-map-as-anatomical-prior-knowledge-for-deep-learningbased-lung-lobe-segmentation">Lung Vessel Connectivity Map as Anatomical Prior Knowledge for Deep Learning–Based Lung Lobe Segmentation</h3>
+<p><strong>Simone Bendazzoli</strong>, Emelie Bäcklin, Örjan Smedby, Birgitta Janerot-Sjöberg, Bryan Connolly, Chunliang Wang<br />
+<em>KTH Royal Institute of Technology, Karolinska Institutet, Karolinska University Hospital</em><br />
+<em>J. Med. Imaging, 2024 — <a href="https://pubmed.ncbi.nlm.nih.gov/38988990/">PMID: 38988990</a> | <a href="https://doi.org/10.1117/1.JMI.11.4.044001">DOI: 10.1117/1.JMI.11.4.044001</a></em></p>
+
+<p>This study explores how <strong>anatomical priors</strong> can enhance deep learning segmentation of lung lobes from chest CT. We introduced a <strong>Lung Vessel Connectivity (LVC) map</strong>, encoding the vascular structure of the lungs, and integrated it into three <strong>nnU-Net</strong> variants: standard, multitask, and cascade models.</p>
+
+<p>Including the LVC map improved segmentation accuracy, especially at challenging interlobar boundaries and in expiration scans, while also improving <strong>robustness in pathological cases</strong> such as COVID-19. The results demonstrate that embedding anatomical knowledge into model design can enhance both <strong>accuracy and generalization</strong>, promoting more <strong>clinically reliable</strong> segmentation systems</p>
+
+<hr />
+
+<h3 id="designing-radio-dynamics-features-for-pcr-prediction-in-breast-dce-mri">Designing Radio-dynamics Features for pCR Prediction in Breast DCE-MRI</h3>
+<p><strong>Simone Bendazzoli</strong>, Mehdi Astaraki, Yanbo Li, Rodrigo Moreno, Örjan Smedby, Hong Lu, Chunliang Wang<br />
+<em>KTH Royal Institute of Technology, Karolinska Institutet, Tianjin Medical University Cancer Hospital</em></p>
+
+<p>This work introduces a novel family of imaging biomarkers, <strong>radio-dynamics features</strong>, designed to improve <strong>pathological complete response (pCR)</strong> prediction in breast cancer patients undergoing <strong>neoadjuvant chemotherapy (NAC)</strong>. These features are derived from <strong>dynamic contrast-enhanced MRI (DCE-MRI)</strong> and aim to capture the <strong>temporal dynamics</strong> of tumor enhancement beyond what traditional radiomics can represent.</p>
+
+<p>The study implemented a full machine learning pipeline for <strong>feature extraction, selection, and classification</strong>, evaluated on 80 subjects using 5-fold cross-validation. Results showed that radio-dynamics features outperformed conventional radiomics, particularly in ensemble models, demonstrating their potential for more accurate and physiologically meaningful prediction of treatment response.</p>
+
+<p>The <strong>source code and pipeline</strong> are openly available at: <a href="https://github.com/minnelab/Hive_ML">https://github.com/minnelab/Hive_ML</a></p>
+
 
     </div>
 
@@ -71,7 +176,7 @@
 
   <div class="wrapper">
 
-    <!--<h2 class="footer-heading">Moreno&#39;s Lab</h2>-->
+    <!--<h2 class="footer-heading">MINNE lab</h2>-->
 
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">

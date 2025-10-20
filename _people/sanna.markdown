@@ -8,7 +8,7 @@ position: 'PhD student'
 status: 'current'
 ---
 
-![Sanna](/assets/people/default.jpg){:class="people-profile-image"}
+![Sanna](/assets/people/sanna.jpg){:class="people-profile-image"}
 
 ## About me
 My research focuses on improving the early detection and diagnosis of neurodegenerative diseases by leveraging tractography, a non-invasive technique used to visually represent neural tracts. This technique is instrumental in understanding the complex network of connections in the brain, particularly the changes in structural brain connectivity at different disease stages. We aim to address this gap to allow for more precise connectivity analysis and possible clinical applications. During my PhD I'm interested in delving deep into the following topics: 
