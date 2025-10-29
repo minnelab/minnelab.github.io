@@ -28,6 +28,19 @@ When I’m not coding or experimenting with new infrastructure designs, I’m us
   </a>
 </p>
 
+## PhD Dissertation
+
+I will be defending my PhD thesis at KTH on Thursday, November 27, 2025. My dissertation is entitled **"Design and Integration of AI Solutions in Oncology and Healthcare Infrastructures: Bridging the Gap Between AI Innovation and Clinical Practice"**. During my defense, I will present the results of five years of research, covering the creation of MAIA, the development of the MONet Bundle, and advancements in federated and active learning.
+
+You can access the public thesis via these links in KTH DiVA and KI Open Archive:
+
+[KTH DiVA](https://kth.diva-portal.org/smash/record.jsf?pid=diva2:2006331)
+
+[KI Open Archive](https://hdl.handle.net/10616/ki.30466691.v1)
+
+**Simone Bendazzoli**  
+*KTH Royal Institute of Technology,  Karolinska University Hospital & Karolinska Institutet, Stockholm, Sweden*  
+*November 27, 2025, 09:00 CET,  T2 (Jacobssonsalen), Hälsovägen 11C, Huddinge, Sweden*  
 
 
 ## Research
