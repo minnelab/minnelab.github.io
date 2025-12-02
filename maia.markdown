@@ -67,12 +67,11 @@ We welcome collaborations — if you are interested in contributing or exploring
 ---
 ### Publications
 
-Our work about **MAIA** is available as an open-access preprint on arXiv:
+Our work about **MAIA** is available as an open-access article on *NPJ Artificial Intelligence*:
 <div style="text-align: center; display: inline-flex; align-items: center; gap: 10px;">
-  <a href="https://arxiv.org/abs/2507.19489">
-    <img src="https://info.arxiv.org/brand/images/brand-logo-black.jpg" alt="arXiv" width="80">
+  <a href="https://www.nature.com/articles/s44387-025-00042-6">
   </a>
-  <a href="https://arxiv.org/abs/2507.19489" style="text-decoration: none; color: inherit; font-weight: bold; font-size: 1rem;">
+  <a href="https://www.nature.com/articles/s44387-025-00042-6" style="text-decoration: none; color: inherit; font-weight: bold; font-size: 1rem;">
     MAIA: A Collaborative Medical AI Platform for Integrated Healthcare Innovation
   </a>
 </div>
