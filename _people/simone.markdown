@@ -38,6 +38,8 @@ You can access the public thesis via these links in KTH DiVA and KI Open Archive
 
 [KI Open Archive](https://hdl.handle.net/10616/ki.30466691.v1)
 
+[Watch on KTH Play](https://play.kth.se/media/Simone+Bendazzoli+PhD+Defense+at+CBH+KTH+-+251127A+%22Design+and+Integration+of+AI+Solutions+in+Oncology+and+Healthcare+InfrastructuresA+Bridging+the+Gap+Between+AI+Innovation+and+Clinical+Practice%22/0_efz427rj)
+
 **Simone Bendazzoli**  
 *KTH Royal Institute of Technology,  Karolinska University Hospital & Karolinska Institutet, Stockholm, Sweden*  
 *November 27, 2025, 09:00 CET,  T2 (Jacobssonsalen), Hälsovägen 11C, Huddinge, Sweden*  
@@ -62,7 +64,8 @@ Key features include **project isolation**, **CI/CD automation**, and integratio
 
 MAIA has been applied in multiple medical imaging projects at **KTH Royal Institute of Technology** and **Karolinska University Hospital**, demonstrating its ability to accelerate the translation of AI research into impactful clinical solutions.  
 
-- **Preprint:** [https://arxiv.org/abs/2507.19489](https://arxiv.org/abs/2507.19489)  
+- **Article:** [https://www.nature.com/articles/s44387-025-00042-6](https://www.nature.com/articles/s44387-025-00042-6)
+- **Preprint:** [https://arxiv.org/abs/2507.19489](https://arxiv.org/abs/2507.19489)
 - **More details:** [MAIA page](/maia/)
 - <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" width="20" style="vertical-align:middle"> **GitHub Code:** [MAIA](https://github.com/minnelab/MAIA)
   
