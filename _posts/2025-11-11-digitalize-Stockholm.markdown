@@ -3,7 +3,7 @@ layout: post
 title:  "Digitalize 2025"
 date:   2025-11-11
 abstract: "Minne lab members present at the Digitalize in sthlm '25 event "
-image: /assets/digitalize/digitalize25.png
+image: /assets/digitalize/digitalize_foto.png
 hide_image: true
 ---
 
