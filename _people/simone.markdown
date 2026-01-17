@@ -35,27 +35,6 @@ When I’m not coding or experimenting with new infrastructure designs, I’m us
   <a href="{{ '/assets/resume/Bendazzoli_CV.pdf' | relative_url }}">Download PDF</a>.
 </iframe>
 
-
-<div id="pdf-viewer" style="height:600px;"></div>
-<script src="/assets/pdfjs/build/pdf.mjs" type="module"></script>
-<script src="/assets/pdfjs/build/pdf.worker.mjs" type="module"></script>
-<script>
-  const url = '{{ "/assets/resume/Bendazzoli_CV.pdf" | relative_url }}';
-  const loadingTask = pdfjsLib.getDocument(url);
-  loadingTask.promise.then(pdf => {
-    pdf.getPage(1).then(page => {
-      const scale = 1.5;
-      const viewport = page.getViewport({scale: scale});
-      const canvas = document.createElement('canvas');
-      const context = canvas.getContext('2d');
-      canvas.height = viewport.height;
-      canvas.width = viewport.width;
-      document.getElementById('pdf-viewer').appendChild(canvas);
-      page.render({canvasContext: context, viewport: viewport});
-    });
-  });
-</script>
-
 ## PhD Dissertation
 
 I will be defending my PhD thesis at KTH on Thursday, November 27, 2025. My dissertation is entitled **"Design and Integration of AI Solutions in Oncology and Healthcare Infrastructures: Bridging the Gap Between AI Innovation and Clinical Practice"**. During my defense, I will present the results of five years of research, covering the creation of MAIA, the development of the MONet Bundle, and advancements in federated and active learning.
