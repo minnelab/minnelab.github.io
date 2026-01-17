@@ -28,6 +28,13 @@ When I’m not coding or experimenting with new infrastructure designs, I’m us
   </a>
 </p>
 
+## Resume
+
+<iframe src="{{ '/assets/resume/Bendazzoli_CV.pdf' | relative_url }}" width="100%" height="600px">
+  This browser does not support PDFs. Please download the PDF to view it:
+  <a href="{{ '/assets/resume/Bendazzoli_CV.pdf' | relative_url }}">Download PDF</a>.
+</iframe>
+
 ## PhD Dissertation
 
 I will be defending my PhD thesis at KTH on Thursday, November 27, 2025. My dissertation is entitled **"Design and Integration of AI Solutions in Oncology and Healthcare Infrastructures: Bridging the Gap Between AI Innovation and Clinical Practice"**. During my defense, I will present the results of five years of research, covering the creation of MAIA, the development of the MONet Bundle, and advancements in federated and active learning.
