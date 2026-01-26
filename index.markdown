@@ -5,7 +5,7 @@
 layout: home
 ---
 
-![MINNE lab](assets/about/group.jpg)
+![MINNE lab](assets/about/group_picture.jpg)
 
 MINNE lab at KTH Royal Institute of Technology. The group is led by [Rodrigo Moreno](people/rodrigo.html).
 
