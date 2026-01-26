@@ -7,7 +7,7 @@ permalink: /about/
 
 The MINNE lab is led by Rodrigo Moreno...
 
-![Group photo](/assets/about/group.jpg){:class="about-image"}
+![Group photo](/assets/about/group_picture.jpg){:class="about-image"}
 
 **Funding**  
 Rodrigo Moreno
