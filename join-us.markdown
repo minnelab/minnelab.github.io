@@ -4,7 +4,7 @@ title: JOIN US
 permalink: /join-us/
 hide_title: true
 ---
-![MINNE lab](assets/about/group.jpg)
+![MINNE lab](assets/about/group_picture.jpg)
 
 ## **Open Positions**
 
