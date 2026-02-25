@@ -3,7 +3,7 @@ layout: person
 title: 'Sarah Vandenbulcke'
 category: people
 permalink: /people/sarah
-image: /assets/people/default.jpg
+image: /assets/people/sarahva.jpg
 position: 'Postdoc'
 status: 'current'
 ---
