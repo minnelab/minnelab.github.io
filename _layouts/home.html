@@ -7,7 +7,7 @@ layout: default
 {%- comment -%}
   Pick a spotlight post:
     1. Most recent post with `featured: true`
-    2. Else the most recent post with a paper author list (a publication)
+    2. Else the most recent post with an author list, abstract and image
     3. Else the most recent post overall.
 {%- endcomment -%}
 {%- assign featured_post = site.posts | where: "featured", true | first -%}
@@ -24,6 +24,12 @@ layout: default
   {%- assign featured_post = site.posts | first -%}
 {%- endunless -%}
 
+{%- if page.hero_image -%}
+  <figure class="home-hero-image">
+    <img src="{{ page.hero_image | relative_url }}" alt="{{ page.hero_image_alt | default: '' | escape }}" />
+  </figure>
+{%- endif -%}
+
 <div class="home-header">
   <div class="wrapper">
     {%- if page.title -%}
@@ -38,8 +44,7 @@ layout: default
 <section class="spotlight">
   <div class="wrapper">
     <div class="section-head">
-      <span class="eyebrow">Featured research</span>
-      <h2 class="section-title">In the spotlight</h2>
+      <h2 class="section-title">Featured publication</h2>
     </div>
 
     <article class="spotlight-card">
@@ -77,8 +82,7 @@ layout: default
   <section class="research-section">
     <div class="wrapper">
       <div class="section-head">
-        <span class="eyebrow">Research</span>
-        <h2 class="section-title">What we work on</h2>
+        <h2 class="section-title">Research areas</h2>
       </div>
       <ul class="research-grid">
         {%- for area in areas -%}
@@ -106,10 +110,7 @@ layout: default
 <section class="home-posts">
   <div class="wrapper">
       <div class="section-head section-head--with-action">
-        <div>
-          <span class="eyebrow">News</span>
-          <h2 class="section-title">Latest from the lab</h2>
-        </div>
+        <h2 class="section-title">News</h2>
         <a class="section-link" href="{{ '/updates/' | relative_url }}">All updates &rarr;</a>
       </div>
 

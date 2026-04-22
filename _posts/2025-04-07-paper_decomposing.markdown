@@ -7,7 +7,7 @@ abstract: "Alzheimer’s disease (AD) subjects usually show more profound morpho
 image: /assets/papers/decomposing_paper.png.webp
 venue: Scientific Reports
 featured: true
-spotlight_excerpt: "Two new scores — an aging score and an AD-specific score — untangle the brain-atrophy signature of Alzheimer’s disease from the effects of normal aging, using learned aging templates and diffeomorphic registration on 1,014 MRI scans from OASIS-3."
+spotlight_excerpt: "Introduces two scores — an aging score and an AD-specific score — that separate disease-specific brain atrophy from the effects of normal aging, combining learned aging templates with diffeomorphic image registration. Evaluated on 1,014 T1-weighted MRI scans from the OASIS-3 cohort."
 ---
 **Published in Scientific Reports**
 
