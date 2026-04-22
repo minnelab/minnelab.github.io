@@ -24,44 +24,81 @@ layout: default
 
   </div>
 </div>
+
+{%- if site.data.research_areas or page.research_areas -%}
+  {%- assign areas = page.research_areas | default: site.data.research_areas -%}
+  <div class="research-section">
+    <div class="wrapper">
+      <div class="section-head">
+        <span class="eyebrow">Research</span>
+        <h2 class="section-title">What we work on</h2>
+      </div>
+      <ul class="research-grid">
+        {%- for area in areas -%}
+          <li class="research-card">
+            {% if area.image %}
+              <a class="research-card__image" href="{{ area.link | default: '/about/' | relative_url }}" aria-hidden="true" tabindex="-1">
+                <img src="{{ area.image | relative_url }}" alt="" />
+              </a>
+            {% endif %}
+            <div class="research-card__body">
+              <h3 class="research-card__title">
+                <a href="{{ area.link | default: '/about/' | relative_url }}">{{ area.title | escape }}</a>
+              </h3>
+              {% if area.description %}
+                <p class="research-card__desc">{{ area.description }}</p>
+              {% endif %}
+            </div>
+          </li>
+        {%- endfor -%}
+      </ul>
+    </div>
+  </div>
+{%- endif -%}
+
 <div class="home-posts">
   <div class="wrapper">
-      <!--<h2 class="post-list-heading">{{ page.list_title | default: "Posts & news" }}</h2>-->
+      <div class="section-head section-head--with-action">
+        <div>
+          <span class="eyebrow">News</span>
+          <h2 class="section-title">Latest from the lab</h2>
+        </div>
+        <a class="section-link" href="{{ '/updates/' | relative_url }}">All updates &rarr;</a>
+      </div>
 
       <ul class="post-list home-post-list">
+        {%- assign shown = 0 -%}
         {%- for post in site.posts -%}
           {% assign postStartDate = post.date | date: '%s' %}
-          {% if postStartDate <= curDate %}
+          {% if postStartDate <= curDate and shown < 5 %}
+            {%- assign shown = shown | plus: 1 -%}
             {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
             {% if post.datenotset %}
             {%- assign date_format = site.minima.date_format | default: "%Y" -%}
             {% endif %}
             <li>
+              {% if post.image %}
+                <a class="post-list-image" href="{{ post.url | relative_url }}" aria-hidden="true" tabindex="-1">
+                  <img src="{{ post.image | relative_url }}" alt="" />
+                </a>
+              {% endif %}
               <div class="post-list-description">
+                  <h4>{{ post.date | date: date_format }}</h4>
                   <h3>
                     <a class="post-link" href="{{ post.url | relative_url }}">
                       {{ post.title | escape }}
                     </a>
                   </h3>
-                  {% if post.author %}
-                    <div class="post-list-author">
-                      <strong>Paper Authors:</strong> {{ post.author | escape }}
-                    </div>
-                  {% endif %}
-                  {% if post.image %}
-                    <div class="post-list-image">
-                      <img src="{{ post.image | relative_url }}" />
-                    </div>
+                  {% if post.paper_authors %}
+                    <div class="post-list-author">{{ post.paper_authors | escape }}</div>
+                  {% elsif post.author %}
+                    <div class="post-list-author">{{ post.author | escape }}</div>
                   {% endif %}
                   {% if post.abstract %}
-                    {{ post.abstract }}
+                    <p class="post-list-excerpt">{{ post.abstract }}</p>
                   {% endif %}
-                  <p>
-                    <h4>{{ post.date | date: date_format }}</h4>
-                  </p>
               </div>
             </li>
-            <li>
           {%- endif -%}
         {%- endfor -%}
       </ul>

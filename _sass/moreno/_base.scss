@@ -9,6 +9,20 @@ dl, dd, ol, ul, figure {
 }
 
 
+/**
+ * Root
+ */
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: $kth-blue;
+  color: #fff;
+}
+
 
 /**
  * Basic styling
@@ -42,9 +56,33 @@ ul, ol, dl, figure,
 
 
 h1, h2 {
-  color: #222;
-  letter-spacing: normal;
+  color: $text-color-header;
+  letter-spacing: -0.015em;
   font-family: $title-font-family;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+h3, h4, h5, h6 {
+  color: $text-color-header;
+  letter-spacing: -0.005em;
+  font-family: $title-font-family;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+/**
+ * Small tracked-caps label — used as eyebrow above titles / section headings.
+ */
+.eyebrow {
+  display: inline-block;
+  font-family: $title-font-family;
+  font-weight: 600;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: $kth-grey;
+  margin: 0 0 0.75rem 0;
 }
 
 /**
@@ -96,28 +134,21 @@ li {
 
 
 /**
- * Headings
- */
-h1, h2, h3, h4, h5, h6 {
-  font-weight: $base-font-weight;
-  font-family: $title-font-family;
-}
-
-
-
-/**
  * Links
  */
 a {
   color: $link-color;
   text-decoration: none;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  transition: color 0.15s ease;
 
   &:visited {
     /*color: darken($brand-color, 15%);*/
   }
 
   &:hover {
-    color: $text-color;
+    color: $link-color-dark;
     text-decoration: underline;
   }
 

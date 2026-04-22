@@ -5,8 +5,12 @@
 layout: home
 ---
 
-![MINNE lab](assets/about/group_picture.jpg)
+<span class="eyebrow">KTH Royal Institute of Technology</span>
 
-MINNE lab at KTH Royal Institute of Technology. The group is led by [Rodrigo Moreno](people/rodrigo.html).
+# Biomedical imaging, quantified.
 
-**[&#xbb; Read more about our research](/about/)** and **[our group](/people/)**
+The MINNE lab develops mathematically grounded methods for medical image analysis and deep learning — bridging quantitative rigor and clinical impact. Led by [Rodrigo Moreno](/people/rodrigo.html).
+
+[Our research →](/about/) &nbsp;&nbsp; [The team →](/people/)
+
+![MINNE lab](/assets/about/group_picture.jpg)

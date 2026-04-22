@@ -3,31 +3,84 @@
  */
 
 .home-header {
-  padding-top: 1.2*$spacing-unit;
-  padding-bottom: $spacing-unit;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  @include relative-font-size(1.3);
-  line-height: $base-line-height * $base-font-size * 1.5;
+  padding-top: 72px;
+  padding-bottom: 64px;
+  background-color: $background-color;
+  border-bottom: 1px solid $grey-color-light;
   color: $text-color-header;
-  font-family: $title-font-family;
-  font-weight: 500;
-}
 
-.home-header a {
-  &,
-  &:visited {
+  @include media-query($on-palm) {
+    padding-top: 48px;
+    padding-bottom: 40px;
+  }
+
+  // Hero headline
+  h1 {
+    font-family: $title-font-family;
+    font-weight: 700;
+    font-size: 3.25rem;
+    line-height: 1.02;
+    letter-spacing: -0.028em;
     color: $text-color-header;
+    max-width: 720px;
+    margin: 0.25rem 0 1.5rem 0;
+
+    @include media-query($on-palm) {
+      font-size: 2.25rem;
+    }
+  }
+
+  // Hero lede: the first paragraph in markdown becomes a confident statement.
+  p {
+    max-width: 680px;
+    font-family: $base-font-family;
+    font-size: 1.2rem;
+    line-height: 1.55;
+    color: $text-color;
+    margin: 0 0 1rem 0;
+
+    @include media-query($on-palm) {
+      font-size: 1.08rem;
+    }
+  }
+
+  // Group photo / hero image — capped max-width so it reads editorial,
+  // not poster-sized. Clean border, no radius.
+  img {
+    display: block;
+    width: 100%;
+    max-width: 880px;
+    height: auto;
+    margin: 1.5rem 0 0 0;
+    border: 1px solid $grey-color-light;
+    border-radius: 0;
+  }
+
+  // If image is wrapped in <p> by markdown, strip the <p>'s text styling.
+  p:has(> img) {
+    font-size: inherit;
+    max-width: none;
+    margin: 1.5rem 0 0 0;
+  }
+
+  a {
+    color: $link-color;
+    font-weight: 500;
+
+    &:visited { color: $link-color; }
+    &:hover   { color: $link-color-dark; }
   }
 }
 
 .home-posts {
-  padding: $spacing-unit 0;
+  padding-top: 48px;
+  padding-bottom: 64px;
   background-color: $background-color;
 }
 
 .site-header {
-  border-top: 0px solid $grey-color-dark;
-  border-bottom: 0px solid $grey-color-light;
+  border-top: 3px solid $brand-color;
+  border-bottom: 1px solid $grey-color-light;
   min-height: $spacing-unit * 1.865;
   background-color: $background-color2;
 
@@ -36,19 +89,22 @@
 }
 
 .site-title {
-  padding-top: 3.0em;
-  padding-bottom: 2.0em;
+  padding-top: 1.4em;
+  padding-bottom: 1em;
   color: $text-color-title;
   float: left;
   font-family: $title-font-family;
+  line-height: 1;
 }
 .site-title a {
-  @include relative-font-size(2.735);
+  @include relative-font-size(2.4);
 
   font-family: $title-font-family;
   font-weight: 700;
-  line-height: $base-line-height * $base-font-size * 2.25;
-  letter-spacing: -0.5px;
+  line-height: 1;
+  letter-spacing: -0.025em;
+  display: inline-block;
+  padding-bottom: 0.15em;
 
   &,
   &:visited {
@@ -64,10 +120,14 @@
 }
 
 .site-subtitle {
-  margin-bottom: $spacing-unit;
+  margin-top: 0.35em;
+  margin-bottom: 0;
   font-family: $title-font-family;
-  font-weight: 600;
+  font-weight: 500;
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
   color: $text-color-subtitle;
+  text-transform: none;
 
   &,
   &:visited {
@@ -79,6 +139,7 @@
   float: right;
   line-height: $base-line-height * $base-font-size * 2.25;
   font-family: $title-font-family;
+  padding-top: 1.2em;
 
   .nav-trigger {
       display: none;
@@ -89,19 +150,40 @@
   }
 
   .page-link {
-    color: $text-color-subtitle;
+    color: $text-color-header;
     line-height: $base-line-height;
-    font-weight: 500;
+    font-weight: 600;
     font-family: $title-font-family;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    position: relative;
+    padding: 0.5em 0;
+    transition: color 0.15s ease;
 
     // Gaps between nav items, but not on the last one
     &:not(:last-child) {
-      margin-right: 20px;
+      margin-right: 28px;
     }
 
     &,
     &:visited {
-      color: $text-color-subtitle;
+      color: $text-color-header;
+    }
+
+    &:hover {
+      color: $link-color;
+      text-decoration: none;
+    }
+
+    &:hover::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0.1em;
+      height: 2px;
+      background: $link-color;
     }
   }
 
@@ -168,9 +250,54 @@
  * Site footer
  */
 .site-footer {
-  border-top: 0px solid $grey-color-light;
+  border-top: 1px solid $grey-color-light;
   background-color: $background-color;
-  padding: $spacing-unit 0;
+  padding: 56px 0 40px 0;
+  margin-top: 40px;
+  font-family: $title-font-family;
+  font-size: 0.88rem;
+  color: $kth-grey;
+}
+
+.site-footer a {
+  color: $text-color-header;
+
+  &:hover {
+    color: $link-color;
+  }
+}
+
+.site-footer .footer-eyebrow {
+  display: block;
+  font-family: $title-font-family;
+  font-weight: 600;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: $kth-grey;
+  margin-bottom: 0.75rem;
+}
+
+.site-footer .footer-wordmark {
+  font-family: $title-font-family;
+  font-weight: 700;
+  font-size: 1.35rem;
+  letter-spacing: -0.02em;
+  color: $kth-blue;
+  margin-bottom: 0.4rem;
+  display: block;
+}
+
+.site-footer .footer-bottom {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid $grey-color-light;
+  font-size: 0.78rem;
+  color: $kth-grey;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 .footer-heading {
@@ -245,8 +372,17 @@
 }
 
 .page-heading {
-  @include relative-font-size(2);
-  font-weight: $title-font-weight;
+  font-family: $title-font-family;
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.05;
+  color: $text-color-header;
+  margin: 0 0 0.75rem 0;
+
+  @include media-query($on-palm) {
+    font-size: 2.1rem;
+  }
 }
 
 /**
@@ -279,63 +415,264 @@
 
 
 .post-header {
-  margin-top: $spacing-unit;
+  margin-top: $spacing-unit * 1.5;
   margin-bottom: $spacing-unit;
+  padding-bottom: $spacing-unit;
+  border-bottom: 1px solid $grey-color-light;
 }
 
-.post-title {
-  @include relative-font-size(2.3);
-  font-weight: $title-font-weight;
+.post-title,
+.post-content h1 {
+  font-family: $title-font-family;
+  font-weight: 700;
+  font-size: 2.6rem;
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+  color: $text-color-header;
+  margin: 0 0 0.75rem 0;
 
-  @include media-query($on-laptop) {
-      @include relative-font-size(2);
+  @include media-query($on-palm) {
+    font-size: 2rem;
   }
-  line-height: 1;
+}
+
+.post-featured-image {
+  margin: 1.5rem 0 0 0;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid $grey-color-light;
+    border-radius: 0;
+  }
 }
 
 .dt-published {
-  font-size: $base-font-size;
-  color: #000;
+  font-family: $title-font-family;
+  font-weight: 600;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: $kth-grey;
+}
+
+.post-meta {
+  margin-top: $spacing-unit;
+  padding-top: 1rem;
+  border-top: 1px solid $grey-color-light;
 }
 
 .post-content {
-  margin-bottom: $spacing-unit;
+  margin-bottom: $spacing-unit * 2;
+  font-size: 1.05rem;
+  line-height: 1.65;
 
-  h1 {
-    @include relative-font-size(2.3);
-    font-weight: $title-font-weight;
-
-    @include media-query($on-laptop) {
-      @include relative-font-size(2);
-    }
+  > p,
+  > ul,
+  > ol,
+  > blockquote,
+  > table {
+    max-width: 720px;
   }
 
   h2 {
-    @include relative-font-size(1.8);
-    font-weight: $heading-font-weight;
-
-    @include media-query($on-laptop) {
-      @include relative-font-size(1.6);
-    }
+    font-family: $title-font-family;
+    font-weight: 700;
+    font-size: 1.65rem;
+    line-height: 1.2;
+    letter-spacing: -0.018em;
+    color: $text-color-header;
+    margin: 2.25rem 0 0.75rem 0;
   }
 
   h3 {
-    @include relative-font-size(1.4);
-    font-weight: $heading-font-weight;
-
-    @include media-query($on-laptop) {
-      @include relative-font-size(1.2);
-    }
+    font-family: $title-font-family;
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 1.25;
+    letter-spacing: -0.012em;
+    color: $text-color-header;
+    margin: 1.75rem 0 0.5rem 0;
   }
 
   h4 {
-    @include relative-font-size(1.1);
-    font-weight: $heading-font-weight;
-
-    @include media-query($on-laptop) {
-      @include relative-font-size(1.0);
-    }
+    font-family: $title-font-family;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: -0.005em;
+    color: $text-color-header;
+    margin: 1.25rem 0 0.25rem 0;
   }
+
+  p,
+  ul,
+  ol {
+    margin-bottom: 1rem;
+  }
+
+  img {
+    max-width: 100%;
+    border: 1px solid $grey-color-light;
+  }
+}
+
+/**
+ * Section heads — eyebrow label + sub-headline, with an optional action link on the right.
+ * Used on the homepage to introduce "Research" and "News" sections.
+ */
+.section-head {
+  margin-bottom: 28px;
+}
+
+.section-head .eyebrow {
+  margin-bottom: 0.35rem;
+}
+
+.section-title {
+  font-family: $title-font-family;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  color: $text-color-header;
+  margin: 0;
+
+  @include media-query($on-palm) {
+    font-size: 1.3rem;
+  }
+}
+
+.section-head--with-action {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.section-link {
+  font-family: $title-font-family;
+  font-weight: 600;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: $link-color;
+  white-space: nowrap;
+
+  &:hover {
+    color: $link-color-dark;
+    text-decoration: none;
+  }
+}
+
+.page-lede {
+  max-width: 680px;
+  font-family: $base-font-family;
+  font-size: 1.1rem;
+  line-height: 1.55;
+  color: $kth-grey;
+  margin: 0.5rem 0 0 0;
+}
+
+.page-hero {
+  padding-top: 56px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid $grey-color-light;
+  background-color: $background-color;
+
+  @include media-query($on-palm) {
+    padding-top: 40px;
+    padding-bottom: 28px;
+  }
+
+  .page-heading {
+    margin-top: 0.25rem;
+  }
+}
+
+/**
+ * Research areas — CSAIL-style thumbnail grid. Three columns on desktop,
+ * two on tablet, one on mobile. Title links out to a detail page.
+ */
+.research-section {
+  padding: 56px 0 48px 0;
+  border-bottom: 1px solid $grey-color-light;
+  background-color: $background-color;
+}
+
+.research-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 40px 32px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @include media-query($on-laptop) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px 28px;
+  }
+
+  @include media-query($on-palm) {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+.research-card {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.research-card__image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  border: 1px solid $grey-color-light;
+  margin-bottom: 1rem;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+
+  &:hover img {
+    transform: scale(1.03);
+  }
+}
+
+.research-card__title {
+  font-family: $title-font-family;
+  font-weight: 700;
+  font-size: 1.15rem;
+  line-height: 1.25;
+  letter-spacing: -0.012em;
+  color: $text-color-header;
+  margin: 0 0 0.35rem 0;
+
+  a,
+  a:visited {
+    color: $text-color-header;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: $link-color;
+  }
+}
+
+.research-card__desc {
+  font-family: $base-font-family;
+  font-size: 0.98rem;
+  line-height: 1.5;
+  color: $text-color;
+  margin: 0;
 }
 
 /**
@@ -387,45 +724,150 @@ workshop
 }
 
 /**
-Post list
-*/
+ * Post list — editorial research-showcase cards.
+ * Image left, text right on desktop; stacked on mobile.
+ * No card chrome — just a thin dividing rule and generous spacing.
+ */
 .home-post-list {
-  margin-top: $spacing-unit/2;
-  margin-bottom: $spacing-unit/2;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid $grey-color-light;
 }
 
 .home-post-list li {
-  display: flex;
-
-  flex-direction: row;
+  display: block;
+  position: relative;
   list-style-type: none;
-  margin-bottom: $spacing-unit/2;
+  padding: 40px 0 44px 312px;
+  min-height: 220px;
+  border-bottom: 1px solid $grey-color-light;
+  margin: 0;
+  transition: background-color 0.2s ease;
+
+  @include media-query($on-palm) {
+    padding: 32px 0;
+    min-height: 0;
+  }
+}
+
+// Hide stray empty <li> elements left over from the old template bug.
+.home-post-list li:not(:has(.post-list-description)) {
+  display: none;
+}
+
+// Hover: a very subtle wash, no flashy animation.
+.home-post-list li:hover {
+  background-color: #FAFAFA;
 }
 
 .post-list-image {
-  float: left;
-  min-width: 280px;
-  margin: 0.5em;
+  position: absolute;
+  left: 0;
+  top: 40px;
+  width: 280px;
+  margin: 0;
+  min-width: 0;
+  float: none;
+  overflow: hidden;
 
+  @include media-query($on-palm) {
+    position: static;
+    width: 100%;
+    margin: 0 0 20px 0;
+  }
 }
 
 .post-list-image img {
-  width: 380px;
-  border-radius: 5px;
+  width: 280px;
+  height: 187px;  // 3:2 aspect
+  object-fit: cover;
+  border-radius: 0;
+  border: 1px solid $grey-color-light;
+  display: block;
+  transition: transform 0.4s ease;
+
+  @include media-query($on-palm) {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 2;
+  }
+}
+
+.home-post-list li:hover .post-list-image img {
+  transform: scale(1.025);
 }
 
 .post-list-description {
-  /*border-top: #ddd 2px solid;*/
-  text-align: justify;
+  text-align: left;
   width: 100%;
-  padding-top: 10px;
+  padding: 0;
   vertical-align: top;
 }
 
+// The H3 inside the card is the post title — the main focal point.
+.home-post-list h3 {
+  margin: 0 0 0.5rem 0;
+  padding: 0;
+  font-family: $title-font-family;
+  font-weight: 700;
+  font-size: 1.35rem;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+  color: $text-color-header;
+}
+
+.home-post-list h3 a,
+.home-post-list h3 a:visited {
+  color: $text-color-header;
+  text-decoration: none;
+  display: inline;
+}
+
+.home-post-list li:hover h3 a {
+  color: $link-color;
+}
+
+// Author line — quiet secondary metadata.
 .post-list-author {
-  font-style: italic;
-  padding-bottom: 10px;
-  vertical-align: top;
+  font-style: normal;
+  font-family: $title-font-family;
+  font-weight: 400;
+  font-size: 0.88rem;
+  color: $kth-grey;
+  padding: 0;
+  margin: 0 0 0.75rem 0;
+}
+
+.post-list-author strong {
+  font-weight: 600;
+  color: $text-color;
+}
+
+// The raw abstract text sits as a text-node sibling — style via context.
+.home-post-list .post-list-description {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: $text-color;
+}
+
+// Excerpt paragraph sits quiet below the title.
+.home-post-list p {
+  margin: 0.5rem 0 0 0;
+  padding: 0;
+  font-size: inherit;
+}
+
+// Date eyebrow — tracked caps, sits directly above the title.
+.home-post-list h4 {
+  font-family: $title-font-family;
+  font-weight: 600;
+  font-size: 0.7rem;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: $kth-grey;
+  margin: 0 0 0.55rem 0;
 }
 
 .post-list-venue {
@@ -491,14 +933,15 @@ Post list
 .people-header {
   padding-top: $spacing-unit;
   padding-bottom: $spacing-unit;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-color: $background-color;
+  border-bottom: 1px solid $grey-color-light;
   color: $text-color-header;
 }
 
 .people-header a {
   &,
   &:visited {
-    color: $text-color-header;
+    color: $link-color;
   }
 }
 

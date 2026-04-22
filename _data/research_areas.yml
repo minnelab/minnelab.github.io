@@ -1,0 +1,23 @@
+# Research areas shown on the homepage as CSAIL-style cards.
+# Each entry: title, description, image (path under /assets/), link (optional).
+
+- title: Medical image analysis
+  description: >-
+    Quantitative methods for segmentation, registration, and biomarker
+    extraction from MR, CT, and microscopy images.
+  image: /assets/about/group_picture.jpg
+  link: /about/
+
+- title: Deep learning for biomedical imaging
+  description: >-
+    Neural architectures and training strategies that hold up under the
+    data and label constraints typical of clinical datasets.
+  image: /assets/MAIA_Segmentation_Portal.png
+  link: /about/
+
+- title: Diffusion MRI and tractography
+  description: >-
+    Reconstructing and analyzing white-matter pathways — from bundle
+    segmentation to tractogram quality assessment.
+  image: /assets/MONet_Bundle.png
+  link: /about/

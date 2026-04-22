@@ -12,7 +12,7 @@ $base-font-weight: 400 !default;
 $title-font-weight: 700 !default;
 $heading-font-weight: 600 !default;
 $small-font-size: $base-font-size * 0.85 !default;
-$base-line-height: 1.3 !default;
+$base-line-height: 1.55 !default;
 
 $spacing-unit: 30px !default;
 
@@ -20,37 +20,35 @@ $grey-color: #828282 !default;
 $grey-color-light: lighten($grey-color, 40%) !default;
 $grey-color-dark: darken($grey-color, 40%) !default;
 
-$text-color: $grey-color-dark;
-$text-color-header: #ffffff;
-$text-color-title: #2563eb;
-/*8EC7C1*/
-$text-color-title2: #1d4ed8;
-/*8EC7C1*/
-$text-color-subtitle: #1e293b;
-$background-color: #fff;
-/*#F9FBF2 !default;*/
-$background-color2: #fff !default;
-/* Modern gradient background for header */
-$background-color3: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !default;
-/*FAD7BE, F7D750, 844279*/
-$brand-color: #132C42 !default;
-/*1C0E58*/
-$link-color: #2563eb !default;
-$link-color-dark: darken($link-color, 20%) !default;
+// KTH brand palette
+$kth-blue:         #1954A6;  // Primary
+$kth-blue-dark:    #0D3D7F;  // Hover / deeper accent
+$kth-ink:          #0A0A0A;  // Headings
+$kth-text:         #1A1A1A;  // Body copy
+$kth-grey:         #6E7071;  // Secondary text, metadata
+$kth-surface:      #FFFFFF;  // Main surface
+$kth-surface-soft: #F5F5F5;  // Optional alternating section
 
-$dark-accent-color: #2C363F;
-$medium-accent-color: #22AED1;
-$light-cream-color: #F2F5EA;
+$text-color:          $kth-text;
+$text-color-header:   $kth-ink;
+$text-color-title:    $kth-blue;
+$text-color-title2:   $kth-blue;
+$text-color-subtitle: $kth-grey;
+$background-color:    $kth-surface;
+$background-color2:   $kth-surface !default;
+$brand-color:         $kth-blue !default;
+$link-color:          $kth-blue !default;
+$link-color-dark:     $kth-blue-dark !default;
 
 
 
 $table-text-align: left !default;
 
 // Width of the content area
-$content-width: 1000px !default;
+$content-width: 1200px !default;
 
 $on-palm: 700px !default;
-$on-laptop: 1000px !default;
+$on-laptop: 1200px !default;
 
 // Use media queries like this:
 // @include media-query($on-palm) {
