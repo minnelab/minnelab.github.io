@@ -25,17 +25,27 @@ layout: default
 {%- endunless -%}
 
 {%- if page.hero_image -%}
-  <figure class="home-hero-image">
-    <img src="{{ page.hero_image | relative_url }}" alt="{{ page.hero_image_alt | default: '' | escape }}" />
-  </figure>
+  <div class="home-hero">
+    <figure class="home-hero__image">
+      <img src="{{ page.hero_image | relative_url }}" alt="{{ page.hero_image_alt | default: '' | escape }}" />
+    </figure>
+    {%- if page.hero_eyebrow or page.hero_title -%}
+      <div class="home-hero__overlay">
+        <div class="wrapper">
+          {%- if page.hero_eyebrow -%}
+            <span class="home-hero__eyebrow">{{ page.hero_eyebrow | escape }}</span>
+          {%- endif -%}
+          {%- if page.hero_title -%}
+            <h1 class="home-hero__title">{{ page.hero_title | escape }}</h1>
+          {%- endif -%}
+        </div>
+      </div>
+    {%- endif -%}
+  </div>
 {%- endif -%}
 
 <div class="home-header">
   <div class="wrapper">
-    {%- if page.title -%}
-      <h1 class="page-heading">{{ page.title }}</h1>
-    {%- endif -%}
-
     {{ content }}
   </div>
 </div>
