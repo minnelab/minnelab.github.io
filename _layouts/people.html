@@ -2,73 +2,82 @@
 layout: default
 ---
 
-{%- assign default_paths = site.pages | map: "path" -%}
-{%- assign page_paths = site.header_pages | default: default_paths -%}
-
-<div class="people-header">
+<div class="page-hero">
   <div class="wrapper">
-      <!--
-      <header class="post-header">
-        <h1 class="post-title">{{ page.title | escape }}</h1>
-      </header>
-      -->
+    <span class="eyebrow">MINNE lab</span>
+    {% unless page.hide_title %}
+      <h1 class="page-heading">{{ page.title | default: "People" | escape }}</h1>
+    {% endunless %}
+    <p class="page-lede">The group — faculty, postdocs, PhD students, visitors, and alumni.</p>
 
-      <div class="post-content">
-        {{ content }}
-      </div>
-
-      <!--
-      <header class="post-header">
-        <h1 class="post-title">Current group members</h1>
-      </header>
-      -->
-
-      <div class="people-container">
-      {%- for person in site.people -%}
-        {%- assign category = person.category | default: 'page' -%}
-        {%- assign status = person.status | default: 'affiliate' -%}
-        {%- if status == 'current' -%}
-          {%- assign position = person.position | default: '' -%}
-          {%- assign image = person.image | default: site.person-default-image -%}
-          {%- if category == 'people' -%}
-            {%- if person.title -%}
-            <div class="people-item">
-              <a  href="{{ person.url | relative_url }}"><img src="{{person.image}}"" class="people-image"/></a>
-              <p>
-              <h3 class="person-name"><a class="page-link" href="{{ person.url | relative_url }}">{{ person.title | escape }}</a></h3>
-              <h4>{{position}}</h4>
-              </p>
-            </div>
-            {%- endif -%}
-          {%- endif -%}
-        {%- endif -%}
-      {%- endfor -%}
-      </div>
-    </div>
+    {%- if content != "" -%}
+      <div class="page-hero__content">{{ content }}</div>
+    {%- endif -%}
+  </div>
 </div>
-<div class="people-content">
+
+<div class="people-section">
   <div class="wrapper">
-    <h1>Alumni</h1>
-    <div class="people-container">
+    <div class="section-head">
+      <span class="eyebrow">Current members</span>
+      <h2 class="section-title">The team</h2>
+    </div>
+
+    <ul class="people-grid">
     {%- for person in site.people -%}
       {%- assign category = person.category | default: 'page' -%}
       {%- assign status = person.status | default: 'affiliate' -%}
-      {%- if status == 'alumni' -%}
+      {%- if status == 'current' and category == 'people' and person.title -%}
         {%- assign position = person.position | default: '' -%}
         {%- assign image = person.image | default: site.person-default-image -%}
-        {%- if category == 'people' -%}
-          {%- if person.title -%}
-          <div class="people-item">
-            <a  href="{{ person.url | relative_url }}"><img src="{{person.image}}"" class="people-image"/></a>
-            <p>
-            <h3 class="person-name"><a class="page-link" href="{{ person.url | relative_url }}">{{ person.title | escape }}</a></h3>
-            <h4>{{position}}</h4>
-            </p>
+        <li class="people-card">
+          <a class="people-card__image" href="{{ person.url | relative_url }}" aria-hidden="true" tabindex="-1">
+            <img src="{{ image }}" alt="" />
+          </a>
+          <div class="people-card__body">
+            <h3 class="people-card__name">
+              <a href="{{ person.url | relative_url }}">{{ person.title | escape }}</a>
+            </h3>
+            {%- if position != '' -%}
+              <p class="people-card__role">{{ position }}</p>
+            {%- endif -%}
           </div>
-          {%- endif -%}
-        {%- endif -%}
+        </li>
       {%- endif -%}
     {%- endfor -%}
+    </ul>
+  </div>
+</div>
+
+<div class="people-section people-section--alumni">
+  <div class="wrapper">
+    <div class="section-head">
+      <span class="eyebrow">Past members</span>
+      <h2 class="section-title">Alumni</h2>
     </div>
+
+    <ul class="people-grid people-grid--compact">
+    {%- for person in site.people -%}
+      {%- assign category = person.category | default: 'page' -%}
+      {%- assign status = person.status | default: 'affiliate' -%}
+      {%- if status == 'alumni' and category == 'people' and person.title -%}
+        {%- assign position = person.position | default: '' -%}
+        {%- assign image = person.image | default: site.person-default-image -%}
+        <li class="people-card">
+          <a class="people-card__image" href="{{ person.url | relative_url }}" aria-hidden="true" tabindex="-1">
+            <img src="{{ image }}" alt="" />
+          </a>
+          <div class="people-card__body">
+            <h3 class="people-card__name">
+              <a href="{{ person.url | relative_url }}">{{ person.title | escape }}</a>
+            </h3>
+            {%- if position != '' -%}
+              <p class="people-card__role">{{ position }}</p>
+            {%- endif -%}
+          </div>
+        </li>
+      {%- endif -%}
+    {%- endfor -%}
+    </ul>
   </div>
 </div>

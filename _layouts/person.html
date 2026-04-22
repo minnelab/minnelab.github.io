@@ -1,16 +1,21 @@
 ---
 layout: default
 ---
+
+<div class="page-hero">
+  <div class="wrapper">
+    <span class="eyebrow">People</span>
+    <h1 class="page-heading">{{ page.title | escape }}</h1>
+    {%- if page.position -%}
+      <p class="page-lede">{{ page.position }}</p>
+    {%- endif -%}
+  </div>
+</div>
+
 <div class="wrapper">
   <article class="post">
-
-    <header class="post-header">
-      <h1 class="post-title">{{ page.title | escape }}</h1>
-    </header>
-
     <div class="post-content">
       {{ content }}
     </div>
-
   </article>
 </div>
