@@ -1,32 +1,67 @@
 ---
 layout: default
 ---
-{% assign curDate = site.time | date: '%s' %}
-{% assign postStartDate = page.date | date: '%s' %}
 
-<div class="wrapper">
-  <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+{%- comment -%}
+  Classify the post so we can show a meaningful eyebrow label:
+   - If `paper_authors` or `venue` is set → "Publication"
+   - Else if the title starts with a paper-ish phrase or category is given → use that
+   - Default: "News"
+{%- endcomment -%}
+{%- assign post_kind = "News" -%}
+{%- if page.kind -%}
+  {%- assign post_kind = page.kind -%}
+{%- elsif page.paper_authors or page.venue -%}
+  {%- assign post_kind = "Publication" -%}
+{%- endif -%}
 
-    <header class="post-header">
-      <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
-      {% if page.image and page.hide_image != true and page.hide_image != 'true' %}
-        <figure class="post-featured-image">
-          <img src="{{ page.image | relative_url }}" alt="{{ page.title | escape }} featured image" />
-        </figure>
-      {% endif %}
-      {%- if page.author -%}
-        <p>
-          <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
-        </p>
+<div class="page-hero page-hero--post">
+  <div class="wrapper">
+    <a class="post-backlink" href="{{ '/updates/' | relative_url }}">&larr; All updates</a>
+    <span class="eyebrow">{{ post_kind }}</span>
+    <h1 class="post-title">{{ page.title | escape }}</h1>
+
+    <div class="post-meta-strip">
+      <time class="post-meta-strip__item post-meta-strip__date" datetime="{{ page.date | date_to_xmlschema }}">
+        {%- assign date_format = site.minima.date_format | default: "%B %-d, %Y" -%}
+        {{ page.date | date: date_format }}
+      </time>
+
+      {%- if page.paper_authors -%}
+        <span class="post-meta-strip__item post-meta-strip__authors">
+          {{ page.paper_authors | escape }}
+        </span>
+      {%- elsif page.author -%}
+        <span class="post-meta-strip__item post-meta-strip__authors">
+          {{ page.author | escape }}
+        </span>
       {%- endif -%}
-      {% if page.paper %}
-        <p>
-          <a href="{{ page.paper | escape }}" target="_blank">[Paper URL]</a>
-        </p>
-      {% endif %}
-    </header>
 
+      {%- if page.venue -%}
+        <span class="post-meta-strip__item post-meta-strip__venue">
+          {{ page.venue | escape }}
+        </span>
+      {%- endif -%}
+    </div>
 
+    {%- if page.paper -%}
+      <div class="post-actions">
+        <a class="post-actions__link" href="{{ page.paper | escape }}" target="_blank" rel="noopener">
+          Read paper &rarr;
+        </a>
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+
+{%- if page.image and page.hide_image != true and page.hide_image != 'true' -%}
+  <figure class="post-hero-image">
+    <img src="{{ page.image | relative_url }}" alt="{{ page.title | escape }}" />
+  </figure>
+{%- endif -%}
+
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="wrapper">
     <div class="post-content e-content" itemprop="articleBody">
       {{ content }}
     </div>
@@ -36,11 +71,44 @@ layout: default
     {%- endif -%}
 
     <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
-    <p class="post-meta">
-      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        {{ page.date | date: date_format }}
-      </time>
-    </p>
-  </article>
-</div>
+  </div>
+</article>
+
+{%- comment -%} Related updates — 3 most recent posts other than this one. {%- endcomment -%}
+{%- assign related_posts = "" | split: "" -%}
+{%- for p in site.posts -%}
+  {%- if p.url != page.url and related_posts.size < 3 -%}
+    {%- assign related_posts = related_posts | push: p -%}
+  {%- endif -%}
+{%- endfor -%}
+
+{%- if related_posts.size > 0 -%}
+<section class="post-related">
+  <div class="wrapper">
+    <div class="section-head section-head--with-action">
+      <h2 class="section-title">More from the lab</h2>
+      <a class="section-link" href="{{ '/updates/' | relative_url }}">All updates &rarr;</a>
+    </div>
+
+    <ul class="post-related__grid">
+      {%- for p in related_posts -%}
+        <li class="post-related__card">
+          {% if p.image %}
+            <a class="post-related__image" href="{{ p.url | relative_url }}" aria-hidden="true" tabindex="-1">
+              <img src="{{ p.image | relative_url }}" alt="" />
+            </a>
+          {% endif %}
+          <div class="post-related__body">
+            <h4 class="post-related__date">
+              {{ p.date | date: "%b %-d, %Y" }}
+            </h4>
+            <h3 class="post-related__title">
+              <a href="{{ p.url | relative_url }}">{{ p.title | escape }}</a>
+            </h3>
+          </div>
+        </li>
+      {%- endfor -%}
+    </ul>
+  </div>
+</section>
+{%- endif -%}

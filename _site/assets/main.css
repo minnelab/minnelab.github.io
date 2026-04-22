@@ -219,21 +219,69 @@ table td { border: 1px solid #e8e8e8; }
 .post-list { margin-left: 0; list-style: none; }
 .post-list > li { margin-bottom: 30px; }
 
-.post-meta { font-size: 15.3px; color: #828282; }
-
 .post-link { display: block; font-size: 25.2px; }
 
-.post-header { margin-top: 45px; margin-bottom: 30px; padding-bottom: 30px; border-bottom: 1px solid #e8e8e8; }
+/** Post detail page  Layout: [page-hero--post]   back link · eyebrow · title · meta strip · action [post-hero-image]   wide banner image for the post (optional) [post-content]      body, constrained to a readable column [post-related]      "More from the lab" card grid */
+.page-hero--post { padding-top: 36px; padding-bottom: 40px; }
+@media screen and (max-width: 700px) { .page-hero--post { padding-top: 24px; padding-bottom: 28px; } }
+.page-hero--post .eyebrow { margin-bottom: 0.75rem; }
 
-.post-title, .post-content h1 { font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 700; font-size: 2.6rem; line-height: 1.08; letter-spacing: -0.025em; color: #0A0A0A; margin: 0 0 0.75rem 0; }
-@media screen and (max-width: 700px) { .post-title, .post-content h1 { font-size: 2rem; } }
+.post-backlink { display: inline-block; font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 600; font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.14em; color: #6E7071; margin-bottom: 1.75rem; }
+.post-backlink, .post-backlink:visited { color: #6E7071; }
+.post-backlink:hover { color: #1954A6; text-decoration: none; }
 
-.post-featured-image { margin: 1.5rem 0 0 0; }
+.post-title, .post-content h1 { font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 700; font-size: 2.6rem; line-height: 1.08; letter-spacing: -0.025em; color: #0A0A0A; margin: 0 0 1.25rem 0; max-width: 860px; }
+@media screen and (max-width: 700px) { .post-title, .post-content h1 { font-size: 2rem; margin-bottom: 1rem; } }
+
+.post-meta-strip { display: flex; flex-wrap: wrap; align-items: center; gap: 0; font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 0.9rem; line-height: 1.35; color: #6E7071; margin: 0; }
+
+.post-meta-strip__item { display: inline-flex; align-items: center; padding: 0; margin: 0; }
+.post-meta-strip__item + .post-meta-strip__item::before { content: "·"; display: inline-block; margin: 0 0.75em; color: #e8e8e8; font-weight: 400; }
+
+.post-meta-strip__date { font-weight: 500; color: #0A0A0A; }
+
+.post-meta-strip__authors { font-weight: 400; color: #6E7071; }
+
+.post-meta-strip__venue { font-weight: 600; font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: #1954A6; }
+
+.post-actions { margin-top: 1.5rem; }
+
+.post-actions__link { display: inline-flex; align-items: center; gap: 0.4em; padding: 0.72em 1.2em; font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 600; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.12em; line-height: 1; color: #ffffff; background-color: #1954A6; border: 1px solid #1954A6; text-decoration: none; transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease; }
+.post-actions__link, .post-actions__link:visited { color: #ffffff; }
+.post-actions__link:hover { background-color: #0D3D7F; border-color: #0D3D7F; color: #ffffff; text-decoration: none; }
+
+/** Full-bleed post hero image — banner between hero text and content. */
+.post-hero-image { width: 100%; margin: 0; background-color: #F5F5F5; }
+.post-hero-image img { display: block; width: 100%; max-width: 1400px; height: auto; max-height: 640px; object-fit: cover; object-position: center; margin: 0 auto; border: 0; border-radius: 0; }
+@media screen and (max-width: 700px) { .post-hero-image img { max-height: 360px; } }
+
+.post-featured-image { margin: 1.5rem 0; }
 .post-featured-image img { display: block; width: 100%; height: auto; border: 1px solid #e8e8e8; border-radius: 0; }
 
-.dt-published { font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 600; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.14em; color: #6E7071; }
+.dt-published { font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 500; font-size: 0.85rem; color: #6E7071; text-transform: none; letter-spacing: 0; }
 
-.post-meta { margin-top: 30px; padding-top: 1rem; border-top: 1px solid #e8e8e8; }
+/** Post footer meta — date at bottom, quiet. */
+.post .post-meta { margin-top: 45px; padding-top: 1.25rem; border-top: 1px solid #e8e8e8; font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 15.3px; color: #6E7071; }
+
+/** Related-updates grid at the bottom of a post */
+.post-related { padding: 56px 0 64px 0; margin-top: 48px; border-top: 1px solid #e8e8e8; background-color: #F5F5F5; }
+@media screen and (max-width: 700px) { .post-related { padding: 40px 0 48px 0; margin-top: 32px; } }
+
+.post-related__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px 28px; margin: 0; padding: 0; list-style: none; }
+@media screen and (max-width: 1200px) { .post-related__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media screen and (max-width: 700px) { .post-related__grid { grid-template-columns: 1fr; gap: 32px; } }
+
+.post-related__card { margin: 0; padding: 0; list-style: none; }
+
+.post-related__image { display: block; width: 100%; aspect-ratio: 3 / 2; overflow: hidden; border: 1px solid #e8e8e8; margin-bottom: 1rem; }
+.post-related__image img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
+.post-related__image:hover img { transform: scale(1.03); }
+
+.post-related__date { font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 600; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.14em; color: #6E7071; margin: 0 0 0.45rem 0; }
+
+.post-related__title { font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 700; font-size: 1.05rem; line-height: 1.25; letter-spacing: -0.01em; color: #0A0A0A; margin: 0; }
+.post-related__title a, .post-related__title a:visited { color: #0A0A0A; text-decoration: none; }
+.post-related__title a:hover { color: #1954A6; }
 
 .post-content { margin-bottom: 60px; font-size: 1.05rem; line-height: 1.65; }
 .post-content > p, .post-content > ul, .post-content > ol, .post-content > blockquote, .post-content > table { max-width: 720px; }
@@ -413,6 +461,77 @@ workshop
 /* LAB LOGO
 */
 .lab-logo { max-width: 300px; height: auto; display: block; margin: 0 auto 2em auto; border-radius: 5px; }
+
+/** Page-body lede — for a short intro paragraph directly below a page-hero inside the .post-content reading column. */
+.post-content > .page-lede { max-width: 720px; font-family: "Georgia", "Times New Roman", Times, serif; font-size: 1.2rem; line-height: 1.5; color: #1A1A1A; margin: 0 0 2.5rem 0; }
+
+.muted-note { max-width: 720px; font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 0.9rem; color: #6E7071; margin: 1.25rem 0 0 0; }
+
+/** Code & Data page — GitHub-profile hero, repository card grid, dataset card. */
+.repo-hero { display: flex; align-items: flex-start; gap: 24px; max-width: 780px; padding: 28px 28px 30px 28px; margin: 1rem 0 2.5rem 0; border: 1px solid #e8e8e8; background-color: #F5F5F5; }
+@media screen and (max-width: 700px) { .repo-hero { padding: 20px; gap: 16px; } }
+
+.repo-hero__body { flex: 1; min-width: 0; }
+
+.repo-hero__eyebrow { display: inline-block; font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 600; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.14em; color: #6E7071; margin: 0 0 0.4rem 0; }
+
+.repo-hero__title { font-family: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-weight: 600; font-size: 1.2rem; line-height: 1.2; color: #0A0A0A; margin: 0 0 0.5rem 0; word-break: break-all; }
+
+.repo-hero__desc { font-family: "Georgia", "Times New Roman", Times, serif; font-size: 1rem; line-height: 1.55; color: #1A1A1A; margin: 0 0 1rem 0; }
+
+.repo-hero__link { display: inline-flex; align-items: center; gap: 0.3em; font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 600; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.12em; color: #1954A6; text-decoration: none; }
+.repo-hero__link:hover { color: #0D3D7F; text-decoration: none; }
+
+.repo-grid { display: grid !important; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 24px; margin: 1rem 0 0 0 !important; padding: 0 !important; list-style: none; max-width: none !important; }
+@media screen and (max-width: 700px) { .repo-grid { grid-template-columns: 1fr; gap: 16px; } }
+
+.repo-card { margin: 0 !important; padding: 22px 22px 24px 22px; list-style: none; background-color: #FFFFFF; border: 1px solid #e8e8e8; transition: border-color 0.2s ease, transform 0.2s ease; }
+.repo-card:hover { border-color: #1954A6; }
+
+.repo-card__tag { display: inline-block; font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 600; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.14em; color: #1954A6; margin: 0 0 0.5rem 0; }
+
+.repo-card__title { font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 700; font-size: 1.05rem; line-height: 1.25; letter-spacing: -0.01em; color: #0A0A0A; margin: 0 0 0.4rem 0; }
+
+.repo-card__desc { font-family: "Georgia", "Times New Roman", Times, serif; font-size: 0.95rem; line-height: 1.5; color: #1A1A1A; margin: 0; }
+
+/** Dataset card — structured metadata block for dataset releases. */
+.dataset-card { max-width: 860px; margin: 1rem 0 2.5rem 0; padding: 32px 32px 28px 32px; border: 1px solid #e8e8e8; background-color: #FFFFFF; }
+@media screen and (max-width: 700px) { .dataset-card { padding: 22px; } }
+
+.dataset-card__header { padding-bottom: 20px; border-bottom: 1px solid #e8e8e8; margin-bottom: 22px; }
+
+.dataset-card__tag { display: inline-block; font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 600; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.14em; color: #1954A6; padding: 0.3em 0.65em; border: 1px solid #1954A6; margin: 0 0 1rem 0; }
+
+.dataset-card__title { font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 700; font-size: 1.45rem; line-height: 1.2; letter-spacing: -0.015em; color: #0A0A0A; margin: 0 0 0.65rem 0; }
+
+.dataset-card__desc { font-family: "Georgia", "Times New Roman", Times, serif; font-size: 1rem; line-height: 1.55; color: #1A1A1A; margin: 0; }
+
+.dataset-card__meta { margin: 0 0 24px 0; padding: 0; }
+
+.dataset-card__row { display: grid; grid-template-columns: 150px 1fr; gap: 0 24px; padding: 10px 0; border-top: 1px solid #e8e8e8; }
+.dataset-card__row:first-child { border-top: 0; padding-top: 0; }
+@media screen and (max-width: 700px) { .dataset-card__row { grid-template-columns: 1fr; gap: 2px 0; padding: 10px 0; } }
+.dataset-card__row dt { font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 600; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.12em; color: #6E7071; line-height: 1.4; margin: 0; padding-top: 3px; }
+.dataset-card__row dd { font-family: "Georgia", "Times New Roman", Times, serif; font-size: 0.98rem; line-height: 1.5; color: #1A1A1A; margin: 0; }
+
+.dataset-card__citation { padding-top: 20px; border-top: 1px solid #e8e8e8; }
+.dataset-card__citation .eyebrow { margin-bottom: 0.5rem; }
+.dataset-card__citation p { font-family: "Georgia", "Times New Roman", Times, serif; font-size: 0.92rem; line-height: 1.55; color: #1A1A1A; margin: 0 0 0.75rem 0; }
+.dataset-card__citation p:last-child { margin-bottom: 0; }
+
+.dataset-card__related { color: #6E7071 !important; }
+
+/** Teaching page — course cards (code + title) in a responsive grid. */
+.course-grid { display: grid !important; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 20px; margin: 1rem 0 2.5rem 0 !important; padding: 0 !important; list-style: none; max-width: none !important; }
+@media screen and (max-width: 700px) { .course-grid { grid-template-columns: 1fr; gap: 12px; } }
+
+.course-card { display: flex; align-items: baseline; gap: 18px; margin: 0 !important; padding: 14px 18px; list-style: none; background-color: #FFFFFF; border: 1px solid #e8e8e8; border-left: 3px solid #1954A6; transition: background-color 0.2s ease; }
+.course-card:hover { background-color: #F5F5F5; }
+@media screen and (max-width: 700px) { .course-card { flex-direction: column; align-items: flex-start; gap: 4px; } }
+
+.course-card__code { flex: 0 0 auto; min-width: 72px; font-family: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-weight: 600; font-size: 0.82rem; color: #1954A6; letter-spacing: 0.02em; }
+
+.course-card__title { font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 500; font-size: 0.98rem; line-height: 1.3; color: #0A0A0A; margin: 0; }
 
 /** Syntax highlighting styles using KTH color scheme Based on KTH brand guidelines and official color palette */
 .highlight { background: #fff; }

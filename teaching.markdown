@@ -1,35 +1,35 @@
 ---
 layout: page
-title: COURSES
+title: Teaching
 permalink: /COURSES/
-hide_title: true
 ---
 
+<p class="page-lede">Rodrigo Moreno teaches the following courses at the Department of Biomedical Engineering and Health Systems at KTH Royal Institute of Technology.</p>
 
-Rodrigo Moreno currently teaches the following courses at the Department of Biomedical Engineering and Health Systems at KTH Royal Institute of Technology:
+## Examiner and course responsible
 
+<ul class="course-grid">
+  <li class="course-card"><span class="course-card__code">HL2027</span><h4 class="course-card__title">3D Image Reconstruction and Analysis in Medicine</h4></li>
+  <li class="course-card"><span class="course-card__code">CM207V</span><h4 class="course-card__title">Basic Medical Image Visualization</h4></li>
+  <li class="course-card"><span class="course-card__code">CM203V</span><h4 class="course-card__title">Introduction to Medical Image Analysis</h4></li>
+  <li class="course-card"><span class="course-card__code">CM2021</span><h4 class="course-card__title">Magnetic Resonance Imaging</h4></li>
+  <li class="course-card"><span class="course-card__code">CM209V</span><h4 class="course-card__title">Magnetic Resonance Imaging Sequences</h4></li>
+  <li class="course-card"><span class="course-card__code">CM208V</span><h4 class="course-card__title">Magnetic Resonance Imaging Basic Principles</h4></li>
+  <li class="course-card"><span class="course-card__code">CM201V</span><h4 class="course-card__title">Medical Image Registration</h4></li>
+  <li class="course-card"><span class="course-card__code">CM202V</span><h4 class="course-card__title">Medical Image Segmentation</h4></li>
+  <li class="course-card"><span class="course-card__code">CM2006</span><h4 class="course-card__title">Medical Image Visualization</h4></li>
+  <li class="course-card"><span class="course-card__code">CM210V</span><h4 class="course-card__title">Postprocessing in Magnetic Resonance Imaging</h4></li>
+  <li class="course-card"><span class="course-card__code">HL1014</span><h4 class="course-card__title">Clinical Engineering</h4></li>
+  <li class="course-card"><span class="course-card__code">HL1015</span><h4 class="course-card__title">Engineering in Intensive Care and Surgery</h4></li>
+  <li class="course-card"><span class="course-card__code">HL2015</span><h4 class="course-card__title">Quality and Regulatory Aspects on Medical Devices</h4></li>
+  <li class="course-card"><span class="course-card__code">HL1013</span><h4 class="course-card__title">Medical Imaging Systems</h4></li>
+</ul>
 
+## Teaching
 
-### **Examiner and course responsible**
-
-* 3D Image Reconstruction and Analysis in Medicine (HL2027)  
-* Basic Medical Image Visualization (CM207V)  
-* Introduction to Medical Image Analysis (CM203V)  
-* Magnetic Resonance Imaging (CM2021)  
-* Magnetic Resonance Imaging Sequences (CM209V)  
-* Magnetic Resonance Imaging Basic Principles (CM208V)  
-* Medical Image Registration (CM201V)  
-* Medical Image Segmentation (CM202V)  
-* Medical Image Visualization (CM2006)  
-* Postprocessing in Magnetic Resonance Imaging (CM210V)  
-* Clinical Engineering (HL1014)  
-* Engineering in Intensive Care and Surgery (HL1015)  
-* Quality and Regulatory Aspects on Medical Devices (HL2015)  
-* Medical Imaging Systems (HL1013)  
-
-### **As teacher**
-
-* Degree Project in Medical Engineering, Second Cycle (HL205X)  
-* Project Carrier Course for Medical Engineers, part 2 (CM2016)  
-* Statistics for Medical Engineering (CM2018)  
-* Technology and Health (FCH3101)  
+<ul class="course-grid">
+  <li class="course-card"><span class="course-card__code">HL205X</span><h4 class="course-card__title">Degree Project in Medical Engineering, Second Cycle</h4></li>
+  <li class="course-card"><span class="course-card__code">CM2016</span><h4 class="course-card__title">Project Carrier Course for Medical Engineers, part 2</h4></li>
+  <li class="course-card"><span class="course-card__code">CM2018</span><h4 class="course-card__title">Statistics for Medical Engineering</h4></li>
+  <li class="course-card"><span class="course-card__code">FCH3101</span><h4 class="course-card__title">Technology and Health</h4></li>
+</ul>

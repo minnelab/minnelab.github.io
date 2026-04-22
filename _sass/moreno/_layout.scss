@@ -685,22 +685,54 @@
   }
 }
 
-.post-meta {
-  font-size: $small-font-size;
-  color: $grey-color;
-}
-
 .post-link {
   display: block;
   @include relative-font-size(1.4);
 }
 
+/**
+ * Post detail page
+ *
+ * Layout:
+ *   [page-hero--post]   back link · eyebrow · title · meta strip · action
+ *   [post-hero-image]   wide banner image for the post (optional)
+ *   [post-content]      body, constrained to a readable column
+ *   [post-related]      "More from the lab" card grid
+ */
 
-.post-header {
-  margin-top: $spacing-unit * 1.5;
-  margin-bottom: $spacing-unit;
-  padding-bottom: $spacing-unit;
-  border-bottom: 1px solid $grey-color-light;
+.page-hero--post {
+  padding-top: 36px;
+  padding-bottom: 40px;
+
+  @include media-query($on-palm) {
+    padding-top: 24px;
+    padding-bottom: 28px;
+  }
+
+  .eyebrow {
+    margin-bottom: 0.75rem;
+  }
+}
+
+.post-backlink {
+  display: inline-block;
+  font-family: $title-font-family;
+  font-weight: 600;
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: $kth-grey;
+  margin-bottom: 1.75rem;
+
+  &,
+  &:visited {
+    color: $kth-grey;
+  }
+
+  &:hover {
+    color: $link-color;
+    text-decoration: none;
+  }
 }
 
 .post-title,
@@ -711,15 +743,124 @@
   line-height: 1.08;
   letter-spacing: -0.025em;
   color: $text-color-header;
-  margin: 0 0 0.75rem 0;
+  margin: 0 0 1.25rem 0;
+  max-width: 860px;
 
   @include media-query($on-palm) {
     font-size: 2rem;
+    margin-bottom: 1rem;
   }
 }
 
+.post-meta-strip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0;
+  font-family: $title-font-family;
+  font-size: 0.9rem;
+  line-height: 1.35;
+  color: $kth-grey;
+  margin: 0;
+}
+
+.post-meta-strip__item {
+  display: inline-flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+
+  // Dot separator between items
+  & + .post-meta-strip__item::before {
+    content: "·";
+    display: inline-block;
+    margin: 0 0.75em;
+    color: $grey-color-light;
+    font-weight: 400;
+  }
+}
+
+.post-meta-strip__date {
+  font-weight: 500;
+  color: $text-color-header;
+}
+
+.post-meta-strip__authors {
+  font-weight: 400;
+  color: $kth-grey;
+}
+
+.post-meta-strip__venue {
+  font-weight: 600;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: $kth-blue;
+}
+
+.post-actions {
+  margin-top: 1.5rem;
+}
+
+.post-actions__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  padding: 0.72em 1.2em;
+  font-family: $title-font-family;
+  font-weight: 600;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  line-height: 1;
+  color: #ffffff;
+  background-color: $kth-blue;
+  border: 1px solid $kth-blue;
+  text-decoration: none;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+
+  &,
+  &:visited {
+    color: #ffffff;
+  }
+
+  &:hover {
+    background-color: $kth-blue-dark;
+    border-color: $kth-blue-dark;
+    color: #ffffff;
+    text-decoration: none;
+  }
+}
+
+/**
+ * Full-bleed post hero image — banner between hero text and content.
+ */
+.post-hero-image {
+  width: 100%;
+  margin: 0;
+  background-color: $kth-surface-soft;
+
+  img {
+    display: block;
+    width: 100%;
+    max-width: 1400px;
+    height: auto;
+    max-height: 640px;
+    object-fit: cover;
+    object-position: center;
+    margin: 0 auto;
+    border: 0;
+    border-radius: 0;
+  }
+
+  @include media-query($on-palm) {
+    img { max-height: 360px; }
+  }
+}
+
+// Legacy selector kept so in-body <figure class="post-featured-image"> still renders tidy.
 .post-featured-image {
-  margin: 1.5rem 0 0 0;
+  margin: 1.5rem 0;
 
   img {
     display: block;
@@ -732,17 +873,113 @@
 
 .dt-published {
   font-family: $title-font-family;
-  font-weight: 600;
-  font-size: 0.72rem;
-  text-transform: uppercase;
-  letter-spacing: 0.14em;
+  font-weight: 500;
+  font-size: 0.85rem;
+  color: $kth-grey;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+/**
+ * Post footer meta — date at bottom, quiet.
+ */
+.post .post-meta {
+  margin-top: $spacing-unit * 1.5;
+  padding-top: 1.25rem;
+  border-top: 1px solid $grey-color-light;
+  font-family: $title-font-family;
+  font-size: $small-font-size;
   color: $kth-grey;
 }
 
-.post-meta {
-  margin-top: $spacing-unit;
-  padding-top: 1rem;
+/**
+ * Related-updates grid at the bottom of a post
+ */
+.post-related {
+  padding: 56px 0 64px 0;
+  margin-top: 48px;
   border-top: 1px solid $grey-color-light;
+  background-color: $kth-surface-soft;
+
+  @include media-query($on-palm) {
+    padding: 40px 0 48px 0;
+    margin-top: 32px;
+  }
+}
+
+.post-related__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px 28px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @include media-query($on-laptop) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @include media-query($on-palm) {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+.post-related__card {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.post-related__image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  border: 1px solid $grey-color-light;
+  margin-bottom: 1rem;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+
+  &:hover img {
+    transform: scale(1.03);
+  }
+}
+
+.post-related__date {
+  font-family: $title-font-family;
+  font-weight: 600;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: $kth-grey;
+  margin: 0 0 0.45rem 0;
+}
+
+.post-related__title {
+  font-family: $title-font-family;
+  font-weight: 700;
+  font-size: 1.05rem;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: $text-color-header;
+  margin: 0;
+
+  a,
+  a:visited {
+    color: $text-color-header;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: $link-color;
+  }
 }
 
 .post-content {
@@ -1435,4 +1672,339 @@ workshop
   display: block;
   margin: 0 auto 2em auto;
   border-radius: 5px;
+}
+
+
+/**
+ * Page-body lede — for a short intro paragraph directly below a page-hero
+ * inside the .post-content reading column.
+ */
+.post-content > .page-lede {
+  max-width: 720px;
+  font-family: $base-font-family;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: $text-color;
+  margin: 0 0 2.5rem 0;
+}
+
+.muted-note {
+  max-width: 720px;
+  font-family: $title-font-family;
+  font-size: 0.9rem;
+  color: $kth-grey;
+  margin: 1.25rem 0 0 0;
+}
+
+
+/**
+ * Code & Data page — GitHub-profile hero, repository card grid, dataset card.
+ */
+
+.repo-hero {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  max-width: 780px;
+  padding: 28px 28px 30px 28px;
+  margin: 1rem 0 2.5rem 0;
+  border: 1px solid $grey-color-light;
+  background-color: $kth-surface-soft;
+
+  @include media-query($on-palm) {
+    padding: 20px;
+    gap: 16px;
+  }
+}
+
+.repo-hero__body {
+  flex: 1;
+  min-width: 0;
+}
+
+.repo-hero__eyebrow {
+  display: inline-block;
+  font-family: $title-font-family;
+  font-weight: 600;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: $kth-grey;
+  margin: 0 0 0.4rem 0;
+}
+
+.repo-hero__title {
+  font-family: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 1.2;
+  color: $text-color-header;
+  margin: 0 0 0.5rem 0;
+  word-break: break-all;
+}
+
+.repo-hero__desc {
+  font-family: $base-font-family;
+  font-size: 1rem;
+  line-height: 1.55;
+  color: $text-color;
+  margin: 0 0 1rem 0;
+}
+
+.repo-hero__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3em;
+  font-family: $title-font-family;
+  font-weight: 600;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: $link-color;
+  text-decoration: none;
+
+  &:hover {
+    color: $link-color-dark;
+    text-decoration: none;
+  }
+}
+
+.repo-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px 24px;
+  margin: 1rem 0 0 0 !important;
+  padding: 0 !important;
+  list-style: none;
+  max-width: none !important;
+
+  @include media-query($on-palm) {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+.repo-card {
+  margin: 0 !important;
+  padding: 22px 22px 24px 22px;
+  list-style: none;
+  background-color: $background-color;
+  border: 1px solid $grey-color-light;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    border-color: $kth-blue;
+  }
+}
+
+.repo-card__tag {
+  display: inline-block;
+  font-family: $title-font-family;
+  font-weight: 600;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: $kth-blue;
+  margin: 0 0 0.5rem 0;
+}
+
+.repo-card__title {
+  font-family: $title-font-family;
+  font-weight: 700;
+  font-size: 1.05rem;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: $text-color-header;
+  margin: 0 0 0.4rem 0;
+}
+
+.repo-card__desc {
+  font-family: $base-font-family;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: $text-color;
+  margin: 0;
+}
+
+
+/**
+ * Dataset card — structured metadata block for dataset releases.
+ */
+.dataset-card {
+  max-width: 860px;
+  margin: 1rem 0 2.5rem 0;
+  padding: 32px 32px 28px 32px;
+  border: 1px solid $grey-color-light;
+  background-color: $background-color;
+
+  @include media-query($on-palm) {
+    padding: 22px;
+  }
+}
+
+.dataset-card__header {
+  padding-bottom: 20px;
+  border-bottom: 1px solid $grey-color-light;
+  margin-bottom: 22px;
+}
+
+.dataset-card__tag {
+  display: inline-block;
+  font-family: $title-font-family;
+  font-weight: 600;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: $kth-blue;
+  padding: 0.3em 0.65em;
+  border: 1px solid $kth-blue;
+  margin: 0 0 1rem 0;
+}
+
+.dataset-card__title {
+  font-family: $title-font-family;
+  font-weight: 700;
+  font-size: 1.45rem;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  color: $text-color-header;
+  margin: 0 0 0.65rem 0;
+}
+
+.dataset-card__desc {
+  font-family: $base-font-family;
+  font-size: 1rem;
+  line-height: 1.55;
+  color: $text-color;
+  margin: 0;
+}
+
+.dataset-card__meta {
+  margin: 0 0 24px 0;
+  padding: 0;
+}
+
+.dataset-card__row {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 0 24px;
+  padding: 10px 0;
+  border-top: 1px solid $grey-color-light;
+
+  &:first-child {
+    border-top: 0;
+    padding-top: 0;
+  }
+
+  @include media-query($on-palm) {
+    grid-template-columns: 1fr;
+    gap: 2px 0;
+    padding: 10px 0;
+  }
+
+  dt {
+    font-family: $title-font-family;
+    font-weight: 600;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: $kth-grey;
+    line-height: 1.4;
+    margin: 0;
+    padding-top: 3px;
+  }
+
+  dd {
+    font-family: $base-font-family;
+    font-size: 0.98rem;
+    line-height: 1.5;
+    color: $text-color;
+    margin: 0;
+  }
+}
+
+.dataset-card__citation {
+  padding-top: 20px;
+  border-top: 1px solid $grey-color-light;
+
+  .eyebrow {
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-family: $base-font-family;
+    font-size: 0.92rem;
+    line-height: 1.55;
+    color: $text-color;
+    margin: 0 0 0.75rem 0;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.dataset-card__related {
+  color: $kth-grey !important;
+}
+
+
+/**
+ * Teaching page — course cards (code + title) in a responsive grid.
+ */
+.course-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px 20px;
+  margin: 1rem 0 2.5rem 0 !important;
+  padding: 0 !important;
+  list-style: none;
+  max-width: none !important;
+
+  @include media-query($on-palm) {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
+.course-card {
+  display: flex;
+  align-items: baseline;
+  gap: 18px;
+  margin: 0 !important;
+  padding: 14px 18px;
+  list-style: none;
+  background-color: $background-color;
+  border: 1px solid $grey-color-light;
+  border-left: 3px solid $kth-blue;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: $kth-surface-soft;
+  }
+
+  @include media-query($on-palm) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+}
+
+.course-card__code {
+  flex: 0 0 auto;
+  min-width: 72px;
+  font-family: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-weight: 600;
+  font-size: 0.82rem;
+  color: $kth-blue;
+  letter-spacing: 0.02em;
+}
+
+.course-card__title {
+  font-family: $title-font-family;
+  font-weight: 500;
+  font-size: 0.98rem;
+  line-height: 1.3;
+  color: $text-color-header;
+  margin: 0;
 }
