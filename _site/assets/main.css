@@ -80,20 +80,33 @@ table td { border: 1px solid #e8e8e8; }
 .home-hero { position: relative; width: 100%; background-color: #0A0A0A; overflow: hidden; }
 
 .home-hero__image { margin: 0; }
-.home-hero__image img { display: block; width: 100%; height: 560px; max-height: 72vh; object-fit: cover; object-position: center 40%; border: 0; border-radius: 0; }
-@media screen and (max-width: 1200px) { .home-hero__image img { height: 480px; } }
-@media screen and (max-width: 700px) { .home-hero__image img { height: 360px; max-height: 55vh; } }
+.home-hero__image img { display: block; width: 100%; height: 640px; max-height: 78vh; object-fit: cover; object-position: center 38%; border: 0; border-radius: 0; }
+@media screen and (max-width: 1200px) { .home-hero__image img { height: 540px; } }
+@media screen and (max-width: 700px) { .home-hero__image img { height: 460px; max-height: 70vh; } }
 
-.home-hero__overlay { position: absolute; inset: 0; display: flex; align-items: flex-end; pointer-events: none; background: linear-gradient(180deg, rgba(0, 0, 0, 0) 35%, rgba(0, 0, 0, 0.35) 70%, rgba(0, 0, 0, 0.72) 100%); }
-.home-hero__overlay .wrapper { padding-top: 48px; padding-bottom: 48px; }
-@media screen and (max-width: 700px) { .home-hero__overlay .wrapper { padding-top: 32px; padding-bottom: 28px; } }
+.home-hero__overlay { position: absolute; inset: 0; display: flex; align-items: flex-end; pointer-events: none; background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.15) 35%, rgba(0, 0, 0, 0.55) 70%, rgba(0, 0, 0, 0.82) 100%); }
+.home-hero__overlay .wrapper { padding-top: 72px; padding-bottom: 56px; }
+@media screen and (max-width: 700px) { .home-hero__overlay .wrapper { padding-top: 40px; padding-bottom: 32px; } }
 .home-hero__overlay * { pointer-events: auto; }
 
-.home-hero__eyebrow { display: inline-block; font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 600; font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.18em; color: rgba(255, 255, 255, 0.92); margin: 0 0 0.85rem 0; text-shadow: 0 1px 6px rgba(0, 0, 0, 0.35); }
+.home-hero__eyebrow { display: inline-block; font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 600; font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.18em; color: rgba(255, 255, 255, 0.92); margin: 0 0 0.85rem 0; text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4); }
 
-.home-hero__title { font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 700; font-size: 3.5rem; line-height: 1.02; letter-spacing: -0.028em; color: #ffffff; max-width: 900px; margin: 0; text-shadow: 0 2px 16px rgba(0, 0, 0, 0.4); }
+.home-hero__title { font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 700; font-size: 3.5rem; line-height: 1.02; letter-spacing: -0.028em; color: #ffffff; max-width: 900px; margin: 0 0 1.25rem 0; text-shadow: 0 2px 18px rgba(0, 0, 0, 0.45); }
 @media screen and (max-width: 1200px) { .home-hero__title { font-size: 3rem; } }
-@media screen and (max-width: 700px) { .home-hero__title { font-size: 2rem; max-width: 100%; } }
+@media screen and (max-width: 700px) { .home-hero__title { font-size: 2rem; max-width: 100%; margin-bottom: 1rem; } }
+
+.home-hero__description { font-family: "Georgia", "Times New Roman", Times, serif; font-size: 1.15rem; line-height: 1.55; color: rgba(255, 255, 255, 0.94); max-width: 720px; margin: 0 0 1.75rem 0; text-shadow: 0 1px 10px rgba(0, 0, 0, 0.55); }
+@media screen and (max-width: 700px) { .home-hero__description { font-size: 1rem; margin-bottom: 1.35rem; } }
+
+.home-hero__actions { display: flex; flex-wrap: wrap; gap: 14px 18px; margin: 0; }
+@media screen and (max-width: 700px) { .home-hero__actions { gap: 10px 12px; } }
+
+.home-hero__action { display: inline-flex; align-items: center; gap: 0.5em; padding: 0.72em 1.2em; font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 600; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.12em; line-height: 1; color: rgba(255, 255, 255, 0.95); background: rgba(10, 10, 10, 0.25); border: 1px solid rgba(255, 255, 255, 0.55); text-decoration: none; backdrop-filter: blur(2px); -webkit-backdrop-filter: blur(2px); transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease; }
+.home-hero__action, .home-hero__action:visited { color: rgba(255, 255, 255, 0.95); }
+.home-hero__action:hover { background: #ffffff; color: #0A0A0A; border-color: #ffffff; text-decoration: none; }
+.home-hero__action__arrow, .home-hero__action .home-hero__action-arrow { transition: transform 0.2s ease; }
+.home-hero__action:hover .home-hero__action-arrow { transform: translateX(3px); }
+@media screen and (max-width: 700px) { .home-hero__action { padding: 0.65em 1em; font-size: 0.75rem; } }
 
 /** Home header — the descriptive body below the hero image. No more headline here; the H1 lives in the hero overlay. */
 .home-header { padding-top: 56px; padding-bottom: 72px; background-color: #FFFFFF; color: #1A1A1A; }

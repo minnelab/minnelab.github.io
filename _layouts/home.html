@@ -29,7 +29,7 @@ layout: default
     <figure class="home-hero__image">
       <img src="{{ page.hero_image | relative_url }}" alt="{{ page.hero_image_alt | default: '' | escape }}" />
     </figure>
-    {%- if page.hero_eyebrow or page.hero_title -%}
+    {%- if page.hero_eyebrow or page.hero_title or page.hero_description or page.hero_links -%}
       <div class="home-hero__overlay">
         <div class="wrapper">
           {%- if page.hero_eyebrow -%}
@@ -38,17 +38,33 @@ layout: default
           {%- if page.hero_title -%}
             <h1 class="home-hero__title">{{ page.hero_title | escape }}</h1>
           {%- endif -%}
+          {%- if page.hero_description -%}
+            <p class="home-hero__description">{{ page.hero_description | strip_newlines }}</p>
+          {%- endif -%}
+          {%- if page.hero_links -%}
+            <div class="home-hero__actions">
+              {%- for link in page.hero_links -%}
+                <a class="home-hero__action" href="{{ link.href | relative_url }}">
+                  <span>{{ link.text | escape }}</span>
+                  <span class="home-hero__action-arrow" aria-hidden="true">&rarr;</span>
+                </a>
+              {%- endfor -%}
+            </div>
+          {%- endif -%}
         </div>
       </div>
     {%- endif -%}
   </div>
 {%- endif -%}
 
-<div class="home-header">
-  <div class="wrapper">
-    {{ content }}
+{%- assign _content = content | strip -%}
+{%- if _content.size > 0 -%}
+  <div class="home-header">
+    <div class="wrapper">
+      {{ content }}
+    </div>
   </div>
-</div>
+{%- endif -%}
 
 {%- if featured_post -%}
 <section class="spotlight">

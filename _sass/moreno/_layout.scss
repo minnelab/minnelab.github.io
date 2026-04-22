@@ -22,22 +22,22 @@
   img {
     display: block;
     width: 100%;
-    height: 560px;
-    max-height: 72vh;
+    height: 640px;
+    max-height: 78vh;
     object-fit: cover;
-    object-position: center 40%;
+    object-position: center 38%;
     border: 0;
     border-radius: 0;
   }
 
   @include media-query($on-laptop) {
-    img { height: 480px; }
+    img { height: 540px; }
   }
 
   @include media-query($on-palm) {
     img {
-      height: 360px;
-      max-height: 55vh;
+      height: 460px;
+      max-height: 70vh;
     }
   }
 }
@@ -49,22 +49,24 @@
   align-items: flex-end;
   pointer-events: none;
 
-  // Dark gradient for text contrast — heavier at the bottom where the
-  // eyebrow/title sit, fading to transparent above.
+  // Dark gradient that covers a larger vertical band — heavier at the
+  // bottom where the full text block sits, fading to transparent near
+  // the top of the image.
   background: linear-gradient(
     180deg,
-    rgba(0, 0, 0, 0) 35%,
-    rgba(0, 0, 0, 0.35) 70%,
-    rgba(0, 0, 0, 0.72) 100%
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.15) 35%,
+    rgba(0, 0, 0, 0.55) 70%,
+    rgba(0, 0, 0, 0.82) 100%
   );
 
   .wrapper {
-    padding-top: 48px;
-    padding-bottom: 48px;
+    padding-top: 72px;
+    padding-bottom: 56px;
 
     @include media-query($on-palm) {
-      padding-top: 32px;
-      padding-bottom: 28px;
+      padding-top: 40px;
+      padding-bottom: 32px;
     }
   }
 
@@ -82,7 +84,7 @@
   letter-spacing: 0.18em;
   color: rgba(255, 255, 255, 0.92);
   margin: 0 0 0.85rem 0;
-  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.35);
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
 }
 
 .home-hero__title {
@@ -93,8 +95,8 @@
   letter-spacing: -0.028em;
   color: #ffffff;
   max-width: 900px;
-  margin: 0;
-  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.4);
+  margin: 0 0 1.25rem 0;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.45);
 
   @include media-query($on-laptop) {
     font-size: 3rem;
@@ -103,6 +105,79 @@
   @include media-query($on-palm) {
     font-size: 2rem;
     max-width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+
+.home-hero__description {
+  font-family: $base-font-family;
+  font-size: 1.15rem;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.94);
+  max-width: 720px;
+  margin: 0 0 1.75rem 0;
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.55);
+
+  @include media-query($on-palm) {
+    font-size: 1rem;
+    margin-bottom: 1.35rem;
+  }
+}
+
+.home-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 18px;
+  margin: 0;
+
+  @include media-query($on-palm) {
+    gap: 10px 12px;
+  }
+}
+
+.home-hero__action {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.72em 1.2em;
+  font-family: $title-font-family;
+  font-weight: 600;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.95);
+  background: rgba(10, 10, 10, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  text-decoration: none;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+
+  &,
+  &:visited {
+    color: rgba(255, 255, 255, 0.95);
+  }
+
+  &:hover {
+    background: #ffffff;
+    color: $kth-ink;
+    border-color: #ffffff;
+    text-decoration: none;
+  }
+
+  &__arrow,
+  .home-hero__action-arrow {
+    transition: transform 0.2s ease;
+  }
+
+  &:hover .home-hero__action-arrow {
+    transform: translateX(3px);
+  }
+
+  @include media-query($on-palm) {
+    padding: 0.65em 1em;
+    font-size: 0.75rem;
   }
 }
 
