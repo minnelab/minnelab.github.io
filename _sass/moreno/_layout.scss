@@ -2008,3 +2008,169 @@ workshop
   color: $text-color-header;
   margin: 0;
 }
+
+
+/**
+ * About page — figure with caption + structured info grid.
+ */
+.about-figure {
+  margin: 1.75rem 0 2.75rem 0;
+  max-width: 900px;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid $grey-color-light;
+    border-radius: 0;
+  }
+
+  figcaption {
+    font-family: $title-font-family;
+    font-weight: 500;
+    font-size: 0.82rem;
+    color: $kth-grey;
+    margin-top: 0.75rem;
+  }
+}
+
+/**
+ * Info grid — structured blocks used on About and Join us.
+ * By default: 2-column responsive; `--two` forces two columns even on
+ * narrower desktops for the Join-us side-by-side layout.
+ */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px 40px;
+  margin: 2rem 0 2.5rem 0;
+  max-width: none;
+
+  @include media-query($on-palm) {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+
+.info-grid--two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  @include media-query($on-palm) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.info-block {
+  max-width: none;
+  margin: 0;
+
+  .eyebrow {
+    margin-bottom: 0.55rem;
+  }
+}
+
+.info-block--bordered {
+  padding: 26px 28px 28px 28px;
+  border: 1px solid $grey-color-light;
+  border-left: 3px solid $kth-blue;
+  background-color: $background-color;
+
+  @include media-query($on-palm) {
+    padding: 22px;
+  }
+}
+
+.info-block__title {
+  font-family: $title-font-family;
+  font-weight: 700;
+  font-size: 1.15rem;
+  line-height: 1.25;
+  letter-spacing: -0.012em;
+  color: $text-color-header;
+  margin: 0 0 0.55rem 0;
+
+  a,
+  a:visited {
+    color: $text-color-header;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: $link-color;
+  }
+}
+
+.info-block__body {
+  font-family: $base-font-family;
+  font-size: 0.98rem;
+  line-height: 1.55;
+  color: $text-color;
+  margin: 0 0 0.75rem 0;
+  max-width: none;
+}
+
+.info-list {
+  margin: 0.25rem 0 0.9rem 1.2em;
+  padding: 0;
+  list-style: disc;
+
+  li {
+    font-family: $base-font-family;
+    font-size: 0.98rem;
+    line-height: 1.5;
+    color: $text-color;
+    margin: 0.2rem 0;
+  }
+}
+
+/**
+ * Contact CTA — prominent get-in-touch block at the bottom of Join us.
+ */
+.contact-cta {
+  max-width: 780px;
+  padding: 32px 36px;
+  margin: 3rem 0 1rem 0;
+  background-color: $kth-surface-soft;
+  border: 1px solid $grey-color-light;
+
+  @include media-query($on-palm) {
+    padding: 24px;
+  }
+
+  .eyebrow {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.contact-cta__title {
+  font-family: $title-font-family;
+  font-weight: 700;
+  font-size: 1.45rem;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  color: $text-color-header;
+  margin: 0 0 0.5rem 0;
+}
+
+.contact-cta__body {
+  font-family: $base-font-family;
+  font-size: 1rem;
+  line-height: 1.55;
+  color: $text-color;
+  margin: 0 0 1rem 0;
+  max-width: 640px;
+}
+
+.contact-cta__link {
+  display: inline-block;
+  font-family: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: $link-color;
+  letter-spacing: 0.01em;
+
+  &:hover {
+    color: $link-color-dark;
+    text-decoration: underline;
+  }
+}
