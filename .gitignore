@@ -1,0 +1,9 @@
+# Bundler / Ruby
+.bundle/
+vendor/
+
+# Jekyll
+_site/assets/main.css.map
+
+# macOS
+.DS_Store
