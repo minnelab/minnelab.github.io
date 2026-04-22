@@ -5,30 +5,34 @@
 /**
  * Full-bleed hero image — CSAIL-style wide banner above the header text.
  * Sits outside the wrapper so it spans the full viewport.
+ *
+ * Uses `object-fit: contain` so research imagery (which often has its own
+ * cropped aspect ratio and black/dark background) isn't scaled up past
+ * its native resolution. A dark figure background masks any letterboxing
+ * on wider screens and blends with imagery that's already on black.
  */
 .home-hero-image {
   width: 100%;
   margin: 0;
+  background-color: #0A0A0A;
 
   img {
     display: block;
     width: 100%;
-    height: 480px;
-    max-height: 62vh;
-    object-fit: cover;
+    max-height: 460px;
+    object-fit: contain;
+    object-position: center;
+    margin: 0 auto;
     border: 0;
     border-radius: 0;
   }
 
   @include media-query($on-laptop) {
-    img { height: 420px; }
+    img { max-height: 400px; }
   }
 
   @include media-query($on-palm) {
-    img {
-      height: 280px;
-      max-height: 48vh;
-    }
+    img { max-height: 260px; }
   }
 }
 

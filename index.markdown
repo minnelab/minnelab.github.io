@@ -1,7 +1,7 @@
 ---
 layout: home
-hero_image: /assets/about/group_picture.jpg
-hero_image_alt: MINNE Lab at KTH Royal Institute of Technology
+hero_image: /assets/papers/bounding_tractography.jpg
+hero_image_alt: Diffusion-MRI tractography of white-matter pathways in the human brain
 ---
 
 <span class="eyebrow">KTH Royal Institute of Technology</span>
