@@ -2,17 +2,27 @@
 layout: default
 ---
 
-{% assign nUpcoming = 0 %}
-{% assign nPast = 0 %}
 {% assign curDate = site.time | date: '%s' %}
-{%- for post in site.posts -%}
-  {% assign postStartDate = post.date | date: '%s' %}
-  {%- if postStartDate >= curDate -%}
-    {% assign nUpcoming = nUpcoming | plus: 1 %}
-  {%- else -%}
-    {% assign nPast = nPast | plus: 1 %}
-  {%- endif -%}
-{%- endfor -%}
+
+{%- comment -%}
+  Pick a spotlight post:
+    1. Most recent post with `featured: true`
+    2. Else the most recent post with a paper author list (a publication)
+    3. Else the most recent post overall.
+{%- endcomment -%}
+{%- assign featured_post = site.posts | where: "featured", true | first -%}
+{%- unless featured_post -%}
+  {%- for post in site.posts -%}
+    {% assign postStartDate = post.date | date: '%s' %}
+    {% if postStartDate <= curDate and post.author and post.abstract and post.image %}
+      {%- assign featured_post = post -%}
+      {% break %}
+    {% endif %}
+  {%- endfor -%}
+{%- endunless -%}
+{%- unless featured_post -%}
+  {%- assign featured_post = site.posts | first -%}
+{%- endunless -%}
 
 <div class="home-header">
   <div class="wrapper">
@@ -21,13 +31,50 @@ layout: default
     {%- endif -%}
 
     {{ content }}
-
   </div>
 </div>
 
-{%- if site.data.research_areas or page.research_areas -%}
-  {%- assign areas = page.research_areas | default: site.data.research_areas -%}
-  <div class="research-section">
+{%- if featured_post -%}
+<section class="spotlight">
+  <div class="wrapper">
+    <div class="section-head">
+      <span class="eyebrow">Featured research</span>
+      <h2 class="section-title">In the spotlight</h2>
+    </div>
+
+    <article class="spotlight-card">
+      {% if featured_post.image %}
+        <a class="spotlight-card__image" href="{{ featured_post.url | relative_url }}" aria-hidden="true" tabindex="-1">
+          <img src="{{ featured_post.image | relative_url }}" alt="" />
+        </a>
+      {% endif %}
+      <div class="spotlight-card__body">
+        {%- if featured_post.venue -%}
+          <span class="spotlight-card__venue">{{ featured_post.venue | escape }}</span>
+        {%- endif -%}
+        <h3 class="spotlight-card__title">
+          <a href="{{ featured_post.url | relative_url }}">{{ featured_post.title | escape }}</a>
+        </h3>
+        {%- if featured_post.paper_authors -%}
+          <p class="spotlight-card__authors">{{ featured_post.paper_authors | escape }}</p>
+        {%- elsif featured_post.author -%}
+          <p class="spotlight-card__authors">{{ featured_post.author | escape }}</p>
+        {%- endif -%}
+        {%- if featured_post.spotlight_excerpt -%}
+          <p class="spotlight-card__excerpt">{{ featured_post.spotlight_excerpt }}</p>
+        {%- elsif featured_post.abstract -%}
+          <p class="spotlight-card__excerpt">{{ featured_post.abstract | truncate: 340 }}</p>
+        {%- endif -%}
+        <a class="spotlight-card__link" href="{{ featured_post.url | relative_url }}">Read more &rarr;</a>
+      </div>
+    </article>
+  </div>
+</section>
+{%- endif -%}
+
+{%- assign areas = page.research_areas | default: site.data.research_areas -%}
+{%- if areas -%}
+  <section class="research-section">
     <div class="wrapper">
       <div class="section-head">
         <span class="eyebrow">Research</span>
@@ -53,10 +100,10 @@ layout: default
         {%- endfor -%}
       </ul>
     </div>
-  </div>
+  </section>
 {%- endif -%}
 
-<div class="home-posts">
+<section class="home-posts">
   <div class="wrapper">
       <div class="section-head section-head--with-action">
         <div>
@@ -71,6 +118,10 @@ layout: default
         {%- for post in site.posts -%}
           {% assign postStartDate = post.date | date: '%s' %}
           {% if postStartDate <= curDate and shown < 5 %}
+            {%- comment -%} Skip the spotlight post — it's already up top. {%- endcomment -%}
+            {%- if featured_post and post.url == featured_post.url -%}
+              {%- continue -%}
+            {%- endif -%}
             {%- assign shown = shown | plus: 1 -%}
             {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
             {% if post.datenotset %}
@@ -95,7 +146,7 @@ layout: default
                     <div class="post-list-author">{{ post.author | escape }}</div>
                   {% endif %}
                   {% if post.abstract %}
-                    <p class="post-list-excerpt">{{ post.abstract }}</p>
+                    <p class="post-list-excerpt">{{ post.abstract | truncate: 200 }}</p>
                   {% endif %}
               </div>
             </li>
@@ -103,4 +154,4 @@ layout: default
         {%- endfor -%}
       </ul>
   </div>
-</div>
+</section>

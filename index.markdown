@@ -12,5 +12,3 @@ layout: home
 The MINNE lab develops mathematically grounded methods for medical image analysis and deep learning — bridging quantitative rigor and clinical impact. Led by [Rodrigo Moreno](/people/rodrigo.html).
 
 [Our research →](/about/) &nbsp;&nbsp; [The team →](/people/)
-
-![MINNE lab](/assets/about/group_picture.jpg)

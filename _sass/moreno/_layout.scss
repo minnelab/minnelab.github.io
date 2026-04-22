@@ -3,30 +3,29 @@
  */
 
 .home-header {
-  padding-top: 72px;
-  padding-bottom: 64px;
+  padding-top: 88px;
+  padding-bottom: 80px;
   background-color: $background-color;
-  border-bottom: 1px solid $grey-color-light;
   color: $text-color-header;
 
   @include media-query($on-palm) {
-    padding-top: 48px;
-    padding-bottom: 40px;
+    padding-top: 56px;
+    padding-bottom: 48px;
   }
 
   // Hero headline
   h1 {
     font-family: $title-font-family;
     font-weight: 700;
-    font-size: 3.25rem;
-    line-height: 1.02;
-    letter-spacing: -0.028em;
+    font-size: 3.75rem;
+    line-height: 1.0;
+    letter-spacing: -0.03em;
     color: $text-color-header;
-    max-width: 720px;
-    margin: 0.25rem 0 1.5rem 0;
+    max-width: 820px;
+    margin: 0.25rem 0 1.75rem 0;
 
     @include media-query($on-palm) {
-      font-size: 2.25rem;
+      font-size: 2.5rem;
     }
   }
 
@@ -44,25 +43,6 @@
     }
   }
 
-  // Group photo / hero image — capped max-width so it reads editorial,
-  // not poster-sized. Clean border, no radius.
-  img {
-    display: block;
-    width: 100%;
-    max-width: 880px;
-    height: auto;
-    margin: 1.5rem 0 0 0;
-    border: 1px solid $grey-color-light;
-    border-radius: 0;
-  }
-
-  // If image is wrapped in <p> by markdown, strip the <p>'s text styling.
-  p:has(> img) {
-    font-size: inherit;
-    max-width: none;
-    margin: 1.5rem 0 0 0;
-  }
-
   a {
     color: $link-color;
     font-weight: 500;
@@ -72,9 +52,145 @@
   }
 }
 
+/**
+ * Featured research spotlight — the homepage headliner.
+ * Split layout: wide image on the left, editorial text block on the right.
+ * Stacks on tablet/mobile. No card chrome, just type + a single hairline above.
+ */
+.spotlight {
+  padding: 56px 0 64px 0;
+  border-top: 1px solid $grey-color-light;
+  border-bottom: 1px solid $grey-color-light;
+  background-color: $background-color;
+
+  @include media-query($on-palm) {
+    padding: 40px 0 48px 0;
+  }
+}
+
+.spotlight-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: 48px;
+  align-items: center;
+
+  @include media-query($on-laptop) {
+    gap: 36px;
+  }
+
+  @include media-query($on-palm) {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+.spotlight-card__image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border: 1px solid $grey-color-light;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+
+  &:hover img {
+    transform: scale(1.02);
+  }
+}
+
+.spotlight-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.spotlight-card__venue {
+  display: inline-block;
+  align-self: flex-start;
+  font-family: $title-font-family;
+  font-weight: 600;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: $kth-blue;
+  padding: 0.4em 0.7em;
+  border: 1px solid $kth-blue;
+  border-radius: 0;
+  margin-bottom: 0.25rem;
+}
+
+.spotlight-card__title {
+  font-family: $title-font-family;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 1.12;
+  letter-spacing: -0.022em;
+  color: $text-color-header;
+  margin: 0;
+
+  @include media-query($on-palm) {
+    font-size: 1.55rem;
+  }
+
+  a,
+  a:visited {
+    color: $text-color-header;
+    text-decoration: none;
+    background-image: linear-gradient(to top, transparent 1px, $link-color 1px, $link-color 2px, transparent 2px);
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    background-size: 0% 2px;
+    transition: background-size 0.35s ease, color 0.2s ease;
+  }
+
+  a:hover {
+    color: $link-color;
+    background-size: 100% 2px;
+  }
+}
+
+.spotlight-card__authors {
+  font-family: $title-font-family;
+  font-weight: 500;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: $kth-grey;
+  margin: 0;
+}
+
+.spotlight-card__excerpt {
+  font-family: $base-font-family;
+  font-size: 1.05rem;
+  line-height: 1.55;
+  color: $text-color;
+  margin: 0.25rem 0 0.5rem 0;
+  max-width: 38em;
+}
+
+.spotlight-card__link {
+  font-family: $title-font-family;
+  font-weight: 600;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: $link-color;
+  align-self: flex-start;
+
+  &:hover {
+    color: $link-color-dark;
+    text-decoration: none;
+  }
+}
+
 .home-posts {
-  padding-top: 48px;
-  padding-bottom: 64px;
+  padding-top: 56px;
+  padding-bottom: 72px;
   background-color: $background-color;
 }
 
