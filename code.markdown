@@ -90,11 +90,6 @@ lede: "Open-source code and datasets from MINNE Lab. We aim to publish data and 
     <p class="repo-card__desc">Slides, notebooks, and setup material for the MAIA tutorial at AIDA Technical Days, September 2025.</p>
   </li>
   <li class="repo-card">
-    <span class="repo-card__tag">Course · CM2003</span>
-    <h4 class="repo-card__title"><a href="https://github.com/minnelab/CM2003-labs" target="_blank" rel="noopener">CM2003-labs</a></h4>
-    <p class="repo-card__desc">Lab exercises for the CM2003 deep-learning course at KTH.</p>
-  </li>
-  <li class="repo-card">
     <span class="repo-card__tag">Workshop</span>
     <h4 class="repo-card__title"><a href="https://github.com/minnelab/Computer-Science-Workshop" target="_blank" rel="noopener">Computer-Science-Workshop</a></h4>
     <p class="repo-card__desc">Material for the Computer Science Workshop held January 2024.</p>
