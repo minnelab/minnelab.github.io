@@ -2,68 +2,183 @@
 layout: default
 ---
 
-{% assign nUpcoming = 0 %}
-{% assign nPast = 0 %}
 {% assign curDate = site.time | date: '%s' %}
-{%- for post in site.posts -%}
-  {% assign postStartDate = post.date | date: '%s' %}
-  {%- if postStartDate >= curDate -%}
-    {% assign nUpcoming = nUpcoming | plus: 1 %}
-  {%- else -%}
-    {% assign nPast = nPast | plus: 1 %}
-  {%- endif -%}
-{%- endfor -%}
 
-<div class="home-header">
-  <div class="wrapper">
-    {%- if page.title -%}
-      <h1 class="page-heading">{{ page.title }}</h1>
+{%- comment -%}
+  Pick a spotlight post:
+    1. Most recent post with `featured: true`
+    2. Else the most recent post with an author list, abstract and image
+    3. Else the most recent post overall.
+{%- endcomment -%}
+{%- assign featured_post = site.posts | where: "featured", true | first -%}
+{%- unless featured_post -%}
+  {%- for post in site.posts -%}
+    {% assign postStartDate = post.date | date: '%s' %}
+    {% if postStartDate <= curDate and post.author and post.abstract and post.image %}
+      {%- assign featured_post = post -%}
+      {% break %}
+    {% endif %}
+  {%- endfor -%}
+{%- endunless -%}
+{%- unless featured_post -%}
+  {%- assign featured_post = site.posts | first -%}
+{%- endunless -%}
+
+{%- if page.hero_image -%}
+  <div class="home-hero">
+    <figure class="home-hero__image">
+      <img src="{{ page.hero_image | relative_url }}" alt="{{ page.hero_image_alt | default: '' | escape }}" />
+    </figure>
+    {%- if page.hero_eyebrow or page.hero_title or page.hero_description or page.hero_links -%}
+      <div class="home-hero__overlay">
+        <div class="wrapper">
+          {%- if page.hero_eyebrow -%}
+            <span class="home-hero__eyebrow">{{ page.hero_eyebrow | escape }}</span>
+          {%- endif -%}
+          {%- if page.hero_title -%}
+            <h1 class="home-hero__title">{{ page.hero_title | escape }}</h1>
+          {%- endif -%}
+          {%- if page.hero_description -%}
+            <p class="home-hero__description">{{ page.hero_description | strip_newlines }}</p>
+          {%- endif -%}
+          {%- if page.hero_links -%}
+            <div class="home-hero__actions">
+              {%- for link in page.hero_links -%}
+                <a class="home-hero__action" href="{{ link.href | relative_url }}">
+                  <span>{{ link.text | escape }}</span>
+                  <span class="home-hero__action-arrow" aria-hidden="true">&rarr;</span>
+                </a>
+              {%- endfor -%}
+            </div>
+          {%- endif -%}
+        </div>
+      </div>
     {%- endif -%}
-
-    {{ content }}
-
   </div>
-</div>
-<div class="home-posts">
+{%- endif -%}
+
+{%- assign _content = content | strip -%}
+{%- if _content.size > 0 -%}
+  <div class="home-header">
+    <div class="wrapper">
+      {{ content }}
+    </div>
+  </div>
+{%- endif -%}
+
+{%- if featured_post -%}
+<section class="spotlight">
   <div class="wrapper">
-      <!--<h2 class="post-list-heading">{{ page.list_title | default: "Posts & news" }}</h2>-->
+    <div class="section-head">
+      <h2 class="section-title">Featured publication</h2>
+    </div>
+
+    <article class="spotlight-card">
+      {% if featured_post.image %}
+        <a class="spotlight-card__image" href="{{ featured_post.url | relative_url }}" aria-hidden="true" tabindex="-1">
+          <img src="{{ featured_post.image | relative_url }}" alt="" />
+        </a>
+      {% endif %}
+      <div class="spotlight-card__body">
+        {%- if featured_post.venue -%}
+          <span class="spotlight-card__venue">{{ featured_post.venue | escape }}</span>
+        {%- endif -%}
+        <h3 class="spotlight-card__title">
+          <a href="{{ featured_post.url | relative_url }}">{{ featured_post.title | escape }}</a>
+        </h3>
+        {%- if featured_post.paper_authors -%}
+          <p class="spotlight-card__authors">{{ featured_post.paper_authors | escape }}</p>
+        {%- elsif featured_post.author -%}
+          <p class="spotlight-card__authors">{{ featured_post.author | escape }}</p>
+        {%- endif -%}
+        {%- if featured_post.spotlight_excerpt -%}
+          <p class="spotlight-card__excerpt">{{ featured_post.spotlight_excerpt }}</p>
+        {%- elsif featured_post.abstract -%}
+          <p class="spotlight-card__excerpt">{{ featured_post.abstract | truncate: 340 }}</p>
+        {%- endif -%}
+        <a class="spotlight-card__link" href="{{ featured_post.url | relative_url }}">Read more &rarr;</a>
+      </div>
+    </article>
+  </div>
+</section>
+{%- endif -%}
+
+{%- assign areas = page.research_areas | default: site.data.research_areas -%}
+{%- if areas -%}
+  <section class="research-section">
+    <div class="wrapper">
+      <div class="section-head">
+        <h2 class="section-title">Research areas</h2>
+      </div>
+      <ul class="research-grid">
+        {%- for area in areas -%}
+          <li class="research-card">
+            {% if area.image %}
+              <a class="research-card__image" href="{{ area.link | default: '/about/' | relative_url }}" aria-hidden="true" tabindex="-1">
+                <img src="{{ area.image | relative_url }}" alt="" />
+              </a>
+            {% endif %}
+            <div class="research-card__body">
+              <h3 class="research-card__title">
+                <a href="{{ area.link | default: '/about/' | relative_url }}">{{ area.title | escape }}</a>
+              </h3>
+              {% if area.description %}
+                <p class="research-card__desc">{{ area.description }}</p>
+              {% endif %}
+            </div>
+          </li>
+        {%- endfor -%}
+      </ul>
+    </div>
+  </section>
+{%- endif -%}
+
+<section class="home-posts">
+  <div class="wrapper">
+      <div class="section-head section-head--with-action">
+        <h2 class="section-title">News</h2>
+        <a class="section-link" href="{{ '/updates/' | relative_url }}">All updates &rarr;</a>
+      </div>
 
       <ul class="post-list home-post-list">
+        {%- assign shown = 0 -%}
         {%- for post in site.posts -%}
           {% assign postStartDate = post.date | date: '%s' %}
-          {% if postStartDate <= curDate %}
+          {% if postStartDate <= curDate and shown < 5 %}
+            {%- comment -%} Skip the spotlight post — it's already up top. {%- endcomment -%}
+            {%- if featured_post and post.url == featured_post.url -%}
+              {%- continue -%}
+            {%- endif -%}
+            {%- assign shown = shown | plus: 1 -%}
             {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
             {% if post.datenotset %}
             {%- assign date_format = site.minima.date_format | default: "%Y" -%}
             {% endif %}
             <li>
+              {% if post.image %}
+                <a class="post-list-image" href="{{ post.url | relative_url }}" aria-hidden="true" tabindex="-1">
+                  <img src="{{ post.image | relative_url }}" alt="" />
+                </a>
+              {% endif %}
               <div class="post-list-description">
+                  <h4>{{ post.date | date: date_format }}</h4>
                   <h3>
                     <a class="post-link" href="{{ post.url | relative_url }}">
                       {{ post.title | escape }}
                     </a>
                   </h3>
-                  {% if post.author %}
-                    <div class="post-list-author">
-                      <strong>Paper Authors:</strong> {{ post.author | escape }}
-                    </div>
-                  {% endif %}
-                  {% if post.image %}
-                    <div class="post-list-image">
-                      <img src="{{ post.image | relative_url }}" />
-                    </div>
+                  {% if post.paper_authors %}
+                    <div class="post-list-author">{{ post.paper_authors | escape }}</div>
+                  {% elsif post.author %}
+                    <div class="post-list-author">{{ post.author | escape }}</div>
                   {% endif %}
                   {% if post.abstract %}
-                    {{ post.abstract }}
+                    <p class="post-list-excerpt">{{ post.abstract | truncate: 200 }}</p>
                   {% endif %}
-                  <p>
-                    <h4>{{ post.date | date: date_format }}</h4>
-                  </p>
               </div>
             </li>
-            <li>
           {%- endif -%}
         {%- endfor -%}
       </ul>
   </div>
-</div>
+</section>

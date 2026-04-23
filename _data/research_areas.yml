@@ -1,0 +1,23 @@
+# Research areas shown on the homepage as CSAIL-style cards.
+# Each entry: title, description, image (path under /assets/), link (optional).
+
+- title: Diffusion MRI and tractography
+  description: >-
+    Reconstruction and analysis of white-matter pathways, including
+    bundle segmentation, tractogram filtering, and quality assessment.
+  image: /assets/MONet_Bundle.png
+  link: /about/
+
+- title: Deep learning for clinical imaging
+  description: >-
+    Deep-learning methods for medical image analysis, with emphasis on
+    data efficiency, limited annotation, and validation in clinical settings.
+  image: /assets/MAIA_Segmentation_Portal.png
+  link: /about/
+
+- title: Imaging biomarkers in neurodegeneration
+  description: >-
+    Quantitative image analysis for the early detection, staging, and
+    longitudinal study of neurodegenerative disease.
+  image: /assets/papers/decomposing_paper.png.webp
+  link: /about/

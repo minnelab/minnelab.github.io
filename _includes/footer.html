@@ -3,32 +3,37 @@
 
   <div class="wrapper">
 
-    <!--<h2 class="footer-heading">{{ site.title | escape }}</h2>-->
-
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
-        <!--
-        {%- if site.organizers -%}
-          <p>
-          <ul class="contact-list">
-          {%- for organizer in site.organizers -%}
-            <li>{{ organizer }}</li>
-          {%- endfor -%}
-          </ul>
-          </p>
-        {%- endif -%}-->
-        <!--
-        <ul class="contact-list">
-          {%- if site.email -%}
-          <li>Contact:</li>
-          <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-          {%- endif -%}
-        </ul>-->
+        <span class="footer-wordmark">MINNE lab</span>
+        <p>Research in biomedical imaging and deep learning, at KTH Royal Institute of Technology.</p>
       </div>
 
       <div class="footer-col footer-col-2">
-
+        <span class="footer-eyebrow">Contact</span>
+        <p>
+          {%- if site.email -%}
+            <a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a><br/>
+          {%- endif -%}
+          Department of Biomedical Engineering and Health Systems<br/>
+          KTH Royal Institute of Technology<br/>
+          Stockholm, Sweden
+        </p>
       </div>
+
+      <div class="footer-col footer-col-3">
+        <span class="footer-eyebrow">Elsewhere</span>
+        <p>
+          {%- if site.github_username -%}
+            <a href="https://github.com/{{ site.github_username }}">GitHub</a><br/>
+          {%- endif -%}
+          <a href="https://www.kth.se/mmk">KTH Biomedical Engineering</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© {{ site.time | date: '%Y' }} MINNE lab · KTH Royal Institute of Technology</span>
     </div>
 
   </div>

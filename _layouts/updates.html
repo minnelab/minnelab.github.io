@@ -2,25 +2,19 @@
 layout: default
 ---
 
-{% assign nUpcoming = 0 %}
-{% assign nPast = 0 %}
 {% assign curDate = site.time | date: '%s' %}
-{%- for post in site.posts -%}
-  {% assign postStartDate = post.date | date: '%s' %}
-  {%- if postStartDate >= curDate -%}
-    {% assign nUpcoming = nUpcoming | plus: 1 %}
-  {%- else -%}
-    {% assign nPast = nPast | plus: 1 %}
-  {%- endif -%}
-{%- endfor -%}
 
-<div class="wrapper">
+<div class="page-hero">
+  <div class="wrapper">
     {% unless page.hide_title %}
-    <header class="post-header">
-      <h1 class="post-title">{{ page.title | escape }}</h1>
-    </header>
+      <h1 class="page-heading">{{ page.title | default: "Updates" | escape }}</h1>
     {% endunless %}
+    <p class="page-lede page-hero__lede">Recent news, publications, and lab activities from the MINNE group.</p>
+  </div>
+</div>
 
+<div class="home-posts">
+  <div class="wrapper">
     <ul class="post-list home-post-list">
       {%- for post in site.posts -%}
         {% assign postStartDate = post.date | date: '%s' %}
@@ -30,25 +24,30 @@ layout: default
           {%- assign date_format = site.minima.date_format | default: "%Y" -%}
           {% endif %}
           <li>
+            {% if post.image %}
+              <a class="post-list-image" href="{{ post.url | relative_url }}" aria-hidden="true" tabindex="-1">
+                <img src="{{ post.image | relative_url }}" alt="" />
+              </a>
+            {% endif %}
             <div class="post-list-description">
-                <h3>
-                  <a class="post-link" href="{{ post.url | relative_url }}">
-                    {{ post.title | escape }}
-                  </a>
-                </h3>
-                <h4>{{ post.date | date: date_format }}</h4>
-                {% if post.image %}
-                  <div class="post-list-image">
-                    <img src="{{ post.image | relative_url }}" />
-                  </div>
-                {% endif %}
-                {% if post.abstract %}
-                  {{ post.abstract }}
-                {% endif %}
+              <h4>{{ post.date | date: date_format }}</h4>
+              <h3>
+                <a class="post-link" href="{{ post.url | relative_url }}">
+                  {{ post.title | escape }}
+                </a>
+              </h3>
+              {% if post.paper_authors %}
+                <div class="post-list-author">{{ post.paper_authors | escape }}</div>
+              {% elsif post.author %}
+                <div class="post-list-author">{{ post.author | escape }}</div>
+              {% endif %}
+              {% if post.abstract %}
+                <p class="post-list-excerpt">{{ post.abstract }}</p>
+              {% endif %}
             </div>
           </li>
-          <li>
         {%- endif -%}
       {%- endfor -%}
     </ul>
+  </div>
 </div>

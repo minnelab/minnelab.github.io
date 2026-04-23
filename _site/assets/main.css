@@ -1,20 +1,25 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-/*8EC7C1*/
-/*8EC7C1*/
-/*#F9FBF2 !default;*/
-/* Modern gradient background for header */
-/*FAD7BE, F7D750, 844279*/
-/*1C0E58*/
 /** Reset some basic elements */
 body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, dl, dd, ol, ul, figure { margin: 0; padding: 0; }
 
+/** Root */
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+::selection { background: #1954A6; color: #fff; }
+
 /** Basic styling */
-body { font: 400 18px/1.3 "Georgia", "Times New Roman", Times, serif; color: #1c1c1c; background-color: #fff; -webkit-text-size-adjust: 100%; -webkit-font-feature-settings: "kern" 1; -moz-font-feature-settings: "kern" 1; -o-font-feature-settings: "kern" 1; font-feature-settings: "kern" 1; font-kerning: normal; display: flex; min-height: 100vh; flex-direction: column; }
+body { font: 400 18px/1.55 "Georgia", "Times New Roman", Times, serif; color: #1A1A1A; background-color: #FFFFFF; -webkit-text-size-adjust: 100%; -webkit-font-feature-settings: "kern" 1; -moz-font-feature-settings: "kern" 1; -o-font-feature-settings: "kern" 1; font-feature-settings: "kern" 1; font-kerning: normal; display: flex; min-height: 100vh; flex-direction: column; }
 
 /** Set `margin-bottom` to maintain vertical rhythm */
 h1, h2, h3, h4, h5, h6, p, blockquote, pre, ul, ol, dl, figure, .highlight { margin-bottom: 15px; }
 
-h1, h2 { color: #222; letter-spacing: normal; font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+h1, h2 { color: #0A0A0A; letter-spacing: -0.015em; font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 700; line-height: 1.15; }
+
+h3, h4, h5, h6 { color: #0A0A0A; letter-spacing: -0.005em; font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 600; line-height: 1.25; }
+
+/** Small tracked-caps label — used as eyebrow above titles / section headings. */
+.eyebrow { display: inline-block; font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 600; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.14em; color: #6E7071; margin: 0 0 0.75rem 0; }
 
 /** `main` element */
 main { display: block; /* Default value of `display` of `main` element is 'inline' in IE 11. */ }
@@ -32,13 +37,10 @@ ul, ol { margin-left: 30px; }
 
 li > ul, li > ol { margin-bottom: 0; }
 
-/** Headings */
-h1, h2, h3, h4, h5, h6 { font-weight: 400; font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
-
 /** Links */
-a { color: #2563eb; text-decoration: none; }
+a { color: #1954A6; text-decoration: none; text-underline-offset: 3px; text-decoration-thickness: 1px; transition: color 0.15s ease; }
 a:visited { /*color: darken($brand-color, 15%);*/ }
-a:hover { color: #1c1c1c; text-decoration: underline; }
+a:hover { color: #0D3D7F; text-decoration: underline; }
 .social-media-list a:hover { text-decoration: none; }
 .social-media-list a:hover .username { text-decoration: underline; }
 
@@ -55,8 +57,8 @@ pre { padding: 8px 12px; overflow-x: auto; }
 pre > code { border: 0; padding-right: 0; padding-left: 0; }
 
 /** Wrapper */
-.wrapper { max-width: -webkit-calc(1000px - (30px * 4)); max-width: calc(1000px - (30px * 4)); margin-right: auto; margin-left: auto; padding-right: 60px; padding-left: 60px; }
-@media screen and (max-width: 1000px) { .wrapper { max-width: -webkit-calc(1000px - (60px)); max-width: calc(1000px - (60px)); margin-right: auto; margin-left: auto; padding-right: 30px; padding-left: 30px; } }
+.wrapper { max-width: -webkit-calc(1200px - (30px * 4)); max-width: calc(1200px - (30px * 4)); margin-right: auto; margin-left: auto; padding-right: 60px; padding-left: 60px; }
+@media screen and (max-width: 1200px) { .wrapper { max-width: -webkit-calc(1200px - (60px)); max-width: calc(1200px - (60px)); margin-right: auto; margin-left: auto; padding-right: 30px; padding-left: 30px; } }
 
 /** Clearfix */
 .wrapper:after, .footer-col-wrapper:after { content: ""; display: table; clear: both; }
@@ -67,38 +69,105 @@ pre > code { border: 0; padding-right: 0; padding-left: 0; }
 .social-media-list li + li { padding-top: 5px; }
 
 /** Tables */
-table { margin-bottom: 30px; width: 100%; text-align: left; color: #4a4a4a; border-collapse: collapse; border: 1px solid #e8e8e8; }
+table { margin-bottom: 30px; width: 100%; text-align: left; color: #484848; border-collapse: collapse; border: 1px solid #e8e8e8; }
 table tr:nth-child(even) { background-color: #f7f7f7; }
 table th, table td { padding: 10px 15px; }
 table th { background-color: #f0f0f0; border: 1px solid #dedede; border-bottom-color: #c9c9c9; }
 table td { border: 1px solid #e8e8e8; }
 
 /** Site header */
-.home-header { padding-top: 36px; padding-bottom: 30px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); font-size: 23.4px; line-height: 35.1px; color: #ffffff; font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 500; }
+/** CSAIL-style hero: full-bleed image with eyebrow + oversized title overlaid at bottom-left over a dark gradient for contrast.  On mobile we still use overlay (keeps the editorial feel) but shrink the image height and dial the title size way down. */
+.home-hero { position: relative; width: 100%; background-color: #0A0A0A; overflow: hidden; }
 
-.home-header a, .home-header a:visited { color: #ffffff; }
+.home-hero__image { margin: 0; }
+.home-hero__image img { display: block; width: 100%; height: 640px; max-height: 78vh; object-fit: cover; object-position: center 38%; border: 0; border-radius: 0; }
+@media screen and (max-width: 1200px) { .home-hero__image img { height: 540px; } }
+@media screen and (max-width: 700px) { .home-hero__image img { height: 460px; max-height: 70vh; } }
 
-.home-posts { padding: 30px 0; background-color: #fff; }
+.home-hero__overlay { position: absolute; inset: 0; display: flex; align-items: flex-end; pointer-events: none; background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.15) 35%, rgba(0, 0, 0, 0.55) 70%, rgba(0, 0, 0, 0.82) 100%); }
+.home-hero__overlay .wrapper { padding-top: 72px; padding-bottom: 56px; }
+@media screen and (max-width: 700px) { .home-hero__overlay .wrapper { padding-top: 40px; padding-bottom: 32px; } }
+.home-hero__overlay * { pointer-events: auto; }
 
-.site-header { border-top: 0px solid #1c1c1c; border-bottom: 0px solid #e8e8e8; min-height: 55.95px; background-color: #fff; position: relative; }
+.home-hero__eyebrow { display: inline-block; font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 600; font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.18em; color: rgba(255, 255, 255, 0.92); margin: 0 0 0.85rem 0; text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4); }
 
-.site-title { padding-top: 3.0em; padding-bottom: 2.0em; color: #2563eb; float: left; font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+.home-hero__title { font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 700; font-size: 3.5rem; line-height: 1.02; letter-spacing: -0.028em; color: #ffffff; max-width: 900px; margin: 0 0 1.25rem 0; text-shadow: 0 2px 18px rgba(0, 0, 0, 0.45); }
+@media screen and (max-width: 1200px) { .home-hero__title { font-size: 3rem; } }
+@media screen and (max-width: 700px) { .home-hero__title { font-size: 2rem; max-width: 100%; margin-bottom: 1rem; } }
 
-.site-title a { font-size: 49.23px; font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 700; line-height: 52.65px; letter-spacing: -0.5px; }
-.site-title a, .site-title a:visited { color: #2563eb; }
+.home-hero__description { font-family: "Georgia", "Times New Roman", Times, serif; font-size: 1.15rem; line-height: 1.55; color: rgba(255, 255, 255, 0.94); max-width: 720px; margin: 0 0 1.75rem 0; text-shadow: 0 1px 10px rgba(0, 0, 0, 0.55); }
+@media screen and (max-width: 700px) { .home-hero__description { font-size: 1rem; margin-bottom: 1.35rem; } }
 
-.site-title #title-ai, .site-title #title-ai:visited { color: #1d4ed8; }
+.home-hero__actions { display: flex; flex-wrap: wrap; gap: 14px 18px; margin: 0; }
+@media screen and (max-width: 700px) { .home-hero__actions { gap: 10px 12px; } }
 
-.site-subtitle { margin-bottom: 30px; font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 600; color: #1e293b; }
-.site-subtitle, .site-subtitle:visited { color: #1e293b; }
+.home-hero__action { display: inline-flex; align-items: center; gap: 0.5em; padding: 0.72em 1.2em; font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 600; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.12em; line-height: 1; color: rgba(255, 255, 255, 0.95); background: rgba(10, 10, 10, 0.25); border: 1px solid rgba(255, 255, 255, 0.55); text-decoration: none; backdrop-filter: blur(2px); -webkit-backdrop-filter: blur(2px); transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease; }
+.home-hero__action, .home-hero__action:visited { color: rgba(255, 255, 255, 0.95); }
+.home-hero__action:hover { background: #ffffff; color: #0A0A0A; border-color: #ffffff; text-decoration: none; }
+.home-hero__action__arrow, .home-hero__action .home-hero__action-arrow { transition: transform 0.2s ease; }
+.home-hero__action:hover .home-hero__action-arrow { transform: translateX(3px); }
+@media screen and (max-width: 700px) { .home-hero__action { padding: 0.65em 1em; font-size: 0.75rem; } }
 
-.site-nav { float: right; line-height: 52.65px; font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+/** Home header — the descriptive body below the hero image. No more headline here; the H1 lives in the hero overlay. */
+.home-header { padding-top: 56px; padding-bottom: 72px; background-color: #FFFFFF; color: #1A1A1A; }
+@media screen and (max-width: 700px) { .home-header { padding-top: 36px; padding-bottom: 48px; } }
+.home-header p { max-width: 760px; font-family: "Georgia", "Times New Roman", Times, serif; font-size: 1.1rem; line-height: 1.6; color: #1A1A1A; margin: 0 0 1rem 0; }
+@media screen and (max-width: 700px) { .home-header p { font-size: 1.05rem; } }
+.home-header a { color: #1954A6; font-weight: 500; }
+.home-header a:visited { color: #1954A6; }
+.home-header a:hover { color: #0D3D7F; }
+
+/** Featured research spotlight — the homepage headliner. Split layout: wide image on the left, editorial text block on the right. Stacks on tablet/mobile. No card chrome, just type + a single hairline above. */
+.spotlight { padding: 64px 0 72px 0; border-top: 1px solid #e8e8e8; border-bottom: 1px solid #e8e8e8; background-color: #F5F5F5; }
+@media screen and (max-width: 700px) { .spotlight { padding: 44px 0 52px 0; } }
+
+.spotlight-card { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 48px; align-items: center; }
+@media screen and (max-width: 1200px) { .spotlight-card { gap: 36px; } }
+@media screen and (max-width: 700px) { .spotlight-card { grid-template-columns: 1fr; gap: 24px; } }
+
+.spotlight-card__image { display: block; width: 100%; aspect-ratio: 4 / 3; overflow: hidden; border: 1px solid #e8e8e8; }
+.spotlight-card__image img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+.spotlight-card__image:hover img { transform: scale(1.02); }
+
+.spotlight-card__body { display: flex; flex-direction: column; gap: 0.9rem; }
+
+.spotlight-card__venue { display: inline-block; align-self: flex-start; font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 600; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.16em; color: #1954A6; padding: 0.4em 0.7em; border: 1px solid #1954A6; border-radius: 0; margin-bottom: 0.25rem; }
+
+.spotlight-card__title { font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 700; font-size: 2rem; line-height: 1.12; letter-spacing: -0.022em; color: #0A0A0A; margin: 0; }
+@media screen and (max-width: 700px) { .spotlight-card__title { font-size: 1.55rem; } }
+.spotlight-card__title a, .spotlight-card__title a:visited { color: #0A0A0A; text-decoration: none; background-image: linear-gradient(to top, transparent 1px, #1954A6 1px, #1954A6 2px, transparent 2px); background-repeat: no-repeat; background-position: 0 100%; background-size: 0% 2px; transition: background-size 0.35s ease, color 0.2s ease; }
+.spotlight-card__title a:hover { color: #1954A6; background-size: 100% 2px; }
+
+.spotlight-card__authors { font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 500; font-size: 0.95rem; line-height: 1.4; color: #6E7071; margin: 0; }
+
+.spotlight-card__excerpt { font-family: "Georgia", "Times New Roman", Times, serif; font-size: 1.05rem; line-height: 1.55; color: #1A1A1A; margin: 0.25rem 0 0.5rem 0; max-width: 38em; }
+
+.spotlight-card__link { font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 600; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.12em; color: #1954A6; align-self: flex-start; }
+.spotlight-card__link:hover { color: #0D3D7F; text-decoration: none; }
+
+.home-posts { padding-top: 56px; padding-bottom: 72px; background-color: #FFFFFF; }
+
+.site-header { border-top: 3px solid #1954A6; border-bottom: 1px solid #e8e8e8; min-height: 55.95px; background-color: #FFFFFF; position: relative; }
+
+.site-title { padding-top: 1.4em; padding-bottom: 1em; color: #1954A6; float: left; font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1; }
+
+.site-title a { font-size: 43.2px; font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 700; line-height: 1; letter-spacing: -0.025em; display: inline-block; padding-bottom: 0.15em; }
+.site-title a, .site-title a:visited { color: #1954A6; }
+
+.site-title #title-ai, .site-title #title-ai:visited { color: #1954A6; }
+
+.site-subtitle { margin-top: 0.35em; margin-bottom: 0; font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 500; font-size: 0.82rem; letter-spacing: 0.04em; color: #6E7071; text-transform: none; }
+.site-subtitle, .site-subtitle:visited { color: #6E7071; }
+
+.site-nav { float: right; line-height: 62.775px; font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; padding-top: 1.2em; }
 .site-nav .nav-trigger { display: none; }
 .site-nav .menu-icon { display: none; }
-.site-nav .page-link { color: #1e293b; line-height: 1.3; font-weight: 500; font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
-.site-nav .page-link:not(:last-child) { margin-right: 20px; }
-.site-nav .page-link, .site-nav .page-link:visited { color: #1e293b; }
-@media screen and (max-width: 700px) { .site-nav { position: absolute; top: 9px; right: 15px; background-color: #fff; border: 1px solid #e8e8e8; border-radius: 5px; text-align: right; }
+.site-nav .page-link { color: #0A0A0A; line-height: 1.55; font-weight: 600; font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.12em; position: relative; padding: 0.5em 0; transition: color 0.15s ease; }
+.site-nav .page-link:not(:last-child) { margin-right: 28px; }
+.site-nav .page-link, .site-nav .page-link:visited { color: #0A0A0A; }
+.site-nav .page-link:hover { color: #1954A6; text-decoration: none; }
+.site-nav .page-link:hover::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0.1em; height: 2px; background: #1954A6; }
+@media screen and (max-width: 700px) { .site-nav { position: absolute; top: 9px; right: 15px; background-color: #FFFFFF; border: 1px solid #e8e8e8; border-radius: 5px; text-align: right; }
   .site-nav label[for="nav-trigger"] { display: block; float: right; width: 36px; height: 36px; z-index: 2; cursor: pointer; }
   .site-nav .menu-icon { display: block; float: right; width: 36px; height: 26px; line-height: 0; padding-top: 10px; text-align: center; }
   .site-nav .menu-icon > svg { fill: #1c1c1c; }
@@ -106,10 +175,19 @@ table td { border: 1px solid #e8e8e8; }
   .site-nav input:checked ~ .trigger { display: block; padding-bottom: 5px; }
   .site-nav .page-link { display: block; padding: 5px 10px; margin-left: 20px; }
   .site-nav .page-link:not(:last-child) { margin-right: 0; }
-  .site-nav .page-link, .site-nav .page-link:visited { color: #1c1c1c; } }
+  .site-nav .page-link, .site-nav .page-link:visited { color: #1A1A1A; } }
 
 /** Site footer */
-.site-footer { border-top: 0px solid #e8e8e8; background-color: #fff; padding: 30px 0; }
+.site-footer { border-top: 1px solid #e8e8e8; background-color: #FFFFFF; padding: 56px 0 40px 0; margin-top: 40px; font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 0.88rem; color: #6E7071; }
+
+.site-footer a { color: #0A0A0A; }
+.site-footer a:hover { color: #1954A6; }
+
+.site-footer .footer-eyebrow { display: block; font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 600; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.14em; color: #6E7071; margin-bottom: 0.75rem; }
+
+.site-footer .footer-wordmark { font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 700; font-size: 1.35rem; letter-spacing: -0.02em; color: #1954A6; margin-bottom: 0.4rem; display: block; }
+
+.site-footer .footer-bottom { margin-top: 40px; padding-top: 20px; border-top: 1px solid #e8e8e8; font-size: 0.78rem; color: #6E7071; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
 
 .footer-heading { font-size: 20.25px; margin-bottom: 15px; }
 
@@ -125,13 +203,14 @@ table td { border: 1px solid #e8e8e8; }
 
 .footer-col-3 { width: -webkit-calc(45% - (30px / 2)); width: calc(45% - (30px / 2)); }
 
-@media screen and (max-width: 1000px) { .footer-col-1, .footer-col-2 { width: -webkit-calc(50% - (30px / 2)); width: calc(50% - (30px / 2)); }
+@media screen and (max-width: 1200px) { .footer-col-1, .footer-col-2 { width: -webkit-calc(50% - (30px / 2)); width: calc(50% - (30px / 2)); }
   .footer-col-3 { width: -webkit-calc(100% - (30px / 2)); width: calc(100% - (30px / 2)); } }
 @media screen and (max-width: 700px) { .footer-col { float: none; width: -webkit-calc(100% - (30px / 2)); width: calc(100% - (30px / 2)); } }
 /** Page content */
 .page-content { /*padding: $spacing-unit 0;*/ padding: 0 0; flex: 1; }
 
-.page-heading { font-size: 36px; font-weight: 700; }
+.page-heading { font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 3rem; font-weight: 700; letter-spacing: -0.025em; line-height: 1.05; color: #0A0A0A; margin: 0 0 0.75rem 0; }
+@media screen and (max-width: 700px) { .page-heading { font-size: 2.1rem; } }
 
 /** Posts
 */
@@ -140,26 +219,122 @@ table td { border: 1px solid #e8e8e8; }
 .post-list { margin-left: 0; list-style: none; }
 .post-list > li { margin-bottom: 30px; }
 
-.post-meta { font-size: 15.3px; color: #828282; }
-
 .post-link { display: block; font-size: 25.2px; }
 
-.post-header { margin-top: 30px; margin-bottom: 30px; }
+/** Post detail page  Layout: [page-hero--post]   back link · eyebrow · title · meta strip · action [post-hero-image]   wide banner image for the post (optional) [post-content]      body, constrained to a readable column [post-related]      "More from the lab" card grid */
+.page-hero--post { padding-top: 36px; padding-bottom: 40px; }
+@media screen and (max-width: 700px) { .page-hero--post { padding-top: 24px; padding-bottom: 28px; } }
+.page-hero--post .eyebrow { margin-bottom: 0.75rem; }
 
-.post-title { font-size: 41.4px; font-weight: 700; line-height: 1; }
-@media screen and (max-width: 1000px) { .post-title { font-size: 36px; } }
+.post-backlink { display: inline-block; font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 600; font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.14em; color: #6E7071; margin-bottom: 1.75rem; }
+.post-backlink, .post-backlink:visited { color: #6E7071; }
+.post-backlink:hover { color: #1954A6; text-decoration: none; }
 
-.dt-published { font-size: 18px; color: #000; }
+.post-title, .post-content h1 { font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 700; font-size: 2.6rem; line-height: 1.08; letter-spacing: -0.025em; color: #0A0A0A; margin: 0 0 1.25rem 0; max-width: 860px; }
+@media screen and (max-width: 700px) { .post-title, .post-content h1 { font-size: 2rem; margin-bottom: 1rem; } }
 
-.post-content { margin-bottom: 30px; }
-.post-content h1 { font-size: 41.4px; font-weight: 700; }
-@media screen and (max-width: 1000px) { .post-content h1 { font-size: 36px; } }
-.post-content h2 { font-size: 32.4px; font-weight: 600; }
-@media screen and (max-width: 1000px) { .post-content h2 { font-size: 28.8px; } }
-.post-content h3 { font-size: 25.2px; font-weight: 600; }
-@media screen and (max-width: 1000px) { .post-content h3 { font-size: 21.6px; } }
-.post-content h4 { font-size: 19.8px; font-weight: 600; }
-@media screen and (max-width: 1000px) { .post-content h4 { font-size: 18px; } }
+.post-meta-strip { display: flex; flex-wrap: wrap; align-items: center; gap: 0; font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 0.9rem; line-height: 1.35; color: #6E7071; margin: 0; }
+
+.post-meta-strip__item { display: inline-flex; align-items: center; padding: 0; margin: 0; }
+.post-meta-strip__item + .post-meta-strip__item::before { content: "·"; display: inline-block; margin: 0 0.75em; color: #e8e8e8; font-weight: 400; }
+
+.post-meta-strip__date { font-weight: 500; color: #0A0A0A; }
+
+.post-meta-strip__authors { font-weight: 400; color: #6E7071; }
+
+.post-meta-strip__venue { font-weight: 600; font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: #1954A6; }
+
+.post-actions { margin-top: 1.5rem; }
+
+.post-actions__link { display: inline-flex; align-items: center; gap: 0.4em; padding: 0.72em 1.2em; font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 600; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.12em; line-height: 1; color: #ffffff; background-color: #1954A6; border: 1px solid #1954A6; text-decoration: none; transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease; }
+.post-actions__link, .post-actions__link:visited { color: #ffffff; }
+.post-actions__link:hover { background-color: #0D3D7F; border-color: #0D3D7F; color: #ffffff; text-decoration: none; }
+
+/** Full-bleed post hero image — banner between hero text and content. */
+.post-hero-image { width: 100%; margin: 0; background-color: #F5F5F5; }
+.post-hero-image img { display: block; width: 100%; max-width: 1400px; height: auto; max-height: 640px; object-fit: cover; object-position: center; margin: 0 auto; border: 0; border-radius: 0; }
+@media screen and (max-width: 700px) { .post-hero-image img { max-height: 360px; } }
+
+.post-featured-image { margin: 1.5rem 0; }
+.post-featured-image img { display: block; width: 100%; height: auto; border: 1px solid #e8e8e8; border-radius: 0; }
+
+.dt-published { font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 500; font-size: 0.85rem; color: #6E7071; text-transform: none; letter-spacing: 0; }
+
+/** Post footer meta — date at bottom, quiet. */
+.post .post-meta { margin-top: 45px; padding-top: 1.25rem; border-top: 1px solid #e8e8e8; font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 15.3px; color: #6E7071; }
+
+/** Related-updates grid at the bottom of a post */
+.post-related { padding: 56px 0 64px 0; margin-top: 48px; border-top: 1px solid #e8e8e8; background-color: #F5F5F5; }
+@media screen and (max-width: 700px) { .post-related { padding: 40px 0 48px 0; margin-top: 32px; } }
+
+.post-related__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px 28px; margin: 0; padding: 0; list-style: none; }
+@media screen and (max-width: 1200px) { .post-related__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media screen and (max-width: 700px) { .post-related__grid { grid-template-columns: 1fr; gap: 32px; } }
+
+.post-related__card { margin: 0; padding: 0; list-style: none; }
+
+.post-related__image { display: block; width: 100%; aspect-ratio: 3 / 2; overflow: hidden; border: 1px solid #e8e8e8; margin-bottom: 1rem; }
+.post-related__image img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
+.post-related__image:hover img { transform: scale(1.03); }
+
+.post-related__date { font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 600; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.14em; color: #6E7071; margin: 0 0 0.45rem 0; }
+
+.post-related__title { font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 700; font-size: 1.05rem; line-height: 1.25; letter-spacing: -0.01em; color: #0A0A0A; margin: 0; }
+.post-related__title a, .post-related__title a:visited { color: #0A0A0A; text-decoration: none; }
+.post-related__title a:hover { color: #1954A6; }
+
+.post-content { margin-bottom: 60px; font-size: 1.05rem; line-height: 1.65; }
+.post-content > p, .post-content > ul, .post-content > ol, .post-content > blockquote, .post-content > table { max-width: 720px; }
+.post-content h2 { font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 700; font-size: 1.65rem; line-height: 1.2; letter-spacing: -0.018em; color: #0A0A0A; margin: 2.25rem 0 0.75rem 0; }
+.post-content h3 { font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 600; font-size: 1.25rem; line-height: 1.25; letter-spacing: -0.012em; color: #0A0A0A; margin: 1.75rem 0 0.5rem 0; }
+.post-content h4 { font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 600; font-size: 1rem; letter-spacing: -0.005em; color: #0A0A0A; margin: 1.25rem 0 0.25rem 0; }
+.post-content p, .post-content ul, .post-content ol { margin-bottom: 1rem; }
+.post-content img { max-width: 100%; border: 1px solid #e8e8e8; }
+
+/** Section heads — eyebrow label + sub-headline, with an optional action link on the right. Used on the homepage to introduce "Research" and "News" sections. */
+.section-head { margin-bottom: 28px; }
+
+.section-head .eyebrow { margin-bottom: 0.35rem; }
+
+.section-title { font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 700; font-size: 1.5rem; line-height: 1.15; letter-spacing: -0.015em; color: #0A0A0A; margin: 0; }
+@media screen and (max-width: 700px) { .section-title { font-size: 1.3rem; } }
+
+.section-head--with-action { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+
+.section-link { font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 600; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.12em; color: #1954A6; white-space: nowrap; }
+.section-link:hover { color: #0D3D7F; text-decoration: none; }
+
+.page-lede { max-width: 720px; font-family: "Georgia", "Times New Roman", Times, serif; font-size: 1.15rem; line-height: 1.55; color: #1A1A1A; margin: 1rem 0 0 0; }
+
+/** Page hero — title band above regular content pages.  Designed to FLOW into the content below rather than sit in its own boxed section: no bottom border, tight bottom padding, and the body wrapper picks up from where the hero left off. */
+.page-hero { padding-top: 56px; padding-bottom: 8px; background-color: #FFFFFF; border-bottom: 0; }
+@media screen and (max-width: 700px) { .page-hero { padding-top: 36px; padding-bottom: 4px; } }
+.page-hero .eyebrow { margin: 0 0 0.6rem 0; }
+.page-hero .page-heading { margin-top: 0; margin-bottom: 0.25rem; }
+.page-hero .page-hero__lede { margin: 0.75rem 0 0 0; }
+
+.page-hero + .wrapper { padding-top: 24px; }
+
+.post-content > .page-lede:first-child { margin-top: 0; margin-bottom: 2rem; }
+
+/** Research areas — CSAIL-style thumbnail grid. Three columns on desktop, two on tablet, one on mobile. Title links out to a detail page. */
+.research-section { padding: 56px 0 48px 0; border-bottom: 1px solid #e8e8e8; background-color: #FFFFFF; }
+
+.research-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px 32px; margin: 0; padding: 0; list-style: none; }
+@media screen and (max-width: 1200px) { .research-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 28px; } }
+@media screen and (max-width: 700px) { .research-grid { grid-template-columns: 1fr; gap: 32px; } }
+
+.research-card { margin: 0; padding: 0; list-style: none; }
+
+.research-card__image { display: block; width: 100%; aspect-ratio: 3 / 2; overflow: hidden; border: 1px solid #e8e8e8; margin-bottom: 1rem; }
+.research-card__image img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
+.research-card__image:hover img { transform: scale(1.03); }
+
+.research-card__title { font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 700; font-size: 1.15rem; line-height: 1.25; letter-spacing: -0.012em; color: #0A0A0A; margin: 0 0 0.35rem 0; }
+.research-card__title a, .research-card__title a:visited { color: #0A0A0A; text-decoration: none; }
+.research-card__title a:hover { color: #1954A6; }
+
+.research-card__desc { font-family: "Georgia", "Times New Roman", Times, serif; font-size: 0.98rem; line-height: 1.5; color: #1A1A1A; margin: 0; }
 
 /**
 workshop
@@ -177,22 +352,43 @@ workshop
 
 .workshop-speaker-image { width: 20%; float: left; clear: left; margin-right: 1em; margin-bottom: 1em; border-radius: 5px; }
 
-.post-content td { color: #1c1c1c; }
+.post-content td { color: #1A1A1A; }
 
-/**
-Post list
-*/
-.home-post-list { margin-top: 15px; margin-bottom: 15px; }
+/** Post list — editorial research-showcase cards. Image left, text right on desktop; stacked on mobile. No card chrome — just a thin dividing rule and generous spacing. */
+.home-post-list { margin: 0; padding: 0; list-style: none; border-top: 1px solid #e8e8e8; }
 
-.home-post-list li { display: flex; flex-direction: row; list-style-type: none; margin-bottom: 15px; }
+.home-post-list li { display: block; position: relative; list-style-type: none; padding: 40px 0 44px 312px; min-height: 220px; border-bottom: 1px solid #e8e8e8; margin: 0; transition: background-color 0.2s ease; }
+@media screen and (max-width: 700px) { .home-post-list li { padding: 32px 0; min-height: 0; } }
 
-.post-list-image { float: left; min-width: 280px; margin: 0.5em; }
+.home-post-list li:not(:has(.post-list-description)) { display: none; }
 
-.post-list-image img { width: 380px; border-radius: 5px; }
+.home-post-list li:hover { background-color: #FAFAFA; }
 
-.post-list-description { /*border-top: #ddd 2px solid;*/ text-align: justify; width: 100%; padding-top: 10px; vertical-align: top; }
+.post-list-image { position: absolute; left: 0; top: 40px; width: 280px; margin: 0; min-width: 0; float: none; overflow: hidden; }
+@media screen and (max-width: 700px) { .post-list-image { position: static; width: 100%; margin: 0 0 20px 0; } }
 
-.post-list-author { font-style: italic; padding-bottom: 10px; vertical-align: top; }
+.post-list-image img { width: 280px; height: 187px; object-fit: cover; border-radius: 0; border: 1px solid #e8e8e8; display: block; transition: transform 0.4s ease; }
+@media screen and (max-width: 700px) { .post-list-image img { width: 100%; height: auto; aspect-ratio: 3 / 2; } }
+
+.home-post-list li:hover .post-list-image img { transform: scale(1.025); }
+
+.post-list-description { text-align: left; width: 100%; padding: 0; vertical-align: top; }
+
+.home-post-list h3 { margin: 0 0 0.5rem 0; padding: 0; font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 700; font-size: 1.35rem; line-height: 1.25; letter-spacing: -0.015em; color: #0A0A0A; }
+
+.home-post-list h3 a, .home-post-list h3 a:visited { color: #0A0A0A; text-decoration: none; display: inline; }
+
+.home-post-list li:hover h3 a { color: #1954A6; }
+
+.post-list-author { font-style: normal; font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 400; font-size: 0.88rem; color: #6E7071; padding: 0; margin: 0 0 0.75rem 0; }
+
+.post-list-author strong { font-weight: 600; color: #1A1A1A; }
+
+.home-post-list .post-list-description { font-size: 0.95rem; line-height: 1.55; color: #1A1A1A; }
+
+.home-post-list p { margin: 0.5rem 0 0 0; padding: 0; font-size: inherit; }
+
+.home-post-list h4 { font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 600; font-size: 0.7rem; line-height: 1; text-transform: uppercase; letter-spacing: 0.14em; color: #6E7071; margin: 0 0 0.55rem 0; }
 
 .post-list-venue { padding-bottom: 5px; font-weight: bold; vertical-align: top; }
 
@@ -210,29 +406,51 @@ Post list
 
 /* ABOUT PAGE
 */
-.about-image { width: 75%; margin-right: 1em; margin-bottom: 1em; border-radius: 5px; }
+.about-image { display: block; width: 100%; max-width: 880px; margin: 1.5rem 0; border: 1px solid #e8e8e8; border-radius: 0; }
 
 /* PEOPLE PAGE
 */
-.people-header { padding-top: 30px; padding-bottom: 30px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: #ffffff; }
+.people-section { padding: 56px 0 48px 0; border-bottom: 1px solid #e8e8e8; background-color: #FFFFFF; }
 
-.people-header a, .people-header a:visited { color: #ffffff; }
+.people-section--alumni { border-bottom: 0; }
 
-.people-content { padding-top: 30px; padding-bottom: 30px; background-color: #fff; }
+.people-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 40px 28px; margin: 0; padding: 0; list-style: none; }
+@media screen and (max-width: 700px) { .people-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 28px 20px; } }
+
+.people-grid--compact { grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 32px 24px; }
+@media screen and (max-width: 700px) { .people-grid--compact { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 24px 16px; } }
+
+.people-card { margin: 0; padding: 0; list-style: none; }
+
+.people-card__image { display: block; width: 100%; aspect-ratio: 1 / 1; overflow: hidden; border: 1px solid #e8e8e8; margin-bottom: 0.9rem; }
+.people-card__image img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
+.people-card__image:hover img { transform: scale(1.03); }
+
+.people-card__name { font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 700; font-size: 1rem; line-height: 1.25; letter-spacing: -0.01em; color: #0A0A0A; margin: 0 0 0.2rem 0; }
+.people-card__name a, .people-card__name a:visited { color: #0A0A0A; text-decoration: none; }
+.people-card__name a:hover { color: #1954A6; }
+
+.people-card__role { font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 500; font-size: 0.85rem; line-height: 1.3; color: #6E7071; margin: 0; }
+
+.people-header { padding-top: 30px; padding-bottom: 30px; background-color: #FFFFFF; border-bottom: 1px solid #e8e8e8; color: #0A0A0A; }
+
+.people-header a, .people-header a:visited { color: #1954A6; }
+
+.people-content { padding-top: 30px; padding-bottom: 30px; background-color: #FFFFFF; }
 
 .people-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); grid-column-gap: 30px; align-content: start; justify-items: start; justify-content: start; margin-top: 30px; }
 @media screen and (max-width: 700px) { .people-container { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); } }
 
-.people-item { text-align: center; max-width: 190px; color: #1c1c1c; }
+.people-item { text-align: center; max-width: 190px; color: #1A1A1A; }
 @media screen and (max-width: 700px) { .people-item { max-width: 120px; } }
 
-.people-item .person-name { margin-bottom: 0px; color: #1c1c1c; font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 600; }
+.people-item .person-name { margin-bottom: 0px; color: #1A1A1A; font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 600; }
 
-.people-image { width: 190px; height: 190px; object-fit: cover; border-radius: 5px; }
+.people-image { width: 190px; height: 190px; object-fit: cover; border: 1px solid #e8e8e8; border-radius: 0; }
 @media screen and (max-width: 700px) { .people-image { width: 120px; height: 120px; } }
 
-.people-profile-image { max-width: 190px; border-radius: 5px; float: left; margin-right: 1em; margin-bottom: 1em; }
-@media screen and (max-width: 700px) { .people-profile-image { max-width: 120px; } }
+.people-profile-image { max-width: 220px; border: 1px solid #e8e8e8; border-radius: 0; float: left; margin: 0.5rem 1.5rem 1rem 0; }
+@media screen and (max-width: 700px) { .people-profile-image { max-width: 140px; margin: 0.25rem 1rem 0.75rem 0; } }
 
 .p-venue { font-weight: bold; }
 
@@ -250,6 +468,180 @@ Post list
 /* LAB LOGO
 */
 .lab-logo { max-width: 300px; height: auto; display: block; margin: 0 auto 2em auto; border-radius: 5px; }
+
+/** Page-body lede — when the lede is written in markdown instead of via front matter, size it to match the hero-lede and give it room below. */
+.post-content > .page-lede { max-width: 720px; font-family: "Georgia", "Times New Roman", Times, serif; font-size: 1.15rem; line-height: 1.55; color: #1A1A1A; margin: 0 0 2.25rem 0; }
+
+.muted-note { max-width: 720px; font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 0.9rem; color: #6E7071; margin: 1.25rem 0 0 0; }
+
+/** Code & Data page — GitHub-profile hero, repository card grid, dataset card. */
+.repo-hero { display: flex; align-items: flex-start; gap: 24px; max-width: 780px; padding: 28px 28px 30px 28px; margin: 1rem 0 2rem 0; border: 1px solid #e8e8e8; border-left: 3px solid #1954A6; background-color: #F5F5F5; }
+@media screen and (max-width: 700px) { .repo-hero { padding: 20px; gap: 16px; } }
+
+.repo-hero--secondary { background-color: #FFFFFF; border-left-color: #e8e8e8; padding-top: 22px; padding-bottom: 22px; }
+
+.repo-hero__body { flex: 1; min-width: 0; }
+
+.repo-hero__eyebrow { display: inline-block; font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 600; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.14em; color: #6E7071; margin: 0 0 0.4rem 0; }
+
+.repo-hero__title { font-family: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-weight: 600; font-size: 1.2rem; line-height: 1.2; color: #0A0A0A; margin: 0 0 0.5rem 0; word-break: break-all; }
+
+.repo-hero__desc { font-family: "Georgia", "Times New Roman", Times, serif; font-size: 1rem; line-height: 1.55; color: #1A1A1A; margin: 0 0 1rem 0; }
+
+.repo-hero__link { display: inline-flex; align-items: center; gap: 0.3em; font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 600; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.12em; color: #1954A6; text-decoration: none; }
+.repo-hero__link:hover { color: #0D3D7F; text-decoration: none; }
+
+.repo-grid { display: grid !important; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 24px; margin: 1rem 0 0 0 !important; padding: 0 !important; list-style: none; max-width: none !important; }
+@media screen and (max-width: 700px) { .repo-grid { grid-template-columns: 1fr; gap: 16px; } }
+
+.repo-card { margin: 0 !important; padding: 22px 22px 24px 22px; list-style: none; background-color: #FFFFFF; border: 1px solid #e8e8e8; transition: border-color 0.2s ease, transform 0.2s ease; }
+.repo-card:hover { border-color: #1954A6; }
+
+.repo-card__tag { display: inline-block; font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 600; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.14em; color: #1954A6; margin: 0 0 0.5rem 0; }
+
+.repo-card__title { font-family: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-weight: 600; font-size: 1rem; line-height: 1.25; letter-spacing: -0.005em; color: #0A0A0A; margin: 0 0 0.45rem 0; word-break: break-word; }
+.repo-card__title a, .repo-card__title a:visited { color: #0A0A0A; text-decoration: none; background-image: linear-gradient(to top, transparent 1px, #1954A6 1px, #1954A6 2px, transparent 2px); background-repeat: no-repeat; background-position: 0 100%; background-size: 0% 2px; transition: background-size 0.3s ease, color 0.2s ease; }
+.repo-card__title a:hover { color: #1954A6; background-size: 100% 2px; }
+
+.repo-card__desc { font-family: "Georgia", "Times New Roman", Times, serif; font-size: 0.95rem; line-height: 1.5; color: #1A1A1A; margin: 0; }
+
+/** Dataset card — structured metadata block for dataset releases. */
+.dataset-card { max-width: 860px; margin: 1rem 0 2.5rem 0; padding: 32px 32px 28px 32px; border: 1px solid #e8e8e8; background-color: #FFFFFF; }
+@media screen and (max-width: 700px) { .dataset-card { padding: 22px; } }
+
+.dataset-card__header { padding-bottom: 20px; border-bottom: 1px solid #e8e8e8; margin-bottom: 22px; }
+
+.dataset-card__tag { display: inline-block; font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 600; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.14em; color: #1954A6; padding: 0.3em 0.65em; border: 1px solid #1954A6; margin: 0 0 1rem 0; }
+
+.dataset-card__title { font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 700; font-size: 1.45rem; line-height: 1.2; letter-spacing: -0.015em; color: #0A0A0A; margin: 0 0 0.65rem 0; }
+
+.dataset-card__desc { font-family: "Georgia", "Times New Roman", Times, serif; font-size: 1rem; line-height: 1.55; color: #1A1A1A; margin: 0; }
+
+.dataset-card__meta { margin: 0 0 24px 0; padding: 0; }
+
+.dataset-card__row { display: grid; grid-template-columns: 150px 1fr; gap: 0 24px; padding: 10px 0; border-top: 1px solid #e8e8e8; }
+.dataset-card__row:first-child { border-top: 0; padding-top: 0; }
+@media screen and (max-width: 700px) { .dataset-card__row { grid-template-columns: 1fr; gap: 2px 0; padding: 10px 0; } }
+.dataset-card__row dt { font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 600; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.12em; color: #6E7071; line-height: 1.4; margin: 0; padding-top: 3px; }
+.dataset-card__row dd { font-family: "Georgia", "Times New Roman", Times, serif; font-size: 0.98rem; line-height: 1.5; color: #1A1A1A; margin: 0; }
+
+.dataset-card__citation { padding-top: 20px; border-top: 1px solid #e8e8e8; }
+.dataset-card__citation .eyebrow { margin-bottom: 0.5rem; }
+.dataset-card__citation p { font-family: "Georgia", "Times New Roman", Times, serif; font-size: 0.92rem; line-height: 1.55; color: #1A1A1A; margin: 0 0 0.75rem 0; }
+.dataset-card__citation p:last-child { margin-bottom: 0; }
+
+.dataset-card__related { color: #6E7071 !important; }
+
+/** Teaching page — course cards (code + title) in a responsive grid. */
+.course-grid { display: grid !important; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 20px; margin: 1rem 0 2.5rem 0 !important; padding: 0 !important; list-style: none; max-width: none !important; }
+@media screen and (max-width: 700px) { .course-grid { grid-template-columns: 1fr; gap: 12px; } }
+
+.course-card { display: flex; align-items: baseline; gap: 18px; margin: 0 !important; padding: 14px 18px; list-style: none; background-color: #FFFFFF; border: 1px solid #e8e8e8; border-left: 3px solid #1954A6; transition: background-color 0.2s ease; }
+.course-card:hover { background-color: #F5F5F5; }
+@media screen and (max-width: 700px) { .course-card { flex-direction: column; align-items: flex-start; gap: 4px; } }
+
+.course-card__code { flex: 0 0 auto; min-width: 72px; font-family: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-weight: 600; font-size: 0.82rem; color: #1954A6; letter-spacing: 0.02em; }
+
+.course-card__title { font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 500; font-size: 0.98rem; line-height: 1.3; color: #0A0A0A; margin: 0; }
+
+/** About page — figure with caption + structured info grid. */
+.about-figure { margin: 1.75rem 0 2.75rem 0; max-width: 900px; }
+.about-figure img { display: block; width: 100%; height: auto; border: 1px solid #e8e8e8; border-radius: 0; }
+.about-figure figcaption { font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 500; font-size: 0.82rem; color: #6E7071; margin-top: 0.75rem; }
+
+/** Info grid — structured blocks used on About and Join us. By default: 2-column responsive; `--two` forces two columns even on narrower desktops for the Join-us side-by-side layout. */
+.info-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 40px; margin: 2rem 0 2.5rem 0; max-width: none; }
+@media screen and (max-width: 700px) { .info-grid { grid-template-columns: 1fr; gap: 28px; } }
+
+.info-grid--two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media screen and (max-width: 700px) { .info-grid--two { grid-template-columns: 1fr; } }
+
+.info-grid--three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media screen and (max-width: 1200px) { .info-grid--three { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media screen and (max-width: 700px) { .info-grid--three { grid-template-columns: 1fr; } }
+
+.info-block { max-width: none; margin: 0; }
+.info-block .eyebrow { margin-bottom: 0.55rem; }
+
+.info-block--bordered { padding: 26px 28px 28px 28px; border: 1px solid #e8e8e8; border-left: 3px solid #1954A6; background-color: #FFFFFF; }
+@media screen and (max-width: 700px) { .info-block--bordered { padding: 22px; } }
+
+.info-block__title { font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 700; font-size: 1.15rem; line-height: 1.25; letter-spacing: -0.012em; color: #0A0A0A; margin: 0 0 0.55rem 0; }
+.info-block__title a, .info-block__title a:visited { color: #0A0A0A; text-decoration: none; }
+.info-block__title a:hover { color: #1954A6; }
+
+.info-block__body { font-family: "Georgia", "Times New Roman", Times, serif; font-size: 0.98rem; line-height: 1.55; color: #1A1A1A; margin: 0 0 0.75rem 0; max-width: none; }
+
+.info-list { margin: 0.25rem 0 0.9rem 1.2em; padding: 0; list-style: disc; }
+.info-list li { font-family: "Georgia", "Times New Roman", Times, serif; font-size: 0.98rem; line-height: 1.5; color: #1A1A1A; margin: 0.2rem 0; }
+
+/** Contact CTA — prominent get-in-touch block at the bottom of Join us. */
+.contact-cta { max-width: 780px; padding: 32px 36px; margin: 3rem 0 1rem 0; background-color: #F5F5F5; border: 1px solid #e8e8e8; }
+@media screen and (max-width: 700px) { .contact-cta { padding: 24px; } }
+.contact-cta .eyebrow { margin-bottom: 0.5rem; }
+
+.contact-cta__title { font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 700; font-size: 1.45rem; line-height: 1.2; letter-spacing: -0.015em; color: #0A0A0A; margin: 0 0 0.5rem 0; }
+
+.contact-cta__body { font-family: "Georgia", "Times New Roman", Times, serif; font-size: 1rem; line-height: 1.55; color: #1A1A1A; margin: 0 0 1rem 0; max-width: 640px; }
+
+.contact-cta__link { display: inline-block; font-family: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-weight: 600; font-size: 1.05rem; color: #1954A6; letter-spacing: 0.01em; }
+.contact-cta__link:hover { color: #0D3D7F; text-decoration: underline; }
+
+/** About page — research-area list + group-leader card. */
+.research-areas-list { display: grid !important; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 22px; margin: 1.25rem 0 1.25rem 0 !important; padding: 0 !important; list-style: none; max-width: none !important; }
+@media screen and (max-width: 700px) { .research-areas-list { grid-template-columns: 1fr; gap: 14px; } }
+.research-areas-list > li { margin: 0 !important; padding: 22px 24px; background-color: #F5F5F5; border-left: 3px solid #1954A6; list-style: none; }
+.research-areas-list h3 { font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 700; font-size: 1.1rem; line-height: 1.25; letter-spacing: -0.01em; color: #0A0A0A; margin: 0 0 0.4rem 0; }
+.research-areas-list p { font-family: "Georgia", "Times New Roman", Times, serif; font-size: 0.95rem; line-height: 1.5; color: #1A1A1A; margin: 0 !important; max-width: none !important; }
+
+.leader-card { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 36px; align-items: start; max-width: 960px; margin: 1.5rem 0 2.5rem 0; }
+@media screen and (max-width: 700px) { .leader-card { grid-template-columns: 1fr; gap: 20px; } }
+
+.leader-card__photo { display: block; width: 100%; }
+.leader-card__photo img { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border: 1px solid #e8e8e8; border-radius: 0; transition: transform 0.4s ease; }
+.leader-card__photo:hover img { transform: scale(1.02); }
+@media screen and (max-width: 700px) { .leader-card__photo { max-width: 220px; } }
+
+.leader-card__body .eyebrow { margin-bottom: 0.5rem; }
+
+.leader-card__name { font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 700; font-size: 1.6rem; line-height: 1.15; letter-spacing: -0.018em; color: #0A0A0A; margin: 0 0 0.45rem 0; }
+.leader-card__name a, .leader-card__name a:visited { color: #0A0A0A; text-decoration: none; }
+.leader-card__name a:hover { color: #1954A6; }
+
+.leader-card__role { font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 500; font-size: 0.95rem; line-height: 1.4; color: #6E7071; margin: 0 0 1.1rem 0 !important; max-width: none !important; }
+
+.leader-card__bio { font-family: "Georgia", "Times New Roman", Times, serif; font-size: 1rem; line-height: 1.6; color: #1A1A1A; margin: 0 0 1.1rem 0 !important; max-width: none !important; }
+
+.leader-card__links { display: flex; flex-wrap: wrap; gap: 22px; margin: 0 !important; max-width: none !important; }
+.leader-card__links a { font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 600; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.12em; color: #1954A6; white-space: nowrap; }
+.leader-card__links a:hover { color: #0D3D7F; text-decoration: none; }
+
+/** MAIA page — consistent figure treatment (same max-width, same border, same margins) so the cover and workspace diagrams don't fight each other, plus a publication block and a link list. */
+.maia-figure { margin: 2rem 0 !important; max-width: 900px !important; padding: 0; text-align: left; }
+.maia-figure img { display: block; width: 100%; height: auto; max-width: 100%; margin: 0; border: 1px solid #e8e8e8; border-radius: 0; }
+.maia-figure figcaption { font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 500; font-size: 0.82rem; color: #6E7071; margin-top: 0.75rem; }
+
+.maia-figure--cover { margin-top: 0.5rem !important; max-width: 960px !important; }
+
+.maia-pub { max-width: 860px; padding: 24px 28px 26px 28px; margin: 1rem 0 2rem 0; background-color: #F5F5F5; border-left: 3px solid #1954A6; }
+.maia-pub .eyebrow { margin: 0 0 0.5rem 0; }
+
+.maia-pub__title { font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 700; font-size: 1.2rem; line-height: 1.25; letter-spacing: -0.012em; color: #0A0A0A; margin: 0 0 0.6rem 0; }
+.maia-pub__title a, .maia-pub__title a:visited { color: #0A0A0A; text-decoration: none; }
+.maia-pub__title a:hover { color: #1954A6; }
+
+.maia-pub__link { display: inline-block; font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 600; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.12em; color: #1954A6; }
+.maia-pub__link:hover { color: #0D3D7F; text-decoration: none; }
+
+.maia-links { display: grid !important; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 24px; margin: 1rem 0 2.5rem 0 !important; padding: 0 !important; list-style: none; max-width: none !important; }
+@media screen and (max-width: 700px) { .maia-links { grid-template-columns: 1fr; } }
+.maia-links > li { display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 0 18px; padding: 10px 0; margin: 0 !important; list-style: none; border-top: 1px solid #e8e8e8; }
+@media screen and (max-width: 700px) { .maia-links > li { grid-template-columns: 1fr; gap: 2px 0; } }
+
+.maia-links__label { font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 600; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.14em; color: #6E7071; align-self: center; }
+
+.maia-links > li a { font-family: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 0.92rem; color: #1954A6; word-break: break-all; align-self: center; }
+.maia-links > li a:hover { color: #0D3D7F; text-decoration: underline; }
 
 /** Syntax highlighting styles using KTH color scheme Based on KTH brand guidelines and official color palette */
 .highlight { background: #fff; }
