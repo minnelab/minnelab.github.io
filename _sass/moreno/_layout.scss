@@ -1506,16 +1506,6 @@ workshop
   }
 }
 
-.people-grid--compact {
-  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
-  gap: 32px 24px;
-
-  @include media-query($on-palm) {
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    gap: 24px 16px;
-  }
-}
-
 .people-card {
   margin: 0;
   padding: 0;

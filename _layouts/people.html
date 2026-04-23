@@ -56,7 +56,7 @@ layout: default
       <h2 class="section-title">Alumni</h2>
     </div>
 
-    <ul class="people-grid people-grid--compact">
+    <ul class="people-grid">
     {%- for person in site.people -%}
       {%- assign category = person.category | default: 'page' -%}
       {%- assign status = person.status | default: 'affiliate' -%}
