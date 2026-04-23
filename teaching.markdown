@@ -2,9 +2,8 @@
 layout: page
 title: Teaching
 permalink: /COURSES/
+lede: "Rodrigo Moreno teaches the following courses at the Department of Biomedical Engineering and Health Systems at KTH Royal Institute of Technology."
 ---
-
-<p class="page-lede">Rodrigo Moreno teaches the following courses at the Department of Biomedical Engineering and Health Systems at KTH Royal Institute of Technology.</p>
 
 ## Examiner and course responsible
 

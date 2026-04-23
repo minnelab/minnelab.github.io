@@ -4,13 +4,13 @@ layout: default
 
 <div class="page-hero">
   <div class="wrapper">
-    <span class="eyebrow">MINNE lab</span>
     {% unless page.hide_title %}
       <h1 class="page-heading">{{ page.title | default: "People" | escape }}</h1>
     {% endunless %}
-    <p class="page-lede">The group — faculty, postdocs, PhD students, visitors, and alumni.</p>
+    <p class="page-lede page-hero__lede">The group — faculty, postdocs, PhD students, visitors, and alumni.</p>
 
-    {%- if content != "" -%}
+    {%- assign _people_body = content | strip -%}
+    {%- if _people_body.size > 0 -%}
       <div class="page-hero__content">{{ content }}</div>
     {%- endif -%}
   </div>

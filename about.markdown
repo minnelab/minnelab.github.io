@@ -2,9 +2,13 @@
 layout: page
 title: About
 permalink: /about/
+lede: >-
+  MINNE Lab develops mathematically grounded computational tools for medical image
+  analysis, at the Division of Biomedical Imaging, KTH Royal Institute of Technology.
+  The group's work emphasises efficiency and clinical translation — building methods
+  that ultimately support physicians in practice, across neuroimaging, oncology, and
+  biomechanics.
 ---
-
-<p class="page-lede">MINNE Lab develops mathematically grounded computational tools for medical image analysis, at the Division of Biomedical Imaging, KTH Royal Institute of Technology. The group's work emphasises efficiency and clinical translation — building methods that ultimately support physicians in practice, across neuroimaging, oncology, and biomechanics.</p>
 
 <figure class="about-figure">
   <img src="/assets/about/group_picture.jpg" alt="MINNE Lab group photo" />

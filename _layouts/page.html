@@ -5,8 +5,13 @@ layout: default
 {% unless page.hide_title %}
 <div class="page-hero">
   <div class="wrapper">
-    <span class="eyebrow">MINNE lab</span>
+    {%- if page.eyebrow -%}
+      <span class="eyebrow">{{ page.eyebrow | escape }}</span>
+    {%- endif -%}
     <h1 class="page-heading">{{ page.title | escape }}</h1>
+    {%- if page.lede -%}
+      <p class="page-lede page-hero__lede">{{ page.lede }}</p>
+    {%- endif -%}
   </div>
 </div>
 {% endunless %}

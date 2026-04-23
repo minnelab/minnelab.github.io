@@ -2,9 +2,8 @@
 layout: page
 title: Join us
 permalink: /join-us/
+lede: "We are always glad to hear from motivated students and researchers interested in medical image analysis, deep learning, and related topics."
 ---
-
-<p class="page-lede">We are always glad to hear from motivated students and researchers interested in medical image analysis, deep learning, and related topics.</p>
 
 <div class="info-grid info-grid--two">
   <div class="info-block info-block--bordered">

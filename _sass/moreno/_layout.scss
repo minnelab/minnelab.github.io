@@ -1086,28 +1086,59 @@
 }
 
 .page-lede {
-  max-width: 680px;
+  max-width: 720px;
   font-family: $base-font-family;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   line-height: 1.55;
-  color: $kth-grey;
-  margin: 0.5rem 0 0 0;
+  color: $text-color;
+  margin: 1rem 0 0 0;
 }
 
+/**
+ * Page hero — title band above regular content pages.
+ *
+ * Designed to FLOW into the content below rather than sit in its own
+ * boxed section: no bottom border, tight bottom padding, and the body
+ * wrapper picks up from where the hero left off.
+ */
 .page-hero {
   padding-top: 56px;
-  padding-bottom: 40px;
-  border-bottom: 1px solid $grey-color-light;
+  padding-bottom: 8px;
   background-color: $background-color;
+  border-bottom: 0;
 
   @include media-query($on-palm) {
-    padding-top: 40px;
-    padding-bottom: 28px;
+    padding-top: 36px;
+    padding-bottom: 4px;
+  }
+
+  .eyebrow {
+    margin: 0 0 0.6rem 0;
   }
 
   .page-heading {
-    margin-top: 0.25rem;
+    margin-top: 0;
+    margin-bottom: 0.25rem;
   }
+
+  // When the lede is in the hero (from front matter), keep it tight
+  // with the title rather than pushed down by the post-content padding.
+  .page-hero__lede {
+    margin: 0.75rem 0 0 0;
+  }
+}
+
+// Reduce the top padding of the body wrapper directly after a page-hero
+// so the first post-content element lands close to the hero, not orphaned.
+.page-hero + .wrapper {
+  padding-top: 24px;
+}
+
+// Within post-content, a .page-lede as the first child should be lifted
+// so it sits directly under the title visually.
+.post-content > .page-lede:first-child {
+  margin-top: 0;
+  margin-bottom: 2rem;
 }
 
 /**
@@ -1676,16 +1707,16 @@ workshop
 
 
 /**
- * Page-body lede — for a short intro paragraph directly below a page-hero
- * inside the .post-content reading column.
+ * Page-body lede — when the lede is written in markdown instead of via
+ * front matter, size it to match the hero-lede and give it room below.
  */
 .post-content > .page-lede {
   max-width: 720px;
   font-family: $base-font-family;
-  font-size: 1.2rem;
-  line-height: 1.5;
+  font-size: 1.15rem;
+  line-height: 1.55;
   color: $text-color;
-  margin: 0 0 2.5rem 0;
+  margin: 0 0 2.25rem 0;
 }
 
 .muted-note {
@@ -2335,5 +2366,141 @@ workshop
       color: $link-color-dark;
       text-decoration: none;
     }
+  }
+}
+
+
+/**
+ * MAIA page — consistent figure treatment (same max-width, same border,
+ * same margins) so the cover and workspace diagrams don't fight each
+ * other, plus a publication block and a link list.
+ */
+.maia-figure {
+  margin: 2rem 0 !important;
+  max-width: 900px !important;
+  padding: 0;
+  text-align: left;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    margin: 0;
+    border: 1px solid $grey-color-light;
+    border-radius: 0;
+  }
+
+  figcaption {
+    font-family: $title-font-family;
+    font-weight: 500;
+    font-size: 0.82rem;
+    color: $kth-grey;
+    margin-top: 0.75rem;
+  }
+}
+
+// Cover-artwork variant — slightly wider, no caption, sits higher
+.maia-figure--cover {
+  margin-top: 0.5rem !important;
+  max-width: 960px !important;
+}
+
+.maia-pub {
+  max-width: 860px;
+  padding: 24px 28px 26px 28px;
+  margin: 1rem 0 2rem 0;
+  background-color: $kth-surface-soft;
+  border-left: 3px solid $kth-blue;
+
+  .eyebrow {
+    margin: 0 0 0.5rem 0;
+  }
+}
+
+.maia-pub__title {
+  font-family: $title-font-family;
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1.25;
+  letter-spacing: -0.012em;
+  color: $text-color-header;
+  margin: 0 0 0.6rem 0;
+
+  a,
+  a:visited {
+    color: $text-color-header;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: $link-color;
+  }
+}
+
+.maia-pub__link {
+  display: inline-block;
+  font-family: $title-font-family;
+  font-weight: 600;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: $link-color;
+
+  &:hover {
+    color: $link-color-dark;
+    text-decoration: none;
+  }
+}
+
+.maia-links {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px 24px;
+  margin: 1rem 0 2.5rem 0 !important;
+  padding: 0 !important;
+  list-style: none;
+  max-width: none !important;
+
+  @include media-query($on-palm) {
+    grid-template-columns: 1fr;
+  }
+
+  > li {
+    display: grid;
+    grid-template-columns: 180px minmax(0, 1fr);
+    gap: 0 18px;
+    padding: 10px 0;
+    margin: 0 !important;
+    list-style: none;
+    border-top: 1px solid $grey-color-light;
+
+    @include media-query($on-palm) {
+      grid-template-columns: 1fr;
+      gap: 2px 0;
+    }
+  }
+}
+
+.maia-links__label {
+  font-family: $title-font-family;
+  font-weight: 600;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: $kth-grey;
+  align-self: center;
+}
+
+.maia-links > li a {
+  font-family: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.92rem;
+  color: $link-color;
+  word-break: break-all;
+  align-self: center;
+
+  &:hover {
+    color: $link-color-dark;
+    text-decoration: underline;
   }
 }

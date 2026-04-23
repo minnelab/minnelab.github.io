@@ -2,9 +2,8 @@
 layout: page
 title: Code & Data
 permalink: /code/
+lede: "Open-source code and datasets from MINNE Lab. We aim to publish data and code from our projects whenever possible."
 ---
-
-<p class="page-lede">Open-source code and datasets from MINNE Lab. We aim to publish data and code from our projects whenever possible.</p>
 
 ## Source code
 
