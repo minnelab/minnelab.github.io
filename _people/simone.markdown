@@ -4,8 +4,8 @@ title: 'Simone Bendazzoli'
 category: people
 permalink: /people/simone
 image: /assets/people/simben.jpg
-position: 'PhD student'
-status: 'current'
+position: 'PhD · Creator of MAIA'
+status: 'alumni'
 ---
 
 ![Simone](/assets/people/simben.jpg){:class="people-profile-image"}
