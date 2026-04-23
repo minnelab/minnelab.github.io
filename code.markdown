@@ -75,11 +75,6 @@ lede: "Open-source code and datasets from MINNE Lab. We aim to publish data and 
     <p class="repo-card__desc">Fast 3D image generation for healthy brain aging using diffeomorphic registration.</p>
   </li>
   <li class="repo-card">
-    <span class="repo-card__tag">Alzheimer's disease</span>
-    <h4 class="repo-card__title"><a href="https://github.com/minnelab/Explainable-AD-Pipeline" target="_blank" rel="noopener">Explainable-AD-Pipeline</a></h4>
-    <p class="repo-card__desc">Explainable-AI pipeline for Alzheimer's disease analysis.</p>
-  </li>
-  <li class="repo-card">
     <span class="repo-card__tag">Breast ultrasound</span>
     <h4 class="repo-card__title"><a href="https://github.com/minnelab/DynamicBUS" target="_blank" rel="noopener">DynamicBUS</a></h4>
     <p class="repo-card__desc">Diffusion-model-based breast ultrasound video generation for diagnosis.</p>
