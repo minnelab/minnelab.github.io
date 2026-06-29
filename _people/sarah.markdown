@@ -17,3 +17,6 @@ My research aims to understand how the brain's microstructure influences its mec
 By linking imaging measurements with computational models, I investigate how variations in brain microstructure give rise to differences in mechanical behavior. The overarching goal is to improve our understanding of how microstructural changes influence brain mechanics and how these changes contribute to ageing and neurodegenerative disorders. 
 
 More broadly, my research interests lie in integrating multiple imaging modalities with computational biomechanical modeling to better understand the complex biomechanical environment of the brain and the surrounding fluids.  
+
+More details on how to contact me: 
+https://www.kth.se/profile/sarahva
