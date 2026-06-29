@@ -10,10 +10,10 @@ status: 'current'
 
 ![Sarah](/assets/people/default.jpg){:class="people-profile-image"}
 
-## About me
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-
 ## Research
 
-Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+My research aims to understand how the brain's microstructure influences its mechanical behavior. To do this, I combine advanced diffusion magnetic resonance imaging, specifically multidimensional diffusion imaging (MD-dMRI), with finite element modeling. These computational models simulate how the brain responds to different types of mechanical loading, including static compression and periodic vibrations. The latter simulates the vibrations applied during magnetic resonance elastography (MRE), an imaging technique that measures the mechanical properties of the brain in vivo. 
+
+By linking imaging measurements with computational models, I investigate how variations in brain microstructure give rise to differences in mechanical behavior. The overarching goal is to improve our understanding of how microstructural changes influence brain mechanics and how these changes contribute to ageing and neurodegenerative disorders. 
+
+More broadly, my research interests lie in integrating multiple imaging modalities with computational biomechanical modeling to better understand the complex biomechanical environment of the brain and the surrounding fluids.  
