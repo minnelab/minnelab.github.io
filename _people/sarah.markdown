@@ -8,7 +8,7 @@ position: 'Postdoc'
 status: 'current'
 ---
 
-![Sarah](/assets/people/sarahva.jpg){:class="people-profile-image"}{: width="250px"}
+![Sarah](/assets/people/sarahva.jpg){:class="people-profile-image"}{: width="100px"}
 
 ## About me
 
