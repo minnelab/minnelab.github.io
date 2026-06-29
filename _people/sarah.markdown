@@ -9,7 +9,7 @@ status: 'current'
 ---
 
 ![Sarah](/assets/people/sarahva.jpg){:class="people-profile-image {
-    max-width: 100%;
+    max-width: 20%;
 }"}
 
 ## About me
